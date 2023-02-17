@@ -47,7 +47,7 @@
 .product-card-img {
   background-position: center;
   background-size: 90%;
-  background-image: url(imgs/download.png);
+  /* background-image: url(imgs/download.png); */
   transition: 0.3s;
 }
 
