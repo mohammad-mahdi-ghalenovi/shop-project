@@ -7,7 +7,7 @@
   width: 100%;
   background-size: cover;
   background-position: center;
-  background-image: url(SLIDER/img.png);
+  /* background-image: url(SLIDER/img.png); */
   background-color: black;
   overflow-x: hidden;
 }
