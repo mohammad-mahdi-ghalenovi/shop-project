@@ -7,6 +7,8 @@ let products = [
   // },
 ];
 let maincontainerElem = document.querySelector(".main-container");
+let hamMenuButton = document.querySelector(".ham-menu-btn");
+let hamMenuElem = document.querySelector(".ham-menu");
 
 products.forEach(function (product) {
   maincontainerElem.insertAdjacentHTML(
@@ -29,3 +31,12 @@ function testOne(productID) {
     "file:///C:/Users/Win%20Green/Desktop/newProject/index.html?id=" +
     productID;
 }
+
+
+function showHamMenu(menu){
+  menu.classList.toggle("ham-active")
+}
+
+hamMenuButton.addEventListener("click", function () {
+  showHamMenu(hamMenuElem);
+});
