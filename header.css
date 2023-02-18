@@ -2,7 +2,7 @@
   position: relative;
   grid-row: 1/2;
   grid-column: 1/-1;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.486);
   border-bottom: 1px solid gray;
   z-index: 6;
 }
@@ -42,6 +42,7 @@
   font-size: 10px;
   line-height: 33px;
   color: gray;
+  cursor: pointer;
 }
 
 .top-wel-icons .icon {
@@ -65,7 +66,8 @@
   display: grid;
   grid-template-columns: 100px repeat(5, 60px) 1fr 270px;
   grid-template-rows: 1fr;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.486);
+  z-index: 99;
 }
 
 .top-main-title {
@@ -96,6 +98,7 @@
   grid-template-columns: repeat(5, 50px);
   grid-column: -1/-2;
   grid-row: 1fr;
+  cursor: pointer;
 }
 
 .navigation-icon {

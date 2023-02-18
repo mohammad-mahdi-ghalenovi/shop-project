@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="product.css" />
     <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="slider.css" />
   </head>
   <body>
     <div class="main-container">
       <!-- WELCOME NAV -->
-      <div class="welcome-nav">
+      <div class="welcome-nav prevent-select">
         <div class="welcome-text">
           <div class="wel-icon"></div>
           <p>WELCOME TO WORLDWIDE METTI STORE</p>
@@ -28,19 +29,19 @@
           </div>
           <div class="top-icons acount">
             <div class="icon"></div>
-            <p>MY ACOUNT</p>
+            <p>MY ACCOUNT</p>
           </div>
         </div>
       </div>
       <!-- END OF WELCOME NAV -->
       <!-- NAVIGATION  -->
-      <div class="top-navigation-container">
+      <div class="top-navigation-container prevent-select">
         <div class="top-main-title">Metti.</div>
-          <li>Home</li>
-          <li>Pages</li>
-          <li>Shop</li>
-          <li>Blog</li>
-          <li>Landing</li>
+        <li>Home</li>
+        <li>Pages</li>
+        <li>Shop</li>
+        <li>Blog</li>
+        <li>Landing</li>
         <div class="navigation-icons-container">
           <div class="navigation-icon"></div>
           <div class="navigation-icon"></div>
@@ -50,7 +51,21 @@
         </div>
       </div>
       <!-- END OF NAVIGATION  -->
+      <!-- SLIDER SECTION -->
+      <div class="slider-section prevent-select">
+        <div class="btn nxt">nxt</div>
+        <div class="btn pre">per</div>
+        <img class="slider" />
+        <div class="slider-product-name-container">
+          <div class="name"></div>
+          <div class="code"></div>
+          <button class="shop-now">SHOP NOW</button>
+        </div>
+        <div class="slides prevent-select"></div>
+      </div>
+      <!--END OF SLIDER SECTION -->
     </div>
     <script src="app.js"></script>
+    <script src="slider.js"></script>
   </body>
 </html>
