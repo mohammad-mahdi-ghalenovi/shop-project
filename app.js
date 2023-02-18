@@ -7,6 +7,7 @@ let products = [
   // },
 ];
 let maincontainerElem = document.querySelector(".main-container");
+let hamMenuButton = document.querySelector(".ham-menu-btn");
 
 products.forEach(function (product) {
   maincontainerElem.insertAdjacentHTML(

@@ -9,6 +9,7 @@
   background-position: center;
   background-image: url(SLIDER/img.png);
   background-color: black;
+  overflow-x: hidden;
 }
 
 .slider-section .btn {
@@ -171,17 +172,19 @@
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-.slides::-webkit-scrollbar-thumb {
-  background-color: rgb(102, 47, 165);
-  outline: 1px solid slategrey;
+  .slides::-webkit-scrollbar-thumb {
+    background-color: rgb(102, 47, 165);
+    outline: 1px solid slategrey;
 }
 
 @media screen and (max-width: 590px) {
-  .slider {
-    width: 90%;
+  .slider-section .btn {
+    display: none;
   }
+
   .slides {
     width: 100%;
     padding: 0 10px;
+    grid-template-columns: repeat(6, 190px);
   }
 }
