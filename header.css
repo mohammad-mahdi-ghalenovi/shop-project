@@ -3,7 +3,7 @@
   grid-row: 1/2;
   grid-column: 1/-1;
   background-color: rgba(0, 0, 0, 0.486);
-  border-bottom: 1px solid gray;
+  border-bottom: 0.9px solid rgba(128, 128, 128, 0.34);
   z-index: 6;
 }
 
@@ -64,15 +64,15 @@
   grid-row: 2/3;
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns: 100px repeat(5, 60px) 1fr 270px;
+  grid-template-columns: 150px repeat(5, 60px) 1fr 270px;
   grid-template-rows: 1fr;
   background-color: rgba(0, 0, 0, 0.486);
   z-index: 99;
 }
 
 .top-main-title {
-  padding-left: 25px;
-  line-height: 45px;
+  padding-left: 55px;
+  line-height: 50px;
   letter-spacing: 4px;
   color: white;
 }
@@ -84,7 +84,7 @@
   font-size: 13px;
   color: white;
   height: 100%;
-  line-height: 43px;
+  line-height: 53px;
   cursor: pointer;
   transition: 0.4s;
 }
