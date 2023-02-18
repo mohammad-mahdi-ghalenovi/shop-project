@@ -1,0 +1,111 @@
+.welcome-nav {
+  position: relative;
+  grid-row: 1/2;
+  grid-column: 1/-1;
+  background-color: rgba(0, 0, 0, 0.486);
+  border-bottom: 0.9px solid rgba(128, 128, 128, 0.34);
+  z-index: 6;
+}
+
+.welcome-nav .welcome-text p {
+  color: gray;
+  font-size: 10px;
+  line-height: 34px;
+  padding-left: 65px;
+}
+
+.wel-icon {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 40px;
+  transform: translate(0, -50%);
+}
+
+/* icons */
+.top-wel-icons {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+}
+
+.top-wel-icons .top-icons {
+  position: relative;
+  font-size: 10px;
+  line-height: 33px;
+  color: gray;
+  cursor: pointer;
+}
+
+.top-wel-icons .icon {
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.top-wel-icons p {
+  padding-left: 35px;
+}
+
+/* navigation */
+.top-navigation-container {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 150px repeat(5, 60px) 1fr 270px;
+  grid-template-rows: 1fr;
+  background-color: rgba(0, 0, 0, 0.486);
+  z-index: 99;
+}
+
+.top-main-title {
+  padding-left: 55px;
+  line-height: 50px;
+  letter-spacing: 4px;
+  color: white;
+}
+
+.top-navigation-container li {
+  list-style-type: none;
+  align-self: center;
+  text-align: center;
+  font-size: 13px;
+  color: white;
+  height: 100%;
+  line-height: 53px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.top-navigation-container li:hover {
+  background-color: rgba(193, 193, 193, 0.354);
+}
+
+.navigation-icons-container {
+  display: grid;
+  grid-template-columns: repeat(5, 50px);
+  grid-column: -1/-2;
+  grid-row: 1fr;
+  cursor: pointer;
+}
+
+.navigation-icon {
+  height: 26px;
+  width: 26px;
+  background-color: white;
+  border-radius: 50%;
+  align-self: center;
+  justify-self: center;
+}

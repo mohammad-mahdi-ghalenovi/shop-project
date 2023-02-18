@@ -47,7 +47,6 @@
 .product-card-img {
   background-position: center;
   background-size: 90%;
-  /* background-image: url(imgs/download.png); */
   transition: 0.3s;
 }
 
@@ -70,6 +69,7 @@
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .heart-icon {
