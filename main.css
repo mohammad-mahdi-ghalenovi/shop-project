@@ -8,13 +8,14 @@
 body {
   background-color: black;
   overflow-x: hidden;
+  height: 2000px;
 }
 
 .main-container {
   display: grid;
   position: absolute;
-  grid-template-rows: 35px 57px 650px;
-  /* top navigation */
+  grid-template-rows: 35px 57px 620px repeat(1, max-content) 200px;
+  /* top navigation  slider top-rated-row */
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
   height: 100%;
