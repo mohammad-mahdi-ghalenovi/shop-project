@@ -10,7 +10,7 @@ let sliderInfoCode = document.querySelector(".code");
 let imgs = [
   {
     id: 0,
-    src: "imgs/download.pn",
+    src: "imgs/download.png",
     name: "Computer & Laptops",
     icon: "WP-213131",
     activeClass: "",
