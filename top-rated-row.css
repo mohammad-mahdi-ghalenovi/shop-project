@@ -2,7 +2,7 @@
   position: relative;
   display: grid;
   height: 600px;
-  grid-gap: 0 20px;
+  grid-gap: 0 50px;
   padding: 20px;
   justify-content: center;
   grid-template-columns: repeat(5, 1fr);
@@ -23,16 +23,17 @@
   font-size: 25px;
 }
 
-@media screen and (max-width: 1464px) {
+@media screen and (max-width: 1357px) {
   .top-rated-products {
     grid-template-columns: repeat(5, 200px);
   }
 }
 
-@media screen and (max-width: 1107px) {
+@media screen and (max-width: 1237px) {
   .top-rated-products {
     grid-template-columns: repeat(3, 200px);
     height: 920px;
+    grid-gap: 0 20px;
   }
 }
 
@@ -47,5 +48,9 @@
   .top-rated-products {
     grid-template-columns: repeat(1, 200px);
     height: 1950px;
+  }
+
+  .top-rated-title {
+    font-size: 18px;
   }
 }
