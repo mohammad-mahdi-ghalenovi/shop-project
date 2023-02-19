@@ -1,10 +1,10 @@
 let products = [
-  // {
-  //   id: 1,
-  //   title: "Gaming Monitor 144Ghz WP-2134",
-  //   price: 2000,
-  //   src: "SLIDER/download.png",
-  // },
+  {
+    id: 1,
+    title: "Gaming Monitor 144Ghz WP-2134",
+    price: 2000,
+    src: "SLIDER/download.png",
+  },
 ];
 let maincontainerElem = document.querySelector(".main-container");
 let hamMenuButton = document.querySelector(".ham-menu-btn");
@@ -32,9 +32,8 @@ function testOne(productID) {
     productID;
 }
 
-
-function showHamMenu(menu){
-  menu.classList.toggle("ham-active")
+function showHamMenu(menu) {
+  menu.classList.toggle("ham-active");
 }
 
 hamMenuButton.addEventListener("click", function () {

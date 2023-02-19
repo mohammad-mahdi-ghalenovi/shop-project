@@ -75,13 +75,13 @@
 .heart-icon {
   top: 13px;
   right: 13px;
-  /* background-image: url(imgs/icons8-loading-heart-30.png); */
+  background-image: url(imgs/icons8-loading-heart-30.png);
 }
 
 .basket-icon {
   bottom: 15px;
   right: 15px;
-  /* background-image: url(imgs/icons8-shopping-cart-30.png); */
+  background-image: url(imgs/icons8-shopping-cart-30.png);
   z-index: 99;
 }
 
