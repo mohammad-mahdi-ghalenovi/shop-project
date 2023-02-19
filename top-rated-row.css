@@ -1,14 +1,17 @@
 .top-rated-products {
   position: relative;
   display: grid;
+  height: 600px;
   grid-gap: 0 20px;
   padding: 20px;
   justify-content: center;
   grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 360px;
   grid-row: 4/5;
   grid-column: 1/-1;
   background-color: aqua;
   z-index: 9;
+  transition: 0.4s;
 }
 
 .top-rated-title {
@@ -20,4 +23,29 @@
   font-size: 25px;
 }
 
+@media screen and (max-width: 1464px) {
+  .top-rated-products {
+    grid-template-columns: repeat(5, 200px);
+  }
+}
 
+@media screen and (max-width: 1107px) {
+  .top-rated-products {
+    grid-template-columns: repeat(3, 200px);
+    height: 920px;
+  }
+}
+
+@media screen and (max-width: 674px) {
+  .top-rated-products {
+    grid-template-columns: repeat(2, 200px);
+    height: 1250px;
+  }
+}
+
+@media screen and (max-width: 466px) {
+  .top-rated-products {
+    grid-template-columns: repeat(1, 200px);
+    height: 1950px;
+  }
+}
