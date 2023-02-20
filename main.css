@@ -14,7 +14,7 @@ body {
 .main-container {
   display: grid;
   position: absolute;
-  grid-template-rows: 35px 57px 620px 1fr;
+  grid-template-rows: 35px 57px 620px 1fr 400px;
   /* top navigation  slider top-rated-row */
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
