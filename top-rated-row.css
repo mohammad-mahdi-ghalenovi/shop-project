@@ -63,21 +63,100 @@
   grid-template-columns: repeat(2, 720px);
   grid-template-rows: 390px;
   grid-gap: 0 35px;
-  padding: 0 12px;
-  padding-top: 60px;
-  background-color: blue;
+  padding: 10px 12px;
 }
 
 .top-rate-banner {
-  background-color: aqua;
-  background-position: center;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 40px 1fr;
   background-size: cover;
+  background-image: url(../imgs/wallpaperflare.com_wallpaper_15.jpg);
+  color: white;
   border-radius: 10px;
+  padding: 37px;
+  overflow: hidden;
 }
 
-.top-rate-banner:nth-child(1) {
-  /* background-image: url(/imgs/wallpaperflare.com_wallpaper_15.jpg); */
+.top-rate-banner .banner-name {
+  grid-row: 1/2;
+  align-self: center;
+  font-size: 55px;
+  z-index: 10;
+  transition: 0.4s;
 }
-.top-rate-banner:nth-child(2) {
-  /* background-image: url(/imgs/wallpaperflare.com_wallpaper_15.jpg); */
+
+.top-rate-banner .banner-code {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  color: gray;
+  align-self: center;
+  padding-top: 5px;
+  font-size: 17px;
+}
+
+.top-rate-banner .banner-price {
+  grid-column: 1/2;
+  grid-row: -1/-2;
+  padding-top: 60px;
+}
+
+.top-rate-banner .banner-price .price {
+  font-size: 50px;
+}
+
+.banner-img {
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  height: 330px;
+  width: 310px;
+  border-radius: 10px;
+  background-image: url(imgs/download.png);
+  background-position: center;
+  background-size: cover;
+  z-index: 9;
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 1560px) {
+  .top-rated-banners {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .top-rate-banner .banner-name {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 1143px) {
+  .top-rated-banners {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 40px;
+    grid-gap: 22px 35px;
+  }
+}
+
+@media screen and (max-width: 664px) {
+  .top-rate-banner .banner-name {
+    font-size: 30px;
+  }
+
+  .banner-img {
+    right: -70px;
+  }
+}
+
+@media screen and (max-width: 515px) {
+  .banner-img {
+    right: -110px;
+  }
+}
+
+@media screen and (max-width: 467px) {
+  .banner-img {
+    right: -140px;
+  }
 }
