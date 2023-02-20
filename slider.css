@@ -7,7 +7,7 @@
   width: 100%;
   background-size: cover;
   background-position: center;
-  /* background-image: url(SLIDER/img.png); */
+  background-image: url(imgs/wallpaperflare.com_wallpaper_15.jpg);
   background-color: black;
   overflow-x: hidden;
 }
@@ -148,9 +148,14 @@
   padding-left: 40px;
   line-height: 26px;
   transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slide p:hover {
+  color: rgb(27, 100, 146);
+}
+
+.slide-active {
   color: rgb(27, 100, 146);
 }
 
@@ -172,9 +177,9 @@
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-  .slides::-webkit-scrollbar-thumb {
-    background-color: rgb(102, 47, 165);
-    outline: 1px solid slategrey;
+.slides::-webkit-scrollbar-thumb {
+  background-color: rgb(102, 47, 165);
+  outline: 1px solid slategrey;
 }
 
 @media screen and (max-width: 590px) {

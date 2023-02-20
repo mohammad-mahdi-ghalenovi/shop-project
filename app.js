@@ -1,17 +1,42 @@
 let products = [
-  // {
-  //   id: 1,
-  //   title: "Gaming Monitor 144Ghz WP-2134",
-  //   price: 2000,
-  //   src: "SLIDER/download.png",
-  // },
+  {
+    id: 1,
+    title: "Gaming Monitor 144Ghz WP-2134",
+    price: 2000,
+    src: "SLIDER/download.png",
+  },
+  {
+    id: 1,
+    title: "Gaming Monitor 144Ghz WP-2134",
+    price: 2000,
+    src: "SLIDER/download.png",
+  },
+  {
+    id: 1,
+    title: "Gaming Monitor 144Ghz WP-2134",
+    price: 2000,
+    src: "SLIDER/download.png",
+  },
+  {
+    id: 1,
+    title: "Gaming Monitor 144Ghz WP-2134",
+    price: 2000,
+    src: "SLIDER/download.png",
+  },
+  {
+    id: 1,
+    title: "Gaming Monitor 144Ghz WP-2134",
+    price: 2000,
+    src: "SLIDER/download.png",
+  },
 ];
 let maincontainerElem = document.querySelector(".main-container");
+const topRatedProducts = document.querySelector(".top-rated-products");
 let hamMenuButton = document.querySelector(".ham-menu-btn");
 let hamMenuElem = document.querySelector(".ham-menu");
 
 products.forEach(function (product) {
-  maincontainerElem.insertAdjacentHTML(
+  topRatedProducts.insertAdjacentHTML(
     "beforeend",
     '<div class="product-card" onclick="testOne(' +
       product.id +
@@ -32,9 +57,8 @@ function testOne(productID) {
     productID;
 }
 
-
-function showHamMenu(menu){
-  menu.classList.toggle("ham-active")
+function showHamMenu(menu) {
+  menu.classList.toggle("ham-active");
 }
 
 hamMenuButton.addEventListener("click", function () {
