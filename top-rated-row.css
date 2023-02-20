@@ -60,11 +60,11 @@
   grid-column: 1/-1;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(2, 600px);
-  grid-template-rows: 300px;
-  grid-gap: 10px;
+  grid-template-columns: repeat(2, 720px);
+  grid-template-rows: 390px;
+  grid-gap: 0 35px;
   padding: 0 12px;
-  padding-top: 45px; 
+  padding-top: 60px;
   background-color: blue;
 }
 
@@ -72,11 +72,12 @@
   background-color: aqua;
   background-position: center;
   background-size: cover;
+  border-radius: 10px;
 }
 
 .top-rate-banner:nth-child(1) {
-  background-image: url(/imgs/wallpaperflare.com_wallpaper_15.jpg);
+  /* background-image: url(/imgs/wallpaperflare.com_wallpaper_15.jpg); */
 }
 .top-rate-banner:nth-child(2) {
-  background-image: url(/imgs/wallpaperflare.com_wallpaper_15.jpg);
+  /* background-image: url(/imgs/wallpaperflare.com_wallpaper_15.jpg); */
 }
