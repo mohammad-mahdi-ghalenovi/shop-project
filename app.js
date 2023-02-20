@@ -29,14 +29,55 @@ let products = [
     price: 2000,
     src: "SLIDER/download.pn",
   },
+  {
+    id: 1,
+    title: "Gaming Monitor 144Ghz WP-2134",
+    price: 2000,
+    src: "SLIDER/download.pn",
+  },
+  {
+    id: 2,
+    title: "Gaming Monitor 144Ghz WP-2134",
+    price: 2000,
+    src: "SLIDER/download.pn",
+  },
+  {
+    id: 3,
+    title: "Gaming Monitor 144Ghz WP-2134",
+    price: 2000,
+    src: "SLIDER/download.pn",
+  },
+  {
+    id: 4,
+    title: "Gaming Monitor 144Ghz WP-2134",
+    price: 2000,
+    src: "SLIDER/download.pn",
+  },
+  {
+    id: 5,
+    title: "Gaming Monitor 144Ghz WP-2134",
+    price: 2000,
+    src: "SLIDER/download.png",
+  },
 ];
 let maincontainerElem = document.querySelector(".main-container");
 const topRatedProducts = document.querySelector(".top-rated-products");
+const featuredProducts = document.querySelector(".featured-products");
 let hamMenuButton = document.querySelector(".ham-menu-btn");
 let hamMenuElem = document.querySelector(".ham-menu");
+let i = 0;
 
 products.forEach(function (product) {
-  topRatedProducts.insertAdjacentHTML(
+  i++;
+  if (i > 5) {
+    createDynamicProducts(featuredProducts, product);
+  } else {
+    createDynamicProducts(topRatedProducts, product);
+  }
+});
+
+function createDynamicProducts(container, product) {
+  container.insertAdjacentHTML(
     "beforeend",
     '<div class="product-card" onclick="testOne(' +
       product.id +
@@ -49,7 +90,7 @@ products.forEach(function (product) {
       product.price +
       '</div> <div class="product-icon basket-icon"></div> <div class="add-product">Select Options</div></div>'
   );
-});
+}
 
 function testOne(productID) {
   location.href =
