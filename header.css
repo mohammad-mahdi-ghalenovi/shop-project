@@ -170,10 +170,16 @@
   width: 100%;
   top: 0;
   background-color: white;
+  animation: animated 0.5s ease;
 }
 
-.active-li {
-  color: black;
+@keyframes animated {
+  from {
+    transform: translateY(12px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 @media screen and (max-width: 780px) {

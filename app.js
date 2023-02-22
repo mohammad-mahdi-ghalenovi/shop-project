@@ -30,43 +30,43 @@ let products = [
     src: "SLIDER/download.png",
   },
   {
-    id: 1,
+    id: 6,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
   },
   {
-    id: 2,
+    id: 7,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
   },
   {
-    id: 3,
+    id: 8,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
   },
   {
-    id: 4,
+    id: 9,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
   },
   {
-    id: 5,
+    id: 10,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
   },
   {
-    id: 3,
+    id: 11,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
   },
   {
-    id: 4,
+    id: 12,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
@@ -84,6 +84,7 @@ const navigationLiChilds = document.querySelectorAll(
   ".top-navigation-container li"
 );
 
+let cards;
 products.forEach(function (product) {
   i++;
   if (i > 5) {
@@ -98,7 +99,7 @@ function createDynamicProducts(container, product) {
     "beforeend",
     '<div class="product-card" onclick="testOne(' +
       product.id +
-      ');"><p>METTI SHOP</p><div class="static-title"></div><div class="product-icon heart-icon"></div><div class="product-card-img" style="background-image: url(' +
+      ');" onload="testOnload() "><p>METTI SHOP</p><div class="static-title"></div><div class="product-icon heart-icon"></div><div class="product-card-img" style="background-image: url(' +
       product.src +
       ')"></div><div class="product-card-title"> ' +
       product.title +
@@ -119,18 +120,19 @@ function testOne(productID) {
 window.addEventListener("scroll", function () {
   console.log(window.scrollY);
   let scrolled = window.scrollY;
+
   if (scrolled > 0) {
     navigationElem.classList.add("active-nav");
     navigationLiChilds.forEach(function (li) {
       li.style.color = "black";
     });
+    hamMenuElem.classList.remove("ham-active");
   } else {
     navigationElem.classList.remove("active-nav");
     navigationLiChilds.forEach(function (li) {
       li.style.color = "white";
     });
   }
-  //213
 });
 
 function showHamMenu(menu) {

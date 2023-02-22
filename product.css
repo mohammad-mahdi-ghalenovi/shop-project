@@ -2,7 +2,7 @@
   display: grid;
   position: relative;
   margin: 100px auto;
-  height: 350px;
+  height: 100%;
   background-color: rgb(0, 0, 0);
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 195px 60px repeat(1, 1fr) 0;
@@ -79,7 +79,7 @@
 }
 
 .basket-icon {
-  bottom: 15px;
+  bottom: 20px;
   right: 15px;
   background-image: url(imgs/icons8-shopping-cart-30.png);
   z-index: 99;
