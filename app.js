@@ -83,6 +83,8 @@ const navigationElem = document.querySelector(".top-navigation-container");
 const navigationLiChilds = document.querySelectorAll(
   ".top-navigation-container li"
 );
+// animated
+const topRateBanner = document.querySelectorAll(".top-rate-banner");
 
 let cards;
 products.forEach(function (product) {
@@ -118,7 +120,7 @@ function testOne(productID) {
 
 // navigation
 window.addEventListener("scroll", function () {
-  console.log(window.scrollY);
+  // console.log(window.scrollY);
   let scrolled = window.scrollY;
 
   if (scrolled > 0) {
@@ -131,6 +133,20 @@ window.addEventListener("scroll", function () {
     navigationElem.classList.remove("active-nav");
     navigationLiChilds.forEach(function (li) {
       li.style.color = "white";
+    });
+  }
+
+  if (scrolled > 600) {
+    topRateBanner.forEach(function (banner) {
+      banner.classList.add("animated-banner");
+
+      banner.addEventListener("animationend", function () {
+        banner.classList.remove("animated-banner");
+      });
+    });
+  } else {
+    topRateBanner.forEach(function (banner) {
+      banner.classList.remove("animated-banner");
     });
   }
 });

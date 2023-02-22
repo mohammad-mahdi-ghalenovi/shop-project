@@ -3,11 +3,11 @@
   grid-row: 3/4;
   grid-column: 1/-1;
   top: -100px;
-  height: 700px;
+  height: 1100px;
   width: 100%;
   background-size: cover;
   background-position: center;
-  /* background-image: url(imgs/wallpaperflare.com_wallpaper_15.jpg); */
+  background-image: url(imgs/wallpaperflare.com_wallpaper_15.jpg);
   background-color: black;
   overflow-x: hidden;
 }
@@ -52,8 +52,10 @@
 
 .slider {
   position: absolute;
-  height: 450px;
-  width: 450px;
+  /* height: 450px;
+  width: 450px; */
+  height: 600px;
+  width: 650px;
   top: 24%;
   right: 150px;
   background-size: cover;
@@ -92,6 +94,17 @@
   padding: 15px 40px;
   cursor: pointer;
   margin-top: 10px;
+}
+
+@media screen and (max-width: 1444px) {
+  .slider-section {
+    height: 700px;
+  }
+
+  .slider {
+    height: 450px;
+    width: 450px;
+  }
 }
 
 @media screen and (max-width: 1024px) {

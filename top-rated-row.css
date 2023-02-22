@@ -31,7 +31,7 @@
 @media screen and (max-width: 1237px) {
   .top-rated-products {
     grid-template-columns: repeat(3, 200px);
-    height: 920px;
+    height: 1020px;
     grid-gap: 10px 10px;
   }
 }
@@ -64,10 +64,10 @@
   grid-column: 1/-1;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(2, 720px);
-  grid-template-rows: 390px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 410px;
   grid-gap: 0 35px;
-  padding: 10px 12px;
+  padding: 15px 12px;
 }
 
 .top-rate-banner {
@@ -82,6 +82,17 @@
   padding: 37px;
   overflow: hidden;
   cursor: pointer;
+  /*  animated  */
+  transform: translateY(-20px);
+  opacity: 0;
+  filter: blur(20px);
+  transition: 0.4s ease-out;
+}
+
+.animated-banner {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0px);
 }
 
 .top-rate-banner .banner-name {
@@ -116,8 +127,8 @@
   right: 3%;
   top: 50%;
   transform: translate(0%, -50%);
-  height: 330px;
-  width: 310px;
+  height: 340px;
+  width: 340px;
   border-radius: 10px;
   background-image: url(imgs/download.png);
   background-position: center;
