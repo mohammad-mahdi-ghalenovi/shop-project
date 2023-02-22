@@ -3,11 +3,11 @@
   grid-row: 3/4;
   grid-column: 1/-1;
   top: -100px;
-  height: 700px;
+  height: 1100px;
   width: 100%;
   background-size: cover;
   background-position: center;
-  /* background-image: url(imgs/wallpaperflare.com_wallpaper_15.jpg); */
+  background-image: url(imgs/wallpaperflare.com_wallpaper_15.jpg);
   background-color: black;
   overflow-x: hidden;
 }
@@ -52,8 +52,10 @@
 
 .slider {
   position: absolute;
-  height: 450px;
-  width: 450px;
+  /* height: 450px;
+  width: 450px; */
+  height: 600px;
+  width: 650px;
   top: 24%;
   right: 150px;
   background-size: cover;
@@ -94,6 +96,17 @@
   margin-top: 10px;
 }
 
+@media screen and (max-width: 1444px) {
+  .slider-section {
+    height: 700px;
+  }
+
+  .slider {
+    height: 450px;
+    width: 450px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .container {
     height: 790px;
@@ -132,7 +145,7 @@
   height: 65px;
   padding-left: 50px;
   bottom: 0;
-  z-index: 99;
+  z-index: 9;
   overflow-x: scroll;
   cursor: pointer;
 }
@@ -178,8 +191,7 @@
 }
 
 .slides::-webkit-scrollbar-thumb {
-  background-color: rgb(102, 47, 165);
-  outline: 1px solid slategrey;
+  background-color: rgb(25, 55, 153);
 }
 
 @media screen and (max-width: 590px) {
