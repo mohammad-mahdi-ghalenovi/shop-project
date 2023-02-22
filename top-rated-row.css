@@ -32,21 +32,21 @@
   .top-rated-products {
     grid-template-columns: repeat(3, 200px);
     height: 1020px;
-    grid-gap: 10px 10px;
+    grid-gap: 15px 15px;
   }
 }
 
 @media screen and (max-width: 674px) {
   .top-rated-products {
     grid-template-columns: repeat(2, 200px);
-    height: 1250px;
+    height: 1390px;
   }
 }
 
 @media screen and (max-width: 466px) {
   .top-rated-products {
-    grid-template-columns: repeat(1, 200px);
-    height: 1950px;
+    grid-template-columns: repeat(1, 1fr);
+    height: 2200px;
   }
 
   .top-rated-title {
@@ -76,17 +76,17 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 40px 1fr;
   background-size: cover;
-  background-image: url(imgs/wallpaperflare.com_wallpaper_15.jpg);
+  background-image: url(imgs/wallpaperflare.com_wallpaper_2.jpg);
   color: white;
   border-radius: 10px;
   padding: 37px;
   overflow: hidden;
   cursor: pointer;
   /*  animated  */
-  transform: translateY(-20px);
+  transform: translateY(-50px);
   opacity: 0;
   filter: blur(20px);
-  transition: 0.4s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .animated-banner {

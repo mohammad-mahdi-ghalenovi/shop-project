@@ -85,6 +85,10 @@ const navigationLiChilds = document.querySelectorAll(
 );
 // animated
 const topRateBanner = document.querySelectorAll(".top-rate-banner");
+const bigBannerImg = document.querySelector(".big-banner-img");
+const bannerProductName = document.querySelector(
+  ".banner-product-name-container"
+);
 
 let cards;
 products.forEach(function (product) {
@@ -118,11 +122,11 @@ function testOne(productID) {
     productID;
 }
 
-// navigation
+// add scroll animations
 window.addEventListener("scroll", function () {
-  // console.log(window.scrollY);
+  console.log(window.scrollY);
   let scrolled = window.scrollY;
-
+  // navigation
   if (scrolled > 0) {
     navigationElem.classList.add("active-nav");
     navigationLiChilds.forEach(function (li) {
@@ -135,8 +139,8 @@ window.addEventListener("scroll", function () {
       li.style.color = "white";
     });
   }
-
-  if (scrolled > 600) {
+  // twice banners
+  if (scrolled > 750) {
     topRateBanner.forEach(function (banner) {
       banner.classList.add("animated-banner");
 
@@ -148,6 +152,14 @@ window.addEventListener("scroll", function () {
     topRateBanner.forEach(function (banner) {
       banner.classList.remove("animated-banner");
     });
+  }
+  // big banner
+  if (scrolled > 1872) {
+    bigBannerImg.classList.add("big-banner-animate");
+    bannerProductName.classList.add("big-banner-animate");
+  } else {
+    bigBannerImg.classList.remove("big-banner-animate");
+    bannerProductName.classList.remove("big-banner-animate");
   }
 });
 

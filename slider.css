@@ -191,8 +191,7 @@
 }
 
 .slides::-webkit-scrollbar-thumb {
-  background-color: rgb(102, 47, 165);
-  outline: 1px solid slategrey;
+  background-color: rgb(25, 55, 153);
 }
 
 @media screen and (max-width: 590px) {
