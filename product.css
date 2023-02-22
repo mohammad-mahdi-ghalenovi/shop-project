@@ -49,9 +49,9 @@
   transition: 0.3s;
 }
 
-.product-card-img:hover {
+/* .product-card-img:hover {
   scale: 1.04;
-}
+} */
 
 .product-card-price {
   align-self: center;

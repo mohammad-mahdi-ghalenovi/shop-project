@@ -8,7 +8,7 @@
 body {
   background-color: black;
   overflow-x: hidden;
-  height: 2000px;
+  zoom: 90%;
 }
 
 .main-container {

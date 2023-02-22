@@ -68,6 +68,7 @@
   grid-template-rows: 1fr;
   background-color: rgba(0, 0, 0, 0.486);
   z-index: 99;
+  transition: 0.4s;
 }
 
 .top-main-title {
@@ -139,7 +140,7 @@
   line-height: 43px;
   list-style-type: none;
   color: white;
-  transition: 0.4s;
+  transition: 1s;
 }
 
 .ham-icons {
@@ -162,6 +163,17 @@
   z-index: 999;
   opacity: 1;
   transform: translateY(0);
+}
+
+.active-nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: white;
+}
+
+.active-li {
+  color: black;
 }
 
 @media screen and (max-width: 780px) {

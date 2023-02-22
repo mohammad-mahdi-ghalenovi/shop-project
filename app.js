@@ -3,58 +3,70 @@ let products = [
     id: 1,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
-    src: "SLIDER/download.pn",
+    src: "SLIDER/download.png",
   },
   {
     id: 2,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
-    src: "SLIDER/download.pn",
+    src: "SLIDER/download.png",
   },
   {
     id: 3,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
-    src: "SLIDER/download.pn",
+    src: "SLIDER/download.png",
   },
   {
     id: 4,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
-    src: "SLIDER/download.pn",
+    src: "SLIDER/download.png",
   },
   {
     id: 5,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
-    src: "SLIDER/download.pn",
+    src: "SLIDER/download.png",
   },
   {
     id: 1,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
-    src: "SLIDER/download.pn",
+    src: "SLIDER/download.png",
   },
   {
     id: 2,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
-    src: "SLIDER/download.pn",
+    src: "SLIDER/download.png",
   },
   {
     id: 3,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
-    src: "SLIDER/download.pn",
+    src: "SLIDER/download.png",
   },
   {
     id: 4,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
-    src: "SLIDER/download.pn",
+    src: "SLIDER/download.png",
   },
   {
     id: 5,
+    title: "Gaming Monitor 144Ghz WP-2134",
+    price: 2000,
+    src: "SLIDER/download.png",
+  },
+  {
+    id: 3,
+    title: "Gaming Monitor 144Ghz WP-2134",
+    price: 2000,
+    src: "SLIDER/download.png",
+  },
+  {
+    id: 4,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
@@ -66,6 +78,11 @@ const featuredProducts = document.querySelector(".featured-products");
 let hamMenuButton = document.querySelector(".ham-menu-btn");
 let hamMenuElem = document.querySelector(".ham-menu");
 let i = 0;
+//navigation
+const navigationElem = document.querySelector(".top-navigation-container");
+const navigationLiChilds = document.querySelectorAll(
+  ".top-navigation-container li"
+);
 
 products.forEach(function (product) {
   i++;
@@ -97,6 +114,24 @@ function testOne(productID) {
     "file:///C:/Users/Win%20Green/Desktop/newProject/index.html?id=" +
     productID;
 }
+
+// navigation
+window.addEventListener("scroll", function () {
+  console.log(window.scrollY);
+  let scrolled = window.scrollY;
+  if (scrolled > 0) {
+    navigationElem.classList.add("active-nav");
+    navigationLiChilds.forEach(function (li) {
+      li.style.color = "black";
+    });
+  } else {
+    navigationElem.classList.remove("active-nav");
+    navigationLiChilds.forEach(function (li) {
+      li.style.color = "white";
+    });
+  }
+  //213
+});
 
 function showHamMenu(menu) {
   menu.classList.toggle("ham-active");

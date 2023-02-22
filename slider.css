@@ -7,7 +7,7 @@
   width: 100%;
   background-size: cover;
   background-position: center;
-  /* background-image: url(imgs/wallpaperflare.com_wallpaper_15.jpg); */
+  background-image: url(imgs/wallpaperflare.com_wallpaper_15.jpg);
   background-color: black;
   overflow-x: hidden;
 }
@@ -132,7 +132,7 @@
   height: 65px;
   padding-left: 50px;
   bottom: 0;
-  z-index: 99;
+  z-index: 9;
   overflow-x: scroll;
   cursor: pointer;
 }

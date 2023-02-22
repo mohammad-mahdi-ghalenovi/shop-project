@@ -52,6 +52,10 @@
   .top-rated-title {
     font-size: 18px;
   }
+
+  .featured-title {
+    font-size: 18px;
+  }
 }
 
 /* BANNERS */
@@ -72,7 +76,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 40px 1fr;
   background-size: cover;
-  background-image: url(../imgs/wallpaperflare.com_wallpaper_15.jpg);
+  background-image: url(imgs/wallpaperflare.com_wallpaper_15.jpg);
   color: white;
   border-radius: 10px;
   padding: 37px;
