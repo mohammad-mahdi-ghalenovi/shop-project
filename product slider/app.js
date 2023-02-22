@@ -1,5 +1,4 @@
 const slider = document.querySelector(".product-slider");
-const slideToButton = document.querySelector(".slide-to");
 let isDown = false;
 let startX;
 let scrollLeft;
