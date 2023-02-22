@@ -6,6 +6,7 @@
   background-color: rgb(74, 71, 71);
   grid-row: 7/8;
   grid-column: 1/-1;
+  overflow: hidden;
 }
 
 .big-banner .big-banner-img {
@@ -95,10 +96,31 @@
     justify-self: center;
     right: auto;
     width: 100%;
+    background-size: 60%;
   }
 
   .banner-product-name-container {
     justify-self: center;
+  }
+}
+
+@media screen and (max-width: 792px) {
+  .big-banner .big-banner-img {
+    width: 100%;
+    height: 500px;
+    background-size: 70%;
+  }
+  .banner-product-name-container {
+    justify-self: center;
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .big-banner .big-banner-img {
+    width: 100%;
+    height: 500px;
+    background-size: 80%;
   }
 }
 
