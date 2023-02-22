@@ -27,7 +27,7 @@
   .featured-products {
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 10px 10px;
-    height: 920px;
+    height: 1020px;
   }
 }
 
@@ -41,20 +41,20 @@
 @media screen and (max-width: 743px) {
   .featured-products {
     grid-template-columns: repeat(3, 1fr);
-    height: 1250px;
+    height: 1350px;
   }
 }
 
 @media screen and (max-width: 643px) {
   .featured-products {
     grid-template-columns: repeat(2, 1fr);
-    height: 1950px;
+    height: 1790px;
   }
 }
 
 @media screen and (max-width: 466px) {
   .featured-products {
     grid-template-columns: repeat(1, 1fr);
-    height: 2650px;
+    height: 2950px;
   }
 }

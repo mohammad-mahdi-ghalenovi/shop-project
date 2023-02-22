@@ -14,8 +14,8 @@ body {
 .main-container {
   display: grid;
   position: absolute;
-  grid-template-rows: 35px 57px 620px 1fr 1fr 1fr;
-  /* top navigation  slider top-rated-row  banners featured-products*/
+  grid-template-rows: 35px 57px 620px 1fr 1fr 1fr ;
+  /* top navigation  slider top-rated-row  banners featured-products big-banner*/
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
   height: 100%;
