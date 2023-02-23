@@ -1,7 +1,6 @@
-.product-slider {
+.recently-products {
   display: grid;
   grid-row: 8/9;
   grid-column: 1/-1;
   height: 600px;
-  background-color: red;
 }

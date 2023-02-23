@@ -158,7 +158,7 @@ window.addEventListener("scroll", function () {
     });
   }
   // big banner
-  if (scrolled > 1672) {
+  if (scrolled > 1772) {
     bigBannerImg.classList.add("big-banner-animate");
     bannerProductName.classList.add("big-banner-animate");
   } else {

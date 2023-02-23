@@ -1,0 +1,102 @@
+.recently-product {
+  display: grid;
+  position: relative;
+  margin: 100px auto;
+  grid-template-columns: 125px 1fr;
+  grid-template-rows: 50px 1fr 40px;
+  height: 170px;
+  width: 425px;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.recently-product .recently-static-title {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  font-size: 13px;
+  color: rgb(167, 166, 166);
+  padding: 8px 30px;
+}
+
+.recently-product .recently-card-img {
+  grid-row: 1/-1;
+  grid-column: 1/2;
+  height: 105%;
+  width: 115%;
+  background-size: 95%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../imgs/download.png);
+  border-radius: 10px;
+}
+
+.recently-product .recently-card-title {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  align-self: center;
+  padding-left: 30px;
+  padding-right: 90px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  transition: 0.4s;
+}
+
+.recently-product .recently-card-title:hover {
+  color: rgb(56, 106, 212);
+}
+
+.recently-product .recently-icon {
+  position: absolute;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  right: 10px;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.heart-icon2 {
+  /* icons for recently */
+  top: 10px;
+  background-image: url(../imgs/icons8-loading-heart-30.png);
+}
+
+.basket-icon2 {
+  /* icons for recently */
+  top: 41px;
+  background-image: url(../imgs/icons8-shopping-cart-30.png);
+}
+
+.recently-product .recently-card-price {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  padding: 1px 30px;
+  font-size: 19px;
+  color: white;
+}
+
+.recently-product .recently-add-shop {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 40px;
+  width: 50px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background: rgba(255, 255, 255, 0);
+  z-index: 5;
+  background-image: url(../imgs/icons8-shopping-cart-30.png);
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.recently-product .recently-add-shop:hover {
+  background-position: 0;
+}
