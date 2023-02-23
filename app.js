@@ -42,31 +42,31 @@ let products = [
     src: "SLIDER/download.png",
   },
   {
-    id: 8,
+    id: 6,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
   },
   {
-    id: 9,
+    id: 7,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
   },
   {
-    id: 10,
+    id: 6,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
   },
   {
-    id: 11,
+    id: 7,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
   },
   {
-    id: 12,
+    id: 7,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
@@ -89,15 +89,19 @@ const bigBannerImg = document.querySelector(".big-banner-img");
 const bannerProductName = document.querySelector(
   ".banner-product-name-container"
 );
+// dragable slider
+const slider = document.querySelector(".product-slider");
 
-let cards;
 products.forEach(function (product) {
   i++;
-  if (i > 5) {
-    createDynamicProducts(featuredProducts, product);
-  } else {
+  if (i < 6) {
     createDynamicProducts(topRatedProducts, product);
-  }
+  } else if (i > 5) {
+    createDynamicProducts(featuredProducts, product);
+  } 
+  // else if (i > 17) {
+  //   createDynamicProducts(slider, product);
+  // }
 });
 
 function createDynamicProducts(container, product) {
@@ -154,7 +158,7 @@ window.addEventListener("scroll", function () {
     });
   }
   // big banner
-  if (scrolled > 1872) {
+  if (scrolled > 1672) {
     bigBannerImg.classList.add("big-banner-animate");
     bannerProductName.classList.add("big-banner-animate");
   } else {
