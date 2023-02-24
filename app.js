@@ -30,43 +30,55 @@ let products = [
     src: "SLIDER/download.png",
   },
   {
-    id: 6,
+    id: 5,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
   },
   {
-    id: 7,
+    id: 5,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
   },
   {
-    id: 6,
+    id: 5,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
   },
   {
-    id: 7,
+    id: 5,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
   },
   {
-    id: 6,
+    id: 5,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
   },
   {
-    id: 7,
+    id: 5,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
   },
   {
-    id: 7,
+    id: 5,
+    title: "Gaming Monitor 144Ghz WP-2134",
+    price: 2000,
+    src: "SLIDER/download.png",
+  },
+  {
+    id: 5,
+    title: "Gaming Monitor 144Ghz WP-2134",
+    price: 2000,
+    src: "SLIDER/download.png",
+  },
+  {
+    id: 5,
     title: "Gaming Monitor 144Ghz WP-2134",
     price: 2000,
     src: "SLIDER/download.png",
@@ -79,7 +91,6 @@ const recentlyProduct = document.querySelector(".recently-products");
 let hamMenuButton = document.querySelector(".ham-menu-btn");
 let hamMenuElem = document.querySelector(".ham-menu");
 let i = 0;
-console.log(recentlyProduct);
 //navigation
 const navigationElem = document.querySelector(".top-navigation-container");
 const navigationLiChilds = document.querySelectorAll(
@@ -92,28 +103,49 @@ const bannerProductName = document.querySelector(
   ".banner-product-name-container"
 );
 
+let isFirstTemplate = true;
 products.forEach(function (product) {
-  // i++;
-  // createDynamicProducts(topRatedProducts, product); // 5 products
-  // createDynamicProducts(featuredProducts, product); // 7 products
-  createRecentlyProducts(recentlyProduct, product); // 8 products
+  i++;
+  if (i < 6) {
+    createDynamicProducts(topRatedProducts, product, isFirstTemplate); // 5 products
+  } else if (i > 5 && i < 13) {
+    createDynamicProducts(featuredProducts, product, isFirstTemplate); // 7 products
+  } else {
+    isFirstTemplate = false;
+    createDynamicProducts(recentlyProduct, product, isFirstTemplate); // 8 products
+  }
 });
 
-function createDynamicProducts(container, product) {
+function createDynamicProducts(container, product, isFirstTemplate) {
   // first template of product
-  container.insertAdjacentHTML(
-    "beforeend",
-    '<div class="product-card" onclick="testOne(' +
-      product.id +
-      ');" onload="testOnload() "><p>METTI SHOP</p><div class="static-title"></div><div class="product-icon heart-icon"></div><div class="product-card-img" style="background-image: url(' +
-      product.src +
-      ')"></div><div class="product-card-title"> ' +
-      product.title +
-      '</div><div class="product-card-price">' +
-      "$" +
-      product.price +
-      '</div> <div class="product-icon basket-icon"></div> <div class="add-product">Select Options</div></div>'
-  );
+  if (isFirstTemplate == true) {
+    container.insertAdjacentHTML(
+      "beforeend",
+      '<div class="product-card" onclick="testOne(' +
+        product.id +
+        ');" onload="testOnload() "><p>METTI SHOP</p><div class="static-title"></div><div class="product-icon heart-icon"></div><div class="product-card-img" style="background-image: url(' +
+        product.src +
+        ')"></div><div class="product-card-title"> ' +
+        product.title +
+        '</div><div class="product-card-price">' +
+        "$" +
+        product.price +
+        '</div> <div class="product-icon basket-icon"></div> <div class="add-product">Select Options</div></div>'
+    );
+  } else if (isFirstTemplate == false) {
+    container.insertAdjacentHTML(
+      "beforeend",
+      '<div class="recently-product"><div class="recently-static-title">Metti</div><div class="recently-icon heart-icon2"></div><div class="recently-card-img" style="background-image: url(' +
+        product.src +
+        ')"></div><div class="recently-card-title"> ' +
+        product.title +
+        ' </div><div class="recently-card-price">' +
+        "$" +
+        "  " +
+        product.price +
+        '</div><div class="recently-icon basket-icon2"></div><button class="recently-add-shop"></button></div>'
+    );
+  }
 }
 
 function testOne(productID) {
@@ -122,25 +154,8 @@ function testOne(productID) {
     productID;
 }
 
-function createRecentlyProducts(container, product) {
-  // second template of product
-  container.insertAdjacentHTML(
-    "beforeend",
-    '<div class="recently-product"><div class="recently-static-title">Metti</div><div class="recently-icon heart-icon2"></div><div class="recently-card-img" style="background-image: url(' +
-      product.src +
-      ')"></div><div class="recently-card-title"> ' +
-      product.title +
-      ' </div><div class="recently-card-price">' +
-      "$" +
-      "  " +
-      product.price +
-      '</div><div class="recently-icon basket-icon2"></div><button class="recently-add-shop"></button></div>'
-  );
-}
-
 // add scroll animations
 window.addEventListener("scroll", function () {
-  console.log(window.scrollY);
   let scrolled = window.scrollY;
   // navigation
   if (scrolled > 0) {
