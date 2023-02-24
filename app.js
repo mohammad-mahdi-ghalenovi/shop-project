@@ -75,9 +75,11 @@ let products = [
 let maincontainerElem = document.querySelector(".main-container");
 const topRatedProducts = document.querySelector(".top-rated-products");
 const featuredProducts = document.querySelector(".featured-products");
+const recentlyProduct = document.querySelector(".recently-products");
 let hamMenuButton = document.querySelector(".ham-menu-btn");
 let hamMenuElem = document.querySelector(".ham-menu");
 let i = 0;
+console.log(recentlyProduct);
 //navigation
 const navigationElem = document.querySelector(".top-navigation-container");
 const navigationLiChilds = document.querySelectorAll(
@@ -89,22 +91,16 @@ const bigBannerImg = document.querySelector(".big-banner-img");
 const bannerProductName = document.querySelector(
   ".banner-product-name-container"
 );
-// dragable slider
-const slider = document.querySelector(".product-slider");
 
 products.forEach(function (product) {
-  i++;
-  if (i < 6) {
-    createDynamicProducts(topRatedProducts, product);
-  } else if (i > 5) {
-    createDynamicProducts(featuredProducts, product);
-  } 
-  // else if (i > 17) {
-  //   createDynamicProducts(slider, product);
-  // }
+  // i++;
+  // createDynamicProducts(topRatedProducts, product); // 5 products
+  // createDynamicProducts(featuredProducts, product); // 7 products
+  createRecentlyProducts(recentlyProduct, product); // 8 products
 });
 
 function createDynamicProducts(container, product) {
+  // first template of product
   container.insertAdjacentHTML(
     "beforeend",
     '<div class="product-card" onclick="testOne(' +
@@ -124,6 +120,22 @@ function testOne(productID) {
   location.href =
     "file:///C:/Users/Win%20Green/Desktop/newProject/index.html?id=" +
     productID;
+}
+
+function createRecentlyProducts(container, product) {
+  // second template of product
+  container.insertAdjacentHTML(
+    "beforeend",
+    '<div class="recently-product"><div class="recently-static-title">Metti</div><div class="recently-icon heart-icon2"></div><div class="recently-card-img" style="background-image: url(' +
+      product.src +
+      ')"></div><div class="recently-card-title"> ' +
+      product.title +
+      ' </div><div class="recently-card-price">' +
+      "$" +
+      "  " +
+      product.price +
+      '</div><div class="recently-icon basket-icon2"></div><button class="recently-add-shop"></button></div>'
+  );
 }
 
 // add scroll animations

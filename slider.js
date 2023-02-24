@@ -118,7 +118,7 @@ function createSlideSigns() {
       "beforeend",
       '<div  class="slide ' +
         img.activeClass +
-        '" onclick="goToSlide(' +
+        '" onclick="goToSlide(' + 
         img.id +
         ')"><div class="slide-icon"></div><p>' +
         img.name +

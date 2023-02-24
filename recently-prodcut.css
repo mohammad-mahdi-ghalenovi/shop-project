@@ -1,11 +1,9 @@
 .recently-product {
   display: grid;
   position: relative;
-  margin: 100px auto;
   grid-template-columns: 125px 1fr;
   grid-template-rows: 50px 1fr 40px;
-  height: 170px;
-  width: 425px;
+  /* width: 425px; */
   border-radius: 10px;
   border: 1px solid gray;
 }
@@ -26,8 +24,14 @@
   background-size: 95%;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(../imgs/download.png);
+  background-image: url(imgs/download.png);
   border-radius: 10px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.recently-product .recently-card-img:hover {
+  transform: translateY(-10px);
 }
 
 .recently-product .recently-card-title {
@@ -62,13 +66,13 @@
 .heart-icon2 {
   /* icons for recently */
   top: 10px;
-  background-image: url(../imgs/icons8-loading-heart-30.png);
+  background-image: url(imgs/icons8-loading-heart-30.png);
 }
 
 .basket-icon2 {
   /* icons for recently */
   top: 41px;
-  background-image: url(../imgs/icons8-shopping-cart-30.png);
+  background-image: url(imgs/icons8-shopping-cart-30.png);
 }
 
 .recently-product .recently-card-price {
@@ -89,14 +93,15 @@
   border-top-left-radius: 10px;
   background: rgba(255, 255, 255, 0);
   z-index: 5;
-  background-image: url(../imgs/icons8-shopping-cart-30.png);
+  background-image: url(imgs/icons8-shopping-cart-30.png);
   background-size: 50%;
   background-position: center;
+  background-color: rgba(38, 83, 179, 0.066);
   background-repeat: no-repeat;
   transition: 0.4s;
   cursor: pointer;
 }
 
 .recently-product .recently-add-shop:hover {
-  background-position: 0;
+  background-color: rgb(38, 83, 179);
 }

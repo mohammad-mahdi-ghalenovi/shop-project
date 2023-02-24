@@ -2,5 +2,22 @@
   display: grid;
   grid-row: 8/9;
   grid-column: 1/-1;
-  height: 600px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 170px);
+  padding: 12px;
+  grid-gap: 15px;
+}
+
+@media screen and (max-width: 1293px) {
+  .recently-products {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 170px);
+  }
+}
+
+@media screen and (max-width: 645px) {
+  .recently-products {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 170px);
+  }
 }
