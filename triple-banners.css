@@ -1,0 +1,15 @@
+.triple-banners {
+  display: grid;
+  grid-row: 9/10;
+  grid-column: 1/-1;
+  background-color: red;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 200px;
+  padding: 10px 50px;
+  grid-gap: 20px;
+}
+
+.triple-product {
+  background-color: yellowgreen;
+  border-radius: 10px;
+}
