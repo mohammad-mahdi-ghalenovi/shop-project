@@ -2,14 +2,77 @@
   display: grid;
   grid-row: 9/10;
   grid-column: 1/-1;
-  background-color: red;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 200px;
+  grid-auto-rows: 200px;
   padding: 10px 50px;
   grid-gap: 20px;
 }
 
 .triple-product {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 1fr;
   background-color: yellowgreen;
   border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(imgs/wallpaperflare.com_wallpaper_5.jpg);
+}
+
+.triple-img {
+  grid-row: 1/3;
+  grid-column: 2/3;
+  background-image: url(imgs/download.png);
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.triple-title {
+  align-self: center;
+  padding: 20px 20px;
+  padding-right: 40px;
+  font-size: 26px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.669);
+  border-top-left-radius: 10px;
+}
+
+.triple-shop-now {
+  font-size: 13px;
+  align-self: center;
+  padding: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.669);
+  border-bottom-left-radius: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1171px) {
+  .triple-title {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+
+  .triple-img {
+    display: none;
+  }
+
+  .triple-shop-now {
+    grid-column: 1/-1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .triple-banners {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .triple-banners {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
