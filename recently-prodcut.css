@@ -106,3 +106,19 @@
   background-color: rgb(38, 83, 179);
 }
 
+@media screen and (max-width: 354px) {
+  .recently-product .recently-card-title {
+    padding: 8px 15px;
+  }
+}
+
+@media screen and (max-width: 273px) {
+  .recently-product .recently-card-title {
+    font-size: 0px;
+  }
+
+  .recently-card-price {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+}
