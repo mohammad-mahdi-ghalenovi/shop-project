@@ -3,7 +3,6 @@
   position: relative;
   grid-template-columns: 125px 1fr;
   grid-template-rows: 50px 1fr 40px;
-  /* width: 425px; */
   border-radius: 10px;
   border: 1px solid gray;
 }
