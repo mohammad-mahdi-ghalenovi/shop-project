@@ -1,4 +1,6 @@
 .footer-section {
+  position: relative;
+  top: 80px;
   height: 900px;
   background-color: purple;
   display: grid;
@@ -81,12 +83,19 @@
 
 .link-row li {
   list-style-type: none;
-  color: white;
+  color: rgb(195, 194, 194);
   font-size: 13px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.link-row li:hover {
+  color: rgb(255, 255, 255);
 }
 
 .link-row li:first-child {
   font-size: 19px;
+  color: white;
   font-weight: bold;
 }
 
