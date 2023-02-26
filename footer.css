@@ -1,10 +1,10 @@
 .footer-section {
-  height: 500px;
+  height: 900px;
   background-color: purple;
   display: grid;
   grid-template-rows: 200px 1fr;
   grid-template-columns: 1fr;
-  grid-row: 9/10;
+  grid-row: 10/11;
   grid-column: 1/-1;
 }
 
@@ -13,20 +13,21 @@
   grid-row: 1/2;
   grid-column: 1/-1;
   display: grid;
+  grid-gap: 20px;
   padding: 40px;
   grid-template-rows: 1fr;
-  grid-template-columns: 1fr 600px 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 
 .footer-sign-up-container .sign-up-title {
   font-size: 23px;
-  padding-left: 15px;
   align-self: center;
 }
 
 .footer-sign-up-container .sign-up-input {
   height: 55px;
-  padding: 12px 10px;
+  width: 100%;
+  padding: 22px 10px;
   font-size: 14px;
   border: 0.5px solid gray;
   border-radius: 10px;
@@ -57,4 +58,20 @@
   grid-row: 2/3;
   background-color: rebeccapurple;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 907px) {
+  .footer-section {
+    grid-template-rows: 300px 1fr;
+  }
+
+  .footer-sign-up-container {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .follow-us-container {
+    grid-row: -1/-2;
+    justify-self: start;
+  }
 }
