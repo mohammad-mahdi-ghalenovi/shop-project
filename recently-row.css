@@ -1,5 +1,6 @@
 .recently-products {
   position: relative;
+  top: 40px;
   display: grid;
   grid-row: 8/9;
   grid-column: 1/-1;
@@ -7,6 +8,15 @@
   grid-template-rows: repeat(2, 170px);
   padding: 12px;
   grid-gap: 15px;
+}
+
+.recently-title {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  color: white;
+  font-size: 25px;
+  top: -47px;
 }
 
 @media screen and (max-width: 1293px) {
@@ -20,5 +30,11 @@
   .recently-products {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, 170px);
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .recently-title {
+    font-size: 21px;
   }
 }

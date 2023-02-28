@@ -55,7 +55,7 @@
 @media screen and (max-width: 466px) {
   .featured-products {
     grid-template-columns: repeat(1, 1fr);
-    height: 3050px;
+    height: 3030px;
   }
 }
 
