@@ -1,0 +1,107 @@
+.product-card {
+  display: grid;
+  position: relative;
+  margin: 100px auto;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 195px 60px repeat(1, 1fr) 0;
+  transition: 0.5s ease;
+  border-radius: 10px;
+  border: 1px solid gray;
+  color: white;
+  overflow: hidden;
+}
+
+.static-title {
+  position: relative;
+  align-self: center;
+  font-size: 10px;
+  color: rgb(202, 197, 197);
+  padding: 0 10px;
+}
+
+.product-card p {
+  position: absolute;
+  color: gray;
+  font-size: 10px;
+  padding-left: 10px;
+  top: 5px;
+}
+
+.product-card-title {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0 11px;
+  padding-right: 25px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.product-card-title:hover {
+  color: rgb(56, 106, 212);
+}
+
+.product-card-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  transition: 0.3s;
+}
+
+/* .product-card-img:hover {
+  scale: 1.04;
+} */
+
+.product-card-price {
+  align-self: center;
+  font-size: 20px;
+  padding: 0 12px;
+  padding-bottom: 15px;
+}
+
+.product-icon {
+  position: absolute;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.heart-icon {
+  top: 13px;
+  right: 13px;
+  background-image: url(../Imgs/Icons/icons8-loading-heart-30.png);
+}
+
+.basket-icon {
+  bottom: 20px;
+  right: 15px;
+  background-image: url(../Imgs/Icons/icons8-shopping-cart-30.png);
+  z-index: 99;
+}
+
+/* product  hover */
+
+.product-card:hover {
+  grid-template-rows: 1fr 195px 60px repeat(1, 1fr) 60px;
+}
+
+.add-product {
+  background: rgb(38, 83, 179);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  line-height: 60px;
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.4s;
+}
+
+.add-product:hover {
+  background: rgba(22, 115, 172, 0.968);
+}
