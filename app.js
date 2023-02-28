@@ -83,6 +83,42 @@
       price: 2000,
       src: "SLIDER/download.png",
     },
+    {
+      id: 5,
+      title: "Gaming Monitor 144Ghz WP-2134",
+      price: 2000,
+      src: "SLIDER/download.png",
+    },
+    {
+      id: 5,
+      title: "Gaming Monitor 144Ghz WP-2134",
+      price: 2000,
+      src: "SLIDER/download.png",
+    },
+    {
+      id: 5,
+      title: "Gaming Monitor 144Ghz WP-2134",
+      price: 2000,
+      src: "SLIDER/download.png",
+    },
+    {
+      id: 5,
+      title: "Gaming Monitor 144Ghz WP-2134",
+      price: 2000,
+      src: "SLIDER/download.png",
+    },
+    {
+      id: 5,
+      title: "Gaming Monitor 144Ghz WP-2134",
+      price: 2000,
+      src: "SLIDER/download.png",
+    },
+    {
+      id: 5,
+      title: "Gaming Monitor 144Ghz WP-2134",
+      price: 2000,
+      src: "SLIDER/download.png",
+    },
   ];
 let maincontainerElem = document.querySelector(".main-container");
 const topRatedProducts = document.querySelector(".top-rated-products");
