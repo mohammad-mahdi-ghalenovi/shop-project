@@ -1,4 +1,5 @@
 .recently-products {
+  position: relative;
   display: grid;
   grid-row: 8/9;
   grid-column: 1/-1;

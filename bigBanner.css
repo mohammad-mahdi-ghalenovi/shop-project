@@ -7,6 +7,8 @@
   grid-row: 7/8;
   grid-column: 1/-1;
   overflow: hidden;
+  position: relative;
+  bottom: 40px;
 }
 
 .big-banner .big-banner-img {

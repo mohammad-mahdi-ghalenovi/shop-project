@@ -6,7 +6,7 @@
   grid-column: 1/-1;
   position: relative;
   display: grid;
-  height: 600px;
+  height: 650px;
   grid-gap: 0 50px;
   padding: 20px;
   justify-content: center;
@@ -41,21 +41,21 @@
 @media screen and (max-width: 743px) {
   .featured-products {
     grid-template-columns: repeat(3, 1fr);
-    height: 1380px;
+    height: 1430px;
   }
 }
 
 @media screen and (max-width: 643px) {
   .featured-products {
     grid-template-columns: repeat(2, 1fr);
-    height: 1790px;
+    height: 1830px;
   }
 }
 
 @media screen and (max-width: 466px) {
   .featured-products {
     grid-template-columns: repeat(1, 1fr);
-    height: 3000px;
+    height: 3050px;
   }
 }
 
