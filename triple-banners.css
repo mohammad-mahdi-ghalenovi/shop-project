@@ -50,8 +50,12 @@
   background-color: rgba(0, 0, 0, 0.669);
   border-bottom-left-radius: 10px;
   cursor: pointer;
+  transition: 0.4s;
 }
 
+.triple-shop-now:hover {
+  background-color: rgb(38, 83, 179);
+}
 @media screen and (max-width: 1171px) {
   .triple-title {
     grid-column: 1/-1;
