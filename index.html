@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="product.css" />
-    <link rel="stylesheet" href="header.css" />
-    <link rel="stylesheet" href="slider.css" />
-    <link rel="stylesheet" href="top-rated-row.css" />
-    <link rel="stylesheet" href="featured-products.css" />
-    <link rel="stylesheet" href="bigBanner.css" />
-    <link rel="stylesheet" href="recently-row.css" />
-    <link rel="stylesheet" href="recently-prodcut.css" />
-    <link rel="stylesheet" href="triple-banners.css" />
-    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="Styles/main.css" />
+    <link rel="stylesheet" href="Styles/product.css" />
+    <link rel="stylesheet" href="Styles/header.css" />
+    <link rel="stylesheet" href="Styles/slider.css" />
+    <link rel="stylesheet" href="Styles/top-rated-row.css" />
+    <link rel="stylesheet" href="Styles/featured-products.css" />
+    <link rel="stylesheet" href="Styles/bigBanner.css" />
+    <link rel="stylesheet" href="Styles/recently-row.css" />
+    <link rel="stylesheet" href="Styles/recently-prodcut.css" />
+    <link rel="stylesheet" href="Styles/triple-banners.css" />
+    <link rel="stylesheet" href="Styles/footer.css" />
   </head>
   <body>
     <div class="main-container">
@@ -139,7 +139,9 @@
       </section>
       <!-- END OF BIG BANNER -->
       <!-- GRID PRODUCTS  -->
-      <div class="recently-products"></div>
+      <div class="recently-products">
+        <div class="recently-title">Recently Products</div>
+      </div>
       <!-- END OF GRID PRODUCTS  -->
       <!-- TRIPLET BANNERS -->
       <section class="triple-banners">
@@ -162,7 +164,7 @@
       <!-- END OF TRIPLET BANNERS -->
       <!-- FOOTER SECTION -->
       <section class="footer-section">
-        <div class="footer-sign-up-container">
+        <div class="footer-sign-up-container prevent-select">
           <div class="sign-up-title">Sign up to Newsletter</div>
           <input
             type="text"
@@ -180,7 +182,7 @@
           </div>
         </div>
         <!-- second row -->
-        <div class="fast-links-container">
+        <div class="fast-links-container prevent-select">
           <ul class="link-row">
             <li>Privacy Policy</li>
             <!--  -->
@@ -222,7 +224,7 @@
             <li>FAQs</li>
           </ul>
         </div>
-        <div class="contact-us-conatiner">
+        <div class="contact-us-conatiner prevent-select">
           <div class="footer-logo">Metti .</div>
           <div class="contact-item">
             <div class="contact-icon"></div>
@@ -238,15 +240,15 @@
           </div>
         </div>
         <div class="footer-copy-container">
-          <p>© 2022 QODE METTI, ALL RIGHTS RESERVED</p>
+          <p>© 2022 METTI SHOP, ALL RIGHTS RESERVED</p>
         </div>
 
         <div class="footer-BG"></div>
       </section>
       <!-- END OF FOOTER SECTION -->
     </div>
-    <script src="app.js"></script>
-    <script src="slider.js"></script>
+    <script src="Js/app.js"></script>
+    <script src="Js/slider.js"></script>
   </body>
 </html>
 <!--  responsive bug at 310px on recently-Section && increase space between all the sections-->
