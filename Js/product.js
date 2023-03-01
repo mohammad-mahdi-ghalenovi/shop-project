@@ -1,33 +1,41 @@
 let products = [
   { id: 1, slides: ["1", "2", "3"] },
-  { id: 2, slides: ["1", "2", "3"] },
-  { id: 3, slides: ["1", "2", "3"] },
+  { id: 2, slides: ["4", "5", "6"] },
+  { id: 3, slides: ["7", "8", "9"] },
 ];
 let productSlider = document.querySelector(".product-slider");
+let productSlides = document.querySelector(".product-slides");
 let i = 0;
 // URL PARAM
 let locationSearch = location.search;
 let SearchUrlParam = new URLSearchParams(locationSearch);
 let targetSearchID = SearchUrlParam.get("id");
+//slider
+let targetSlider = [];
 
-function setSliderId(searchID) {
+// find target Obj
+function findTargetObj(searchID) {
   let mainProduct = products.find(function (product) {
     return product.id == searchID;
   });
 
-  console.log(mainProduct);
+  targetSlider = mainProduct.slides;
 }
+findTargetObj(targetSearchID);
 
-setSliderId(targetSearchID);
-// slider
-// document.body.addEventListener("click", function () {
-//   i++;
-//   targetSlider = products[0].slides;
+// create Click slides
 
-//   if (i > targetSlider.length - 1) {
-//     i = 0;
-//     productSlider.textContent = targetSlider[i];
-//   }
+products.forEach(function (product) {
+  productSlides.insertAdjacentHTML(
+    "beforeend",
+    "<button onclick='changeSlideImg(" +
+      product.id +
+      ")'>Slide no." +
+      product.id +
+      "</button>"
+  );
+});
 
-//   productSlider.textContent = targetSlider[i];
-// });
+function changeSlideImg(slideID) {
+  productSlider.textContent = targetSlider[slideID - 1];
+}
