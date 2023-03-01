@@ -60,12 +60,31 @@
   background-color: purple;
 }
 
-.product-slider {
+.product-slider-container {
   grid-column: 1/2;
-  background-color: yellowgreen;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 180px;
+  background-color: rgb(57, 67, 36);
 }
 
 .product-information {
   grid-column: 2/3;
   background-color: yellow;
+}
+
+.product-slider {
+  background-color: rgb(33, 124, 163);
+  grid-row: 1/2;
+  grid-column: 1/2;
+  width: 70%;
+  justify-self: center;
+  position: relative;
+  top: 20px;
+}
+
+.product-slides {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: violet;
 }
