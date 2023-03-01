@@ -46,3 +46,26 @@
 }
 
 /* product  */
+
+.product-info-section {
+  grid-row: 4/5;
+  grid-column: 1/-1;
+  height: 800px;
+  position: relative;
+  top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  padding: 0 50px;
+  background-color: purple;
+}
+
+.product-slider {
+  grid-column: 1/2;
+  background-color: yellowgreen;
+}
+
+.product-information {
+  grid-column: 2/3;
+  background-color: yellow;
+}
