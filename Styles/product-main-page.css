@@ -9,7 +9,7 @@
   position: absolute;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 35px 57px;
+  grid-template-rows: 35px 57px 50px;
   height: 100%;
   width: 100%;
   background: red;

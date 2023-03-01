@@ -1,0 +1,48 @@
+/* location */
+
+.location-container {
+  grid-row: 3/4;
+  grid-column: 1/-1;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 50px) 70px 55px;
+  padding: 10px 250px;
+}
+
+.location-container > li {
+  position: relative;
+  list-style-type: none;
+  font-size: 10px;
+  align-self: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.location-container > li:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 20px;
+  width: 2px;
+  background-color: rgb(60, 60, 63);
+  left: 0%;
+}
+
+.location-container > li:last-child::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 20px;
+  width: 2px;
+  background-color: rgb(60, 60, 63);
+  right: 0%;
+}
+
+.location-container > li:nth-child(3) {
+  padding: 0 10px;
+}
+
+/* product  */
