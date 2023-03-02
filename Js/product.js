@@ -5,7 +5,6 @@ let products = [
 ];
 let productSlider = document.querySelector(".product-slider");
 let productSlides = document.querySelector(".product-slides");
-let i = 0;
 // URL PARAM
 let locationSearch = location.search;
 let SearchUrlParam = new URLSearchParams(locationSearch);
@@ -19,22 +18,21 @@ function findTargetObj(searchID) {
     return product.id == searchID;
   });
 
-  targetSlider = mainProduct.slides;
+  targetSlider = mainProduct;
+
+  createButtons(targetSlider);
 }
 findTargetObj(targetSearchID);
 
 // create Click slides
-
-products.forEach(function (product) {
-  productSlides.insertAdjacentHTML(
-    "beforeend",
-    "<button onclick='changeSlideImg(" +
-      product.id +
-      ")'>Slide no." +
-      product.id +
-      "</button>"
-  );
-});
+function createButtons(targetSlider) {
+  targetSlider.slides.forEach(function (slide) {
+    productSlides.insertAdjacentHTML(
+      "beforeend",
+      "<button onclick='changeSlideImg()'>Slide no</button>" // set the same background for main slider
+    );
+  });
+}
 
 function changeSlideImg(slideID) {
   productSlider.textContent = targetSlider[slideID - 1];
