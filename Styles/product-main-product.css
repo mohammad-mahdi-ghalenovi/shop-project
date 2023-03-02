@@ -125,3 +125,25 @@
   padding: 30px;
 }
 
+.info-rate-container {
+  /*  */
+  background-color: yellowgreen;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(5, 22px) 120px;
+  grid-template-rows: 22px;
+  align-content: center;
+  padding: 30px;
+}
+
+.info-rate-container > .rate-stars {
+  background-color: white;
+  border-radius: 50%;
+}
+
+.info-rate-container > .rate-reviews {
+  font-size: 12px;
+  padding-left: 10px;
+  align-self: center;
+}
+
