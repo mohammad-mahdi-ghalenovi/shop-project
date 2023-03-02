@@ -147,3 +147,10 @@
   align-self: center;
 }
 
+.info-desc {
+  /*  */
+  padding-top: 20px;
+  padding-right: 150px;
+  padding-left: 30px;
+  color: gray;
+}
