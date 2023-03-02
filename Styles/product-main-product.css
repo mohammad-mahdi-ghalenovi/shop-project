@@ -52,7 +52,7 @@
   grid-column: 1/-1;
   height: 800px;
   position: relative;
-  top: 50px;
+  top: 80px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
@@ -64,27 +64,93 @@
   grid-column: 1/2;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 180px;
+  grid-template-rows: 600px 180px;
   background-color: rgb(57, 67, 36);
 }
 
-.product-information {
-  grid-column: 2/3;
-  background-color: yellow;
-}
+/* SLIDER */
 
 .product-slider {
   background-color: rgb(33, 124, 163);
+  background-position: center;
+  background-size: cover;
   grid-row: 1/2;
   grid-column: 1/2;
-  width: 70%;
+  width: 700px;
   justify-self: center;
   position: relative;
-  top: 20px;
 }
 
 .product-slides {
   display: grid;
+  grid-gap: 4px;
+  padding: 50px;
   grid-template-columns: repeat(3, 1fr);
   background-color: violet;
+}
+
+.slides {
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.slides:hover {
+  transform: translateY(-3px);
+}
+
+/* INFORMATION */
+
+.product-information {
+  grid-column: 2/3;
+  background-color: yellow;
+  display: grid;
+  grid-template-rows: 120px 70px 90px;
+  /* title / price / rate */
+}
+
+.info-name {
+  /*  */
+  position: relative;
+  font-size: 32px;
+  width: 700px;
+  padding: 10px 30px;
+}
+
+.info-price {
+  /*  */
+  align-self: center;
+  font-size: 25px;
+  padding: 30px;
+}
+
+.info-rate-container {
+  /*  */
+  background-color: yellowgreen;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(5, 22px) 120px;
+  grid-template-rows: 22px;
+  align-content: center;
+  padding: 30px;
+}
+
+.info-rate-container > .rate-stars {
+  background-color: white;
+  border-radius: 50%;
+}
+
+.info-rate-container > .rate-reviews {
+  font-size: 12px;
+  padding-left: 10px;
+  align-self: center;
+}
+
+.info-desc {
+  /*  */
+  padding-top: 20px;
+  padding-right: 150px;
+  padding-left: 30px;
+  color: gray;
 }
