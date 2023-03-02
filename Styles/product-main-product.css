@@ -232,3 +232,28 @@
   cursor: pointer;
 }
 
+.info-icons-conatiner {
+  /*   */
+  display: grid;
+  grid-gap: 5px;
+  padding: 30px;
+  grid-template-columns: repeat(2, 25px);
+  grid-template-rows: 25px;
+  align-content: center;
+}
+
+.info-icons-conatiner > .info-icon {
+  background-color: red;
+  border-radius: 50%;
+}
+
+.info-need-help-container {
+  background-color: rgba(128, 128, 128, 0.642);
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+  bottom: 10px;
+  left: 10px;
+  width: 300px;
+  border-radius: 10px;
+}
