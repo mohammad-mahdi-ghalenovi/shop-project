@@ -202,3 +202,33 @@
   align-self: center;
 }
 
+.info-buy-container {
+  /*   */
+  display: grid;
+  grid-gap: 20px;
+  padding: 30px;
+  grid-template-columns: 70px 120px;
+  grid-template-rows: 55px;
+}
+
+.info-buy-container > .buy-input {
+  width: 70%;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.info-buy-container > .buy-add {
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  font-size: 11px;
+  line-height: 55px;
+  text-align: start;
+  padding-left: 7px;
+  cursor: pointer;
+}
+
