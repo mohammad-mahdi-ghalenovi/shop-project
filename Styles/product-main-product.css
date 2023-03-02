@@ -106,8 +106,8 @@
   grid-column: 2/3;
   background-color: yellow;
   display: grid;
-  grid-template-rows: 120px 70px 90px;
-  /* title / price / rate */
+  grid-template-rows: 120px 70px 90px 110px 100px 100px 65px 100px 1fr;
+  /* title / price / rate / options / buy / icons*/
 }
 
 .info-name {
@@ -153,4 +153,32 @@
   padding-right: 150px;
   padding-left: 30px;
   color: gray;
+}
+
+.info-options-container {
+  /*  */
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 70px repeat(4, 80px);
+  grid-template-rows: 1fr;
+  padding: 30px;
+}
+
+.info-options-container > .option-title {
+  align-self: center;
+}
+
+.info-options-container > .option-sizes {
+  background-color: white;
+  text-align: center;
+  line-height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.info-options-container > .option-sizes:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
