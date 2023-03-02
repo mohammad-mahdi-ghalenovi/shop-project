@@ -182,3 +182,23 @@
 .info-options-container > .option-sizes:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
+.info-colors-container {
+  /*  */
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 80px repeat(3, 35px);
+  grid-template-rows: 35px;
+  padding: 30px;
+}
+
+.info-colors-container > .info-color {
+  border-radius: 50%;
+  background-color: yellowgreen;
+  cursor: pointer;
+}
+
+.info-colors-container > .color-title {
+  align-self: center;
+}
+
