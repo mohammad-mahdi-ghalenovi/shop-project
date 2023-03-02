@@ -75,6 +75,8 @@
 
 .product-slider {
   background-color: rgb(33, 124, 163);
+  background-position: center;
+  background-size: cover;
   grid-row: 1/2;
   grid-column: 1/2;
   width: 70%;
@@ -87,4 +89,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background-color: violet;
+}
+
+.slides {
+  background-size: cover;
+  background-position: center;
 }
