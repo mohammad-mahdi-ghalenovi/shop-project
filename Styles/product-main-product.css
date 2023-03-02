@@ -110,3 +110,18 @@
   /* title / price / rate */
 }
 
+.info-name {
+  /*  */
+  position: relative;
+  font-size: 32px;
+  width: 700px;
+  padding: 10px 30px;
+}
+
+.info-price {
+  /*  */
+  align-self: center;
+  font-size: 25px;
+  padding: 30px;
+}
+
