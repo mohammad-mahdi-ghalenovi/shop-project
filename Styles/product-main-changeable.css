@@ -1,5 +1,5 @@
 .changeable-section {
-  grid-row: 5/6;
+  grid-row: 6/7;
   grid-column: 1/-1;
   background-color: aqua;
   display: grid;
@@ -12,9 +12,19 @@
   grid-column: 1/-1;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(50px);
-  grid-template-rows: 1fr;
+  padding: 30px;
+  grid-template-columns: repeat(4, 120px);
+  grid-template-rows: 50px;
 }
 
 .changeable-btn {
+}
+
+.details-container {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  background-color: red;
+  height: 340px;
+  padding: 10px 40px;
+  font-size: 18px;
 }
