@@ -28,6 +28,12 @@ let targetSearchID = SearchUrlParam.get("id");
 let targetSlider = [];
 // changeable section
 let changeableSection = document.querySelector(".changeable-section");
+let specificationItems = [
+  { name: "Weight", desc: "7.25kg" },
+  { name: "dimes", desc: "80 * 89 * 78" },
+  { name: "size", desc: "one size fits all" },
+  { name: "color", desc: "black , orange" },
+];
 
 // find target Obj
 function findTargetObj(searchID) {
@@ -69,16 +75,15 @@ function changeSlideImg(slideID) {
 
 // dynamic changeable section
 function addSectionInnerHtml() {
-  changeableSection.insertAdjacentHTML(
-    "beforeend",
-    '<div class="details-container dynamic-desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Loremipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempincid idunt ut labore et dolore magna aliqua. nisi ut aliquip ex eacommodo consat. Duis aute irure dolor in reprehenderit n volup tate velitesse cillum dolore euy elit ale ruin irure dolor in. Adipisci accusatainterpretaris nec ea. In etiam neglegentur has, his iudico vidisse feugiatid. An nibh homero pri, mutat feugait salutandi id me.</div>'
-  );
+  // changeableSection.insertAdjacentHTML(
+  //   "beforeend",
+  //   '<div class="details-container dynamic-desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Loremipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempincid idunt ut labore et dolore magna aliqua. nisi ut aliquip ex eacommodo consat. Duis aute irure dolor in reprehenderit n volup tate velitesse cillum dolore euy elit ale ruin irure dolor in. Adipisci accusatainterpretaris nec ea. In etiam neglegentur has, his iudico vidisse feugiatid. An nibh homero pri, mutat feugait salutandi id me.</div>'
+  // );
 
-  changeableSection.insertAdjacentHTML(
-    "beforeend",
-    '<div class="details-container dynamic-additional">  <div>    <p>RAM Size :</p>    16GB , 32Gb , 8GB  </div>  <div>    <p>Colors :</p>    White , Orange , Grey  </div></div>'
-  );
+  // changeableSection.insertAdjacentHTML(
+  //   "beforeend",
+  //   '<div class="details-container dynamic-additional">  <div>    <p>RAM Size :</p>    16GB , 32Gb , 8GB  </div>  <div>    <p>Colors :</p>    White , Orange , Grey  </div></div>'
+  // );
 
-  
 }
 addSectionInnerHtml();
