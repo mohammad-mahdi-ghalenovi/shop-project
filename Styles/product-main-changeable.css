@@ -76,3 +76,10 @@
   grid-template-columns: 100px 1fr;
   padding: 30px;
 }
+
+@media screen and (max-width: 1120px) {
+  .changeable-buttons-container {
+    /* grid-template-columns: repeat(4, 1fr); */
+    display: none;
+  }
+}
