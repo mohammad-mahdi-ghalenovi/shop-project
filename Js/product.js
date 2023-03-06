@@ -115,6 +115,7 @@ function aditionalInfoSetHandler() {
 function specInfoSetHandler() {
   detailsContainerElem.classList = "details-container  dynamic-spec ";
   detailsContainerElem.innerHTML = "";
+  window.scrollTo(0, 933);
   specificationItems.forEach(function (item) {
     detailsContainerElem.insertAdjacentHTML(
       "beforeend",
@@ -145,4 +146,11 @@ changeableButton.forEach(function (btn) {
         break;
     }
   });
+});
+
+window.addEventListener("scroll", function () {
+  console.log(window.scrollY);
+  if (window.scrollY > 553) {
+    // alert("ks");
+  }
 });
