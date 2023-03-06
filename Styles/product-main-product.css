@@ -268,9 +268,9 @@
 @media screen and (max-width: 1120px) {
   .product-info-section {
     top: 20px;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 800px 1fr;
     grid-template-columns: 1fr;
-    height: 2100px;
+    height: 1800px;
   }
 
   .product-slider {
@@ -282,4 +282,9 @@
     grid-row: 2/3;
     grid-column: 1/-1;
   }
+
+  .location-container {
+    justify-content: center;
+  }
+
 }
