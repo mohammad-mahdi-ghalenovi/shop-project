@@ -147,10 +147,3 @@ changeableButton.forEach(function (btn) {
     }
   });
 });
-
-window.addEventListener("scroll", function () {
-  console.log(window.scrollY);
-  if (window.scrollY > 553) {
-    // alert("ks");
-  }
-});
