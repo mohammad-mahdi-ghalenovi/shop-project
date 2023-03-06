@@ -93,31 +93,56 @@ function changeSlideImg(slideID) {
 }
 
 // dynamic changeable section
-function addSectionInnerHtml() {
-  // changeableSection.insertAdjacentHTML(
-  //   "beforeend",
-  //   '<div class="details-container dynamic-desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Loremipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempincid idunt ut labore et dolore magna aliqua. nisi ut aliquip ex eacommodo consat. Duis aute irure dolor in reprehenderit n volup tate velitesse cillum dolore euy elit ale ruin irure dolor in. Adipisci accusatainterpretaris nec ea. In etiam neglegentur has, his iudico vidisse feugiatid. An nibh homero pri, mutat feugait salutandi id me.</div>'
-  // );
-  // changeableSection.insertAdjacentHTML(
-  //   "beforeend",
-  //   '<div class="details-container dynamic-additional">  <div>    <p>RAM Size :</p>    16GB , 32Gb , 8GB  </div>  <div>    <p>Colors :</p>    White , Orange , Grey  </div></div>'
-  // );
-}
-addSectionInnerHtml();
 
-specificationItems.forEach(function (item) {
+function descInfoSetHandler() {
+  detailsContainerElem.className = "details-container dynamic-desc";
+  detailsContainerElem.innerHTML = "";
   detailsContainerElem.insertAdjacentHTML(
     "beforeend",
-    '<div class="spec-item">' + item.name + " :<p> " + item.desc + "</p></div>"
+    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Loremipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempincid idunt ut labore et dolore magna aliqua. nisi ut aliquip ex eacommodo consat. Duis aute irure dolor in reprehenderit n volup tate velitesse cillum dolore euy elit ale ruin irure dolor in. Adipisci accusatainterpretaris nec ea. In etiam neglegentur has, his iudico vidisse feugiatid. An nibh homero pri, mutat feugait salutandi id me."
   );
-});
+}
+
+function aditionalInfoSetHandler() {
+  detailsContainerElem.className = "details-container  dynamic-additional";
+  detailsContainerElem.innerHTML = "";
+  detailsContainerElem.insertAdjacentHTML(
+    "beforeend",
+    "<div>    <p>RAM Size :</p>    16GB , 32Gb , 8GB  </div>  <div>    <p>Colors :</p>    White , Orange , Grey  </div>"
+  );
+}
+
+function specInfoSetHandler() {
+  detailsContainerElem.classList = "details-container  dynamic-spec ";
+  detailsContainerElem.innerHTML = "";
+  specificationItems.forEach(function (item) {
+    detailsContainerElem.insertAdjacentHTML(
+      "beforeend",
+      '<div class="spec-item">' +
+        item.name +
+        " :<p> " +
+        item.desc +
+        "</p></div>"
+    );
+  });
+}
 
 let targetButtonId = null;
-
 changeableButton.forEach(function (btn) {
   btn.addEventListener("click", function (event) {
-    targetButtonId = event.target.id;
+    targetButtonId = event.target.id * 1;
+    detailsContainerElem.innerHTML = "";
+
     switch (targetButtonId) {
+      case 1:
+        descInfoSetHandler();
+        break;
+      case 2:
+        aditionalInfoSetHandler();
+        break;
+      case 3:
+        specInfoSetHandler();
+        break;
     }
   });
 });
