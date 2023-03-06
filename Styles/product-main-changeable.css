@@ -23,7 +23,7 @@
 .details-container {
   grid-row: 2/3;
   grid-column: 1/-1;
-  background-color: red;
+  background-color: white;
   transition: 0.4s ease;
   padding: 10px 40px;
 }
@@ -49,17 +49,16 @@
   grid-template-rows: repeat(12, 50px);
   grid-auto-rows: 50px;
   grid-template-columns: repeat(1, 1fr);
-  height: 600px;
   padding: 30px;
 }
 
 .spec-item {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.13);
-  color: white;
-  border: 1px solid gray;
+  color: black;
+  border-bottom: 1px solid gray;
   line-height: 50px;
   padding: 0 15px;
+  font-size: 20px;
 }
 
 .spec-item p {

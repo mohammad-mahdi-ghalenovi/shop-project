@@ -34,6 +34,24 @@ let specificationItems = [
   { name: "Weight", desc: "7.25kg" },
   { name: "dimes", desc: "80 * 89 * 78" },
   { name: "size", desc: "one size fits all" },
+  { name: "size", desc: "one size fits all" },
+  { name: "size", desc: "one size fits all" },
+  { name: "size", desc: "one size fits all" },
+  { name: "size", desc: "one size fits all" },
+  { name: "size", desc: "one size fits all" },
+  { name: "size", desc: "one size fits all" },
+  { name: "size", desc: "one size fits all" },
+  { name: "size", desc: "one size fits all" },
+  { name: "size", desc: "one size fits all" },
+  { name: "size", desc: "one size fits all" },
+  { name: "size", desc: "one size fits all" },
+  { name: "size", desc: "one size fits all" },
+  { name: "size", desc: "one size fits all" },
+  { name: "size", desc: "one size fits all" },
+  { name: "size", desc: "one size fits all" },
+  { name: "size", desc: "one size fits all" },
+  { name: "size", desc: "one size fits all" },
+  { name: "size", desc: "one size fits all" },
 ];
 
 // find target Obj
@@ -99,7 +117,7 @@ let targetButtonId = null;
 changeableButton.forEach(function (btn) {
   btn.addEventListener("click", function (event) {
     targetButtonId = event.target.id;
-    switch(targetButtonId){
+    switch (targetButtonId) {
     }
   });
 });
