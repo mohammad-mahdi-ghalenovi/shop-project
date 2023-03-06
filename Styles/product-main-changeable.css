@@ -23,7 +23,7 @@
 .details-container {
   grid-row: 2/3;
   grid-column: 1/-1;
-  background-color: red;
+  background-color: white;
   transition: 0.4s ease;
   padding: 10px 40px;
 }
@@ -45,4 +45,41 @@
 
 /*  */
 .dynamic-spec {
+  display: grid;
+  grid-template-rows: repeat(12, 50px);
+  grid-auto-rows: 50px;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 30px;
+}
+
+.spec-item {
+  position: relative;
+  color: black;
+  border-bottom: 1px solid gray;
+  line-height: 50px;
+  padding: 0 15px;
+  font-size: 20px;
+}
+
+.spec-item p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 350px;
+}
+
+/*  */
+.review-container {
+  display: grid;
+  height: 600px;
+  grid-template-rows: 40px 50px 60px 60px;
+  grid-template-columns: 100px 1fr;
+  padding: 30px;
+}
+
+@media screen and (max-width: 1120px) {
+  .changeable-buttons-container {
+    /* grid-template-columns: repeat(4, 1fr); */
+    display: none;
+  }
 }

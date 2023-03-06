@@ -5,6 +5,10 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+:root {
+  scroll-behavior: smooth;
+}
+
 .main-product-page {
   position: absolute;
   display: grid;

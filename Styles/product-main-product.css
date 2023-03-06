@@ -50,9 +50,9 @@
 .product-info-section {
   grid-row: 4/5;
   grid-column: 1/-1;
-  height: 800px;
   position: relative;
   top: 80px;
+  height: 800px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
@@ -79,6 +79,7 @@
   width: 700px;
   justify-self: center;
   position: relative;
+  transition: 0.4s;
 }
 
 .product-slides {
@@ -114,7 +115,7 @@
   /*  */
   position: relative;
   font-size: 32px;
-  width: 700px;
+  /* width: 700px; */
   padding: 10px 30px;
 }
 
@@ -159,7 +160,7 @@
   /*  */
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: 70px repeat(4, 80px);
+  grid-template-columns: 70px repeat(3, 80px);
   grid-template-rows: 1fr;
   padding: 30px;
 }
@@ -256,4 +257,95 @@
   left: 10px;
   width: 300px;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 1340px) {
+  .product-slider {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .product-info-section {
+    top: 20px;
+    grid-template-rows: 800px 1fr;
+    grid-template-columns: 1fr;
+    height: 1800px;
+    padding: 0;
+  }
+
+  .product-slider {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+  }
+
+  .product-information {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+  }
+
+  .location-container {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .info-name {
+    font-size: 20px;
+  }
+
+  .info-options-container {
+    position: relative;
+    top: 20px;
+  }
+
+  .product-slider {
+    width: 100%;
+  }
+
+  .location-container {
+    display: none;
+  }
+
+  .info-colors-container {
+    grid-template-columns: 69px repeat(3, 35px);
+  }
+
+  .info-options-container {
+    grid-template-columns: 70px repeat(3, 1fr);
+    font-size: 14px;
+  }
+
+  .info-desc {
+    padding: 0px 10px;
+    font-size: 15px;
+  }
+
+  .info-rate-container {
+    grid-template-columns: repeat(5, 22px) 1fr;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .info-buy-container {
+    justify-content: center;
+  }
+
+  .info-buy-container > .buy-input {
+    width: 70%;
+  }
+
+  .info-buy-container > .buy-add {
+    padding-left: 7px;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 317px) {
+  .product-information {
+    grid-template-rows: 120px 70px 90px 110px 100px 100px 65px 100px 180px;
+  }
+  .info-need-help-container {
+    width: 70%;
+  }
 }
