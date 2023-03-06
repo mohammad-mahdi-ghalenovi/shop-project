@@ -67,3 +67,12 @@
   transform: translateY(-50%);
   padding-left: 350px;
 }
+
+/*  */
+.review-container {
+  display: grid;
+  height: 600px;
+  grid-template-rows: 40px 50px 60px 60px;
+  grid-template-columns: 100px 1fr;
+  padding: 30px;
+}

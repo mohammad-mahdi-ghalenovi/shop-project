@@ -114,7 +114,7 @@
   /*  */
   position: relative;
   font-size: 32px;
-  width: 700px;
+  /* width: 700px; */
   padding: 10px 30px;
 }
 
@@ -256,4 +256,10 @@
   left: 10px;
   width: 300px;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 1497px) {
+  .product-slider {
+    /* width: aut; */
+  }
 }
