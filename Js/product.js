@@ -53,6 +53,34 @@ let specificationItems = [
   { name: "size", desc: "one size fits all" },
   { name: "size", desc: "one size fits all" },
 ];
+// related producrs
+let relatedProductSection = document.querySelector(".related-product-section");
+let relatedProducts = [
+  {
+    id: 6,
+    title: "I5 Cpu",
+    price: 1200,
+    src: "Imgs/products/cpu.png",
+  },
+  {
+    id: 7,
+    title: "Cpu Fan",
+    price: 200,
+    src: "Imgs/products/cpu-fan.png",
+  },
+  {
+    id: 8,
+    title: "HeadPhone",
+    price: 450,
+    src: "Imgs/products/game-headphone.png",
+  },
+  {
+    id: 9,
+    title: "Gaming Keyboard",
+    price: 340,
+    src: "Imgs/products/keyboard.png",
+  },
+];
 
 // find target Obj
 function findTargetObj(searchID) {
@@ -91,7 +119,6 @@ function changeSlideImg(slideID) {
     "url(" + targetSlider.slides[slideID - 1];
   +");";
 }
-
 
 // dynamic changeable section
 
@@ -163,3 +190,24 @@ changeableButton.forEach(function (btn) {
     }
   });
 });
+
+// related products
+
+function setRelatedProducts() {
+  relatedProducts.forEach(function (product) {
+    relatedProductSection.insertAdjacentHTML(
+      "beforeend",
+      '<div class="product-card" onclick="testOne(' +
+        product.id +
+        ');" ><p>METTI SHOP</p><div class="static-title"></div><div class="product-icon heart-icon"></div><div class="product-card-img" style="background-image: url(' +
+        product.src +
+        ')"></div><div class="product-card-title"> ' +
+        product.title +
+        '</div><div class="product-card-price">' +
+        "$" +
+        product.price +
+        '</div> <div class="product-icon basket-icon"></div> <div class="add-product">Select Options</div></div>'
+    );
+  });
+}
+setRelatedProducts();
