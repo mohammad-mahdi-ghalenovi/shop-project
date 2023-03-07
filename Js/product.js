@@ -37,68 +37,126 @@ let products = [
     title: "Graphic Card",
     price: 2000,
     src: "Imgs/products/card.png",
+    slides: [
+      "Imgs/products/card.png",
+      "Imgs/products/card.png",
+      "Imgs/products/card.png",
+    ],
   },
   {
     id: 5,
     title: "Controller",
     price: 500,
     src: "Imgs/products/control.png",
+    slides: [
+      "Imgs/products/control.png",
+      "Imgs/products/control.png",
+      "Imgs/products/control.png",
+    ],
   },
   {
     id: 6,
     title: "I5 Cpu",
     price: 1200,
     src: "Imgs/products/cpu.png",
+    slides: [
+      "Imgs/products/cpu.png",
+      "Imgs/products/cpu.png",
+      "Imgs/products/cpu.png",
+    ],
   },
   {
     id: 7,
     title: "Cpu Fan",
     price: 200,
     src: "Imgs/products/cpu-fan.png",
+    slides: [
+      "Imgs/products/cpu-fan..png",
+      "Imgs/products/cpu-fan..png",
+      "Imgs/products/cpu-fan..png",
+    ],
   },
   {
     id: 8,
     title: "HeadPhone",
     price: 450,
     src: "Imgs/products/game-headphone.png",
+    slides: [
+      "Imgs/products/game-headphone.png",
+      "Imgs/products/game-headphone.png",
+      "Imgs/products/game-headphone.png",
+    ],
   },
   {
     id: 9,
     title: "Gaming Keyboard",
     price: 340,
     src: "Imgs/products/keyboard.png",
+    slides: [
+      "Imgs/products/keyboard.png",
+      "Imgs/products/keyboard.png",
+      "Imgs/products/keyboard.png",
+    ],
   },
   {
     id: 10,
     title: "Gaming Mouse",
     price: 150,
     src: "Imgs/products/mouse.png",
+    slides: [
+      "Imgs/products/mouse.png",
+      "Imgs/products/mouse.png",
+      "Imgs/products/mouse.png",
+    ],
   },
   {
     id: 11,
     title: "Gaming Table",
     price: 1000,
     src: "Imgs/products/table.png",
+    slides: [
+      "Imgs/products/table.png",
+      "Imgs/products/table.png",
+      "Imgs/products/table.png",
+    ],
   },
   {
     id: 12,
     title: " SAM TV",
     price: 1300,
     src: "Imgs/products/tv.png",
+    slides: [
+      "Imgs/products/tv.png",
+      "Imgs/products/tv.png",
+      "Imgs/products/tv.png",
+    ],
   },
   {
     id: 13,
     title: "USB",
     price: 30,
     src: "Imgs/products/usb.png",
+    slides: [
+      "Imgs/products/usb.png",
+      "Imgs/products/usb.png",
+      "Imgs/products/usb.png",
+    ],
   },
   {
     id: 14,
     title: "Gaming Mouse",
     price: 150,
     src: "Imgs/products/mouse.png",
+    slides: [
+      "Imgs/products/mouse.png",
+      "Imgs/products/mouse.png",
+      "Imgs/products/mouse.png",
+    ],
   },
 ];
+// onload elems
+let infoNameElem = document.querySelector(".info-name");
+let infoPriceElem = document.querySelector(".info-price");
 
 let productSlider = document.querySelector(".product-slider");
 let productSlides = document.querySelector(".product-slides");
@@ -181,11 +239,13 @@ function findTargetObj(searchID) {
 
   createButtons(targetSlider, i);
   setProductsInformation(mainProduct);
+  console.log(mainProduct);
 }
 findTargetObj(targetSearchID);
 
 function setProductsInformation(mainProduct) {
-  
+  infoNameElem.textContent = mainProduct.title;
+  infoPriceElem.textContent = "$" + mainProduct.price;
 }
 
 // create Click slides
