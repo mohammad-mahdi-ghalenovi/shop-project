@@ -1,22 +1,105 @@
 let products = [
   {
     id: 1,
+    title: "Gaming Glass Case ",
+    price: 3000,
+    src: "Imgs/products/case.png",
     slides: [
-      "Imgs/wallpaperflare.com_wallpaper_15.jpg",
-      "Imgs/wallpaperflare.com_wallpaper_2.jpg",
-      "Imgs/wallpaperflare.com_wallpaper_5.jpg",
+      "Imgs/products/case.png",
+      "Imgs/products/case.png",
+      "Imgs/products/case.png",
     ],
   },
   {
     id: 2,
+    title: "HDMI Cable ",
+    price: 30,
+    src: "Imgs/products/cable.png",
     slides: [
-      "Imgs/wallpaperflare.com_wallpaper_15.jpg",
-      "Imgs/wallpaperflare.com_wallpaper_5.jpg",
-      "Imgs/wallpaperflare.com_wallpaper_2.jpg",
+      "Imgs/products/cable.png",
+      "Imgs/products/cable.png",
+      "Imgs/products/cable.png",
     ],
   },
-  { id: 3, slides: ["7", "8", "9"] },
+  {
+    id: 3,
+    title: "Camera",
+    price: 500,
+    src: "Imgs/products/camera.png",
+    slides: [
+      "Imgs/products/camera.png",
+      "Imgs/products/camera.png",
+      "Imgs/products/camera.png",
+    ],
+  },
+  {
+    id: 4,
+    title: "Graphic Card",
+    price: 2000,
+    src: "Imgs/products/card.png",
+  },
+  {
+    id: 5,
+    title: "Controller",
+    price: 500,
+    src: "Imgs/products/control.png",
+  },
+  {
+    id: 6,
+    title: "I5 Cpu",
+    price: 1200,
+    src: "Imgs/products/cpu.png",
+  },
+  {
+    id: 7,
+    title: "Cpu Fan",
+    price: 200,
+    src: "Imgs/products/cpu-fan.png",
+  },
+  {
+    id: 8,
+    title: "HeadPhone",
+    price: 450,
+    src: "Imgs/products/game-headphone.png",
+  },
+  {
+    id: 9,
+    title: "Gaming Keyboard",
+    price: 340,
+    src: "Imgs/products/keyboard.png",
+  },
+  {
+    id: 10,
+    title: "Gaming Mouse",
+    price: 150,
+    src: "Imgs/products/mouse.png",
+  },
+  {
+    id: 11,
+    title: "Gaming Table",
+    price: 1000,
+    src: "Imgs/products/table.png",
+  },
+  {
+    id: 12,
+    title: " SAM TV",
+    price: 1300,
+    src: "Imgs/products/tv.png",
+  },
+  {
+    id: 13,
+    title: "USB",
+    price: 30,
+    src: "Imgs/products/usb.png",
+  },
+  {
+    id: 14,
+    title: "Gaming Mouse",
+    price: 150,
+    src: "Imgs/products/mouse.png",
+  },
 ];
+
 let productSlider = document.querySelector(".product-slider");
 let productSlides = document.querySelector(".product-slides");
 let i = 0;
@@ -97,8 +180,13 @@ function findTargetObj(searchID) {
   targetSlider = mainProduct;
 
   createButtons(targetSlider, i);
+  setProductsInformation(mainProduct);
 }
-// findTargetObj(targetSearchID);
+findTargetObj(targetSearchID);
+
+function setProductsInformation(mainProduct) {
+  
+}
 
 // create Click slides
 function createButtons(targetSlider) {
@@ -217,3 +305,5 @@ function setRelatedProducts() {
   });
 }
 setRelatedProducts();
+
+document.body.style.zoom = "90%";

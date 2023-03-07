@@ -5,6 +5,10 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+  zoom: 90%;
+}
+
 :root {
   scroll-behavior: smooth;
 }

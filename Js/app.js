@@ -187,7 +187,7 @@ function createDynamicProducts(container, product, isFirstTemplate) {
 
 function testOne(productID) {
   location.href =
-    "file:///C:/Users/Win%20Green/Desktop/newProject/index.html?id=" +
+    "file:///C:/Users/Win%20Green/Desktop/newProject/product.html?id=" +
     productID;
 }
 
