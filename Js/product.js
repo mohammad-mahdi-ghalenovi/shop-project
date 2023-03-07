@@ -92,6 +92,7 @@ function changeSlideImg(slideID) {
   +");";
 }
 
+
 // dynamic changeable section
 
 function descInfoSetHandler() {
@@ -128,6 +129,18 @@ function specInfoSetHandler() {
   });
 }
 
+function reviewInfoSetHandler() {
+  detailsContainerElem.className = "details-container dynamic-review";
+  detailsContainerElem.innerHTML = "";
+  window.scrollTo(0, 933);
+  for (let i = 0; i < 2; i++) {
+    detailsContainerElem.insertAdjacentHTML(
+      "beforeend",
+      '<div class="review-container">    <div class="review-profile"></div>    <div class="info-rate-container">      <div class="rate-stars"></div>      <div class="rate-stars"></div>      <div class="rate-stars"></div>      <div class="rate-stars"></div>      <div class="rate-stars"></div>    </div>    <div class="review-since">OCTOBER 19, 2022</div>    <div class="review-name">Metti Gh</div>    <div class="review-desc">      eserunt, voluptates cumque! Perferendis rem distinctio sapiente      laudantium exercitationem, maxime ad mollitia, quisquam deserunt      sequi eligendi molestiae excepturi!     </div>   </div>'
+    );
+  }
+}
+
 let targetButtonId = null;
 changeableButton.forEach(function (btn) {
   btn.addEventListener("click", function (event) {
@@ -143,6 +156,9 @@ changeableButton.forEach(function (btn) {
         break;
       case 3:
         specInfoSetHandler();
+        break;
+      case 4:
+        reviewInfoSetHandler();
         break;
     }
   });
