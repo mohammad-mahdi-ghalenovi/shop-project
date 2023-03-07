@@ -80,6 +80,12 @@ let relatedProducts = [
     price: 340,
     src: "Imgs/products/keyboard.png",
   },
+  {
+    id: 7,
+    title: "Cpu Fan",
+    price: 200,
+    src: "Imgs/products/cpu-fan.png",
+  },
 ];
 
 // find target Obj
