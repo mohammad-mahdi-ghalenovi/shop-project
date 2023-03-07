@@ -7,6 +7,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 195px 60px repeat(1, 1fr) 0;
   transition: 0.5s ease;
+  width: 200px;
   border-radius: 10px;
   border: 1px solid gray;
   color: white;
@@ -75,13 +76,13 @@
 .heart-icon {
   top: 13px;
   right: 13px;
-  background-image: url(../Imgs/Icons/icons8-loading-heart-30.png);
+  background-image: url(../Imgs/Icons/icons8-melting-heart-40.png);
 }
 
 .basket-icon {
   bottom: 20px;
   right: 15px;
-  background-image: url(../Imgs/Icons/icons8-shopping-cart-30.png);
+  background-image: url(../Imgs/Icons/icons8-shopping-cart-40.png);
   z-index: 99;
 }
 

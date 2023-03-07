@@ -9,6 +9,10 @@
   overflow: hidden;
   position: relative;
   bottom: 40px;
+  background-image: url(../Imgs/Wallpaper_4K3D_8214.jpg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: 10px 0px 0px 10px #4e57ef;
 }
 
 .big-banner .big-banner-img {

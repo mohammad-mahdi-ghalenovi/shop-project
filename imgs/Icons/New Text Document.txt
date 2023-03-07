@@ -1,0 +1,16 @@
+basket 30 - 40
+heart 30 - 40 
+user 40 
+arrow 40 
+magnifer 40 
+
+car 30
+location 30 
+account 30 
+card 30 
+
+camera 30 
+headphone 30 
+mouse 30 
+washing mechine 30 
+tv 30 

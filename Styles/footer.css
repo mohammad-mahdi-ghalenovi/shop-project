@@ -17,8 +17,7 @@
   background-size: cover;
   background-position: center;
   background-image: url(../imgs/6901c688259729.5dd19fb662b4b.jpg);
-  filter: brightness(20%
-  );
+  filter: brightness(20%);
   z-index: -2;
 }
 
@@ -90,7 +89,13 @@
 .follow-us-container .follow-icon {
   grid-row: 2/3;
   border-radius: 50%;
-  background-color: white;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.follow-us-container .follow-icon:first-child {
+  background-color: red;
 }
 
 /* second row */
@@ -167,7 +172,8 @@
 
 .contact-item .contact-icon {
   position: absolute;
-  background-color: white;
+  background-position: center;
+  background-size: cover;
   border-radius: 50%;
   top: -10%;
   left: 20px;
@@ -268,7 +274,8 @@
 
   .contact-item .contact-icon {
     position: absolute;
-    background-color: white;
+    background-position: center;
+    background-size: cover;
     border-radius: 50%;
     top: -10%;
     left: 20px;

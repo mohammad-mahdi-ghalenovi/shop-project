@@ -1,123 +1,123 @@
 let products = [
   {
     id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
-    price: 2000,
-    src: "Imgs/download.png",
+    title: "Gaming Glass Case ",
+    price: 3000,
+    src: "Imgs/products/case.png",
   },
   {
-    id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
-    price: 2000,
-    src: "Imgs/download.png",
+    id: 2,
+    title: "HDMI Cable ",
+    price: 30,
+    src: "Imgs/products/cable.png",
   },
   {
-    id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
-    price: 2000,
-    src: "Imgs/download.png",
+    id: 3,
+    title: "Camera",
+    price: 500,
+    src: "Imgs/products/camera.png",
   },
   {
-    id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
+    id: 4,
+    title: "Graphic Card",
     price: 2000,
-    src: "Imgs/download.png",
+    src: "Imgs/products/card.png",
   },
   {
-    id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
-    price: 2000,
-    src: "Imgs/download.png",
+    id: 5,
+    title: "Controller",
+    price: 500,
+    src: "Imgs/products/control.png",
   },
   {
-    id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
-    price: 2000,
-    src: "Imgs/download.png",
+    id: 6,
+    title: "I5 Cpu",
+    price: 1200,
+    src: "Imgs/products/cpu.png",
   },
   {
-    id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
-    price: 2000,
-    src: "Imgs/download.png",
+    id: 7,
+    title: "Cpu Fan",
+    price: 200,
+    src: "Imgs/products/cpu-fan.png",
   },
   {
-    id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
-    price: 2000,
-    src: "Imgs/download.png",
+    id: 8,
+    title: "HeadPhone",
+    price: 450,
+    src: "Imgs/products/game-headphone.png",
   },
   {
-    id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
-    price: 2000,
-    src: "Imgs/download.png",
+    id: 9,
+    title: "Gaming Keyboard",
+    price: 340,
+    src: "Imgs/products/keyboard.png",
   },
   {
-    id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
-    price: 2000,
-    src: "Imgs/download.png",
+    id: 10,
+    title: "Gaming Mouse",
+    price: 150,
+    src: "Imgs/products/mouse.png",
   },
   {
-    id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
-    price: 2000,
-    src: "Imgs/download.png",
+    id: 11,
+    title: "Gaming Table",
+    price: 1000,
+    src: "Imgs/products/table.png",
   },
   {
-    id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
-    price: 2000,
-    src: "Imgs/download.png",
+    id: 12,
+    title: " SAM TV",
+    price: 1300,
+    src: "Imgs/products/tv.png",
   },
   {
-    id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
-    price: 2000,
-    src: "Imgs/download.png",
+    id: 13,
+    title: "USB",
+    price: 30,
+    src: "Imgs/products/usb.png",
   },
   {
-    id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
-    price: 2000,
-    src: "Imgs/download.png",
+    id: 14,
+    title: "Gaming Mouse",
+    price: 150,
+    src: "Imgs/products/mouse.png",
   },
   {
-    id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
-    price: 2000,
-    src: "Imgs/download.png",
+    id: 15,
+    title: "I5 Cpu",
+    price: 1200,
+    src: "Imgs/products/cpu.png",
   },
   {
-    id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
-    price: 2000,
-    src: "Imgs/download.png",
+    id: 16,
+    title: "Gaming Glass Case ",
+    price: 3000,
+    src: "Imgs/products/case.png",
   },
   {
-    id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
-    price: 2000,
-    src: "Imgs/download.png",
+    id: 17,
+    title: "Cpu Fan",
+    price: 200,
+    src: "Imgs/products/cpu-fan.png",
   },
   {
-    id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
-    price: 2000,
-    src: "Imgs/download.png",
+    id: 18,
+    title: "Camera",
+    price: 500,
+    src: "Imgs/products/camera.png",
   },
   {
-    id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
-    price: 2000,
-    src: "Imgs/download.png",
+    id: 19,
+    title: "HeadPhone",
+    price: 450,
+    src: "Imgs/products/game-headphone.png",
   },
   {
-    id: 1,
-    title: "Gaming Monitor 144Ghz WP-2134",
-    price: 2000,
-    src: "Imgs/download.png",
+    id: 20,
+    title: "Gaming Mouse",
+    price: 150,
+    src: "Imgs/products/mouse.png",
   },
 ];
 let maincontainerElem = document.querySelector(".main-container");
@@ -138,6 +138,7 @@ const bigBannerImg = document.querySelector(".big-banner-img");
 const bannerProductName = document.querySelector(
   ".banner-product-name-container"
 );
+let tripleProduct = document.querySelectorAll(".triple-product");
 
 let isFirstTemplate = true;
 products.forEach(function (product) {
@@ -193,11 +194,12 @@ function testOne(productID) {
 // add scroll animations
 window.addEventListener("scroll", function () {
   let scrolled = window.scrollY;
+  console.log(scrolled);
   // navigation
   if (scrolled > 0) {
     navigationElem.classList.add("active-nav");
     navigationLiChilds.forEach(function (li) {
-      li.style.color = "black";
+      li.style.color = "white";
     });
     hamMenuElem.classList.remove("ham-active");
   } else {
@@ -227,6 +229,16 @@ window.addEventListener("scroll", function () {
   } else {
     bigBannerImg.classList.remove("big-banner-animate");
     bannerProductName.classList.remove("big-banner-animate");
+  }
+  // triple banner
+  if (scrolled > 2755) {
+    tripleProduct.forEach(function (banner) {
+      banner.classList.add("animated-banner");
+    });
+  } else {
+    tripleProduct.forEach(function (banner) {
+      banner.classList.remove("animated-banner");
+    });
   }
 });
 
