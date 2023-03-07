@@ -7,7 +7,7 @@
   width: 100%;
   background-size: cover;
   background-position: center;
-  background-image: url(../Imgs/wallpaperflare.com_wallpaper_15.jpg);
+  background-image: url(../Imgs/backiee-88593-landscape.jpg);
   background-color: black;
   overflow-x: hidden;
 }
@@ -18,16 +18,19 @@
   transform: translate(0, -50%);
   padding: 12px 20px;
   background-position: center;
-  background-size: cover;
+  background-size: 110%;
   color: white;
   z-index: 99;
+  cursor: pointer;
 }
 
 .nxt {
   right: 0;
+  background-image: url(../Imgs/Icons/icons8-chevron-right50.png);
 }
 
 .pre {
+  background-image: url(../Imgs/Icons/icons8-chevron-left-50.png);
 }
 
 .transition {
@@ -154,7 +157,7 @@
   position: relative;
   color: white;
   align-self: center;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .slide p {
@@ -162,6 +165,7 @@
   line-height: 26px;
   transition: 0.4s;
   transition: 0.4s;
+  font-size: 12.5px;
 }
 
 .slide p:hover {
@@ -176,8 +180,9 @@
   position: absolute;
   height: 30px;
   width: 30px;
-  background-color: white;
   border-radius: 50%;
+  background-position: center;
+  background-size: 90%;
 }
 
 .slides::-webkit-scrollbar {

@@ -7,7 +7,7 @@
   position: relative;
   display: grid;
   height: 650px;
-  grid-gap: 0 50px;
+  grid-gap: 0 20px;
   padding: 20px;
   justify-content: center;
   z-index: 9;
@@ -31,14 +31,14 @@
   }
 }
 
-@media screen and (max-width: 891px) {
+@media screen and (max-width: 991px) {
   .featured-products {
     grid-template-columns: repeat(4, 1fr);
   }
   /*  */
 }
 
-@media screen and (max-width: 743px) {
+@media screen and (max-width: 843px) {
   .featured-products {
     grid-template-columns: repeat(3, 1fr);
     height: 1430px;
