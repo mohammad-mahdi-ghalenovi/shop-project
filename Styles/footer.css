@@ -290,4 +290,8 @@
     font-size: 12px;
     color: gray;
   }
+  /* first row */
+  .footer-sign-up-container::after {
+    background-color: transparent;
+  }
 }
