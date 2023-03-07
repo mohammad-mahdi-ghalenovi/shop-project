@@ -290,8 +290,13 @@
 }
 
 @media screen and (max-width: 532px) {
+  .product-information {
+    grid-gap: 10px 20px;
+  }
+
   .info-name {
     font-size: 20px;
+    display: none;
   }
 
   .info-options-container {
@@ -308,12 +313,15 @@
   }
 
   .info-colors-container {
-    grid-template-columns: 69px repeat(3, 35px);
+    grid-template-columns: 30px repeat(3, 35px);
+    font-size: 14px;
+    padding: 30px 10px;
   }
 
   .info-options-container {
-    grid-template-columns: 70px repeat(3, 1fr);
+    grid-template-columns: 30px repeat(3, 1fr);
     font-size: 14px;
+    padding: 30px 10px;
   }
 
   .info-desc {
