@@ -113,7 +113,7 @@
 
 .product-information {
   grid-column: 2/3;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.361);
   display: grid;
   grid-template-rows: 100px 70px 60px 100px 70px 80px 65px 80px 1fr;
   /* title / price / rate / options / buy / icons*/
@@ -121,6 +121,7 @@
 
 .info-name {
   /*  */
+  color: white;
   position: relative;
   font-size: 35px;
   padding: 10px 30px;
@@ -131,6 +132,7 @@
   align-self: center;
   font-size: 25px;
   padding: 30px;
+  color: white;
 }
 
 .info-rate-container {
@@ -140,6 +142,8 @@
   grid-template-columns: repeat(5, 22px) 120px;
   grid-template-rows: 22px;
   align-content: center;
+  background: #111;
+  /* change icons  */
   padding: 30px;
 }
 
@@ -148,6 +152,7 @@
   background-size: cover;
   background-position: center;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .info-rate-container > .rate-reviews {
@@ -171,6 +176,7 @@
   grid-template-columns: 70px repeat(3, 80px);
   grid-template-rows: 1fr;
   padding: 30px;
+  color: white;
 }
 
 .info-options-container > .option-title {
@@ -178,7 +184,7 @@
 }
 
 .info-options-container > .option-sizes {
-  background-color: white;
+  background: #111;
   text-align: center;
   line-height: 50px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
@@ -190,6 +196,7 @@
 
 .info-options-container > .option-sizes:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: translateY(-5px);
 }
 
 .info-colors-container {
@@ -198,6 +205,7 @@
   grid-gap: 20px;
   grid-template-columns: 80px repeat(3, 35px);
   grid-template-rows: 35px;
+  color: white;
   padding: 30px;
 }
 
@@ -240,6 +248,9 @@
   border-radius: 10px;
   border: none;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background: #111;
+  color: white;
+  box-shadow: 0 0 4px white;
 }
 
 .info-buy-container > .buy-add {
@@ -337,7 +348,7 @@
 }
 
 .info-need-help-container {
-  background-color: rgba(128, 128, 128, 0.642);
+  background: #111;
   color: white;
   padding: 10px 20px;
   position: relative;
