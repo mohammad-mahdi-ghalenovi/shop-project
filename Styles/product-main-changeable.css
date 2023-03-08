@@ -110,7 +110,6 @@
   font-size: 15px;
 }
 
-
 @media screen and (max-width: 590px) {
   .changeable-buttons-container {
     grid-template-columns: repeat(4, 1fr);
@@ -132,5 +131,21 @@
     grid-template-rows: 105px 60px 20px 40px;
     grid-template-columns: 1fr;
     padding: 20px;
+  }
+
+  .spec-item p {
+    padding-left: 120px;
+  }
+}
+
+@media screen and (max-width: 333px) {
+  .spec-item p {
+    padding-left: 100px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .spec-item p {
+    padding-left: 50px;
   }
 }

@@ -79,6 +79,7 @@
 
 /* navigation */
 .top-navigation-container {
+  position: relative;
   grid-row: 2/3;
   grid-column: 1/-1;
   display: grid;

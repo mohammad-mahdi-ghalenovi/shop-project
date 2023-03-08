@@ -241,7 +241,7 @@ function findTargetObj(searchID) {
   setProductsInformation(mainProduct);
   console.log(mainProduct);
 }
-findTargetObj(targetSearchID);
+// findTargetObj(targetSearchID);
 
 function setProductsInformation(mainProduct) {
   infoNameElem.textContent = mainProduct.title;
