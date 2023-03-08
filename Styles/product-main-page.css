@@ -6,6 +6,7 @@
 }
 
 body {
+  background-color: black;
   zoom: 90%;
 }
 
@@ -20,11 +21,19 @@ body {
   grid-template-rows: 35px 57px 50px 1fr 150px 1fr 1fr;
   height: 100%;
   width: 100%;
-  background: red;
 }
 
 .prevent-select {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+}
+
+.header-bg {
+  position: absolute;
+  width: 100%;
+  height: 190%;
+  background-image: url(../Imgs/6901c688259729.5dd19fb662b4b.jpg);
+  filter: brightness(30%);
+  z-index: -1;
 }

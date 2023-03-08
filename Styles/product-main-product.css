@@ -1,13 +1,23 @@
 /* location */
 
 .location-container {
+  position: relative;
   grid-row: 3/4;
   grid-column: 1/-1;
-  background-color: rgb(255, 255, 255);
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(2, 50px) 70px 55px;
   padding: 10px 250px;
+  z-index: 99;
+  color: white;
+}
+
+.location-container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: gray;
 }
 
 .location-container > li {
@@ -57,7 +67,6 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   padding: 0 50px;
-  background-color: purple;
 }
 
 .product-slider-container {
@@ -65,15 +74,15 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 600px 180px;
-  background-color: rgb(57, 67, 36);
 }
 
 /* SLIDER */
 
 .product-slider {
-  background-color: rgb(33, 124, 163);
+  background-image: url(../Imgs/products/game-headphone.png);
   background-position: center;
   background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   grid-row: 1/2;
   grid-column: 1/2;
   width: 700px;
@@ -87,11 +96,13 @@
   grid-gap: 4px;
   padding: 50px;
   grid-template-columns: repeat(3, 1fr);
-  background-color: violet;
 }
 
 .slides {
+  box-shadow: 0px 4px 6px 0px rgba(50, 50, 93, 0.11),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.08);
   background-size: cover;
+  background-color: #111;
   background-position: center;
   cursor: pointer;
   transition: 0.4s ease;
@@ -105,17 +116,17 @@
 
 .product-information {
   grid-column: 2/3;
-  background-color: yellow;
+  background-color: rgba(0, 0, 0, 0.361);
   display: grid;
-  grid-template-rows: 120px 70px 90px 110px 100px 100px 65px 100px 1fr;
+  grid-template-rows: 100px 70px 60px 100px 70px 80px 65px 80px 1fr;
   /* title / price / rate / options / buy / icons*/
 }
 
 .info-name {
   /*  */
+  color: white;
   position: relative;
-  font-size: 32px;
-  /* width: 700px; */
+  font-size: 35px;
   padding: 10px 30px;
 }
 
@@ -124,28 +135,34 @@
   align-self: center;
   font-size: 25px;
   padding: 30px;
+  color: white;
 }
 
 .info-rate-container {
   /*  */
-  background-color: yellowgreen;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(5, 22px) 120px;
   grid-template-rows: 22px;
   align-content: center;
+  background: #111;
+  /* change icons  */
   padding: 30px;
 }
 
 .info-rate-container > .rate-stars {
-  background-color: white;
+  background-image: url(../Imgs/Icons/Star-Icon-by-arus-3.jpg);
+  background-size: 200%;
+  background-position: center;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .info-rate-container > .rate-reviews {
   font-size: 12px;
   padding-left: 10px;
   align-self: center;
+  color: white;
 }
 
 .info-desc {
@@ -163,6 +180,7 @@
   grid-template-columns: 70px repeat(3, 80px);
   grid-template-rows: 1fr;
   padding: 30px;
+  color: white;
 }
 
 .info-options-container > .option-title {
@@ -170,7 +188,7 @@
 }
 
 .info-options-container > .option-sizes {
-  background-color: white;
+  background: #111;
   text-align: center;
   line-height: 50px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
@@ -182,6 +200,7 @@
 
 .info-options-container > .option-sizes:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: translateY(-5px);
 }
 
 .info-colors-container {
@@ -190,13 +209,28 @@
   grid-gap: 20px;
   grid-template-columns: 80px repeat(3, 35px);
   grid-template-rows: 35px;
+  color: white;
   padding: 30px;
 }
 
 .info-colors-container > .info-color {
   border-radius: 50%;
-  background-color: yellowgreen;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.info-colors-container > .info-color:nth-child(2) {
+  background-color: rgb(255, 165, 69);
+}
+
+.info-colors-container > .info-color:nth-child(3) {
+  background-color: rgb(63, 59, 151);
+}
+
+.info-colors-container > .info-color:nth-child(4) {
+  background-color: rgb(160, 209, 62);
 }
 
 .info-colors-container > .color-title {
@@ -218,11 +252,13 @@
   border-radius: 10px;
   border: none;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background: #111;
+  color: white;
+  box-shadow: 0 0 4px white;
 }
 
 .info-buy-container > .buy-add {
-  background-color: blue;
-  color: white;
+  color: black;
   border-radius: 10px;
   border: none;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -231,6 +267,73 @@
   text-align: start;
   padding-left: 7px;
   cursor: pointer;
+}
+
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
 
 .info-icons-conatiner {
@@ -244,12 +347,22 @@
 }
 
 .info-icons-conatiner > .info-icon {
-  background-color: red;
   border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.info-icons-conatiner > .info-icon:nth-child(2) {
+  background-image: url(../imgs/icons/icons8-location-40.png);
+}
+
+.info-icons-conatiner > .info-icon:nth-child(1) {
+  background-image: url(../imgs/icons/icons8-free-shipping-40.png);
 }
 
 .info-need-help-container {
-  background-color: rgba(128, 128, 128, 0.642);
+  background: #111;
   color: white;
   padding: 10px 20px;
   position: relative;

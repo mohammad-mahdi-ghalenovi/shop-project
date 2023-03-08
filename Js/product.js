@@ -173,26 +173,26 @@ let detailsContainerElem = document.querySelector(".details-container");
 let changeableButton = document.querySelectorAll(".changeable-btn");
 let specificationItems = [
   { name: "Weight", desc: "7.25kg" },
-  { name: "dimes", desc: "80 * 89 * 78" },
-  { name: "size", desc: "one size fits all" },
-  { name: "size", desc: "one size fits all" },
-  { name: "size", desc: "one size fits all" },
-  { name: "size", desc: "one size fits all" },
-  { name: "size", desc: "one size fits all" },
-  { name: "size", desc: "one size fits all" },
-  { name: "size", desc: "one size fits all" },
-  { name: "size", desc: "one size fits all" },
-  { name: "size", desc: "one size fits all" },
-  { name: "size", desc: "one size fits all" },
-  { name: "size", desc: "one size fits all" },
-  { name: "size", desc: "one size fits all" },
-  { name: "size", desc: "one size fits all" },
-  { name: "size", desc: "one size fits all" },
-  { name: "size", desc: "one size fits all" },
-  { name: "size", desc: "one size fits all" },
-  { name: "size", desc: "one size fits all" },
-  { name: "size", desc: "one size fits all" },
-  { name: "size", desc: "one size fits all" },
+  { name: "Dimensions", desc: "90 x 60 x 90 cm" },
+  { name: "Size", desc: "One Size Fits All" },
+  { name: "Color", desc: "Black with Red, White with Gold" },
+  { name: "Guarantee", desc: "5 years" },
+  { name: "Brand", desc: "Metti" },
+  { name: "Item Height", desc: "18 Millimeters" },
+  { name: "Item Width", desc: "one size fits all" },
+  { name: "Screen Size", desc: "13 Inches" },
+  { name: "Item Weight", desc: "1.6kg" },
+  { name: "Product Dimensions", desc: "21.9 x 31.4 x 1.8 cm" },
+  { name: "Item Model Number", desc: "MF841HN/A" },
+  { name: "Processor Brand", desc: "Intel" },
+  { name: "Processor Type", desc: "Core I7" },
+  { name: "Processor Speed", desc: "3.4 Ghz" },
+  { name: "RAM Size", desc: "8 GB" },
+  { name: "Hard Drive Size", desc: "512 GB" },
+  { name: "Hard Disk Technology", desc: "Solid State Drive" },
+  { name: "Graphics Coprocessor", desc: "Intel Integrated Graphics" },
+  { name: "Graphic Card Description", desc: "Integrated Graphics Card" },
+  { name: "Hardware Platform", desc: "Windows" },
 ];
 // related producrs
 let relatedProductSection = document.querySelector(".related-product-section");
@@ -279,6 +279,7 @@ function changeSlideImg(slideID) {
 function descInfoSetHandler() {
   detailsContainerElem.className = "details-container dynamic-desc";
   detailsContainerElem.innerHTML = "";
+  window.scrollTo(0, 533);
   detailsContainerElem.insertAdjacentHTML(
     "beforeend",
     "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Loremipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempincid idunt ut labore et dolore magna aliqua. nisi ut aliquip ex eacommodo consat. Duis aute irure dolor in reprehenderit n volup tate velitesse cillum dolore euy elit ale ruin irure dolor in. Adipisci accusatainterpretaris nec ea. In etiam neglegentur has, his iudico vidisse feugiatid. An nibh homero pri, mutat feugait salutandi id me."
@@ -288,6 +289,7 @@ function descInfoSetHandler() {
 function aditionalInfoSetHandler() {
   detailsContainerElem.className = "details-container  dynamic-additional";
   detailsContainerElem.innerHTML = "";
+  window.scrollTo(0, 533);
   detailsContainerElem.insertAdjacentHTML(
     "beforeend",
     "<div>    <p>RAM Size :</p>    16GB , 32Gb , 8GB  </div>  <div>    <p>Colors :</p>    White , Orange , Grey  </div>"
@@ -297,7 +299,6 @@ function aditionalInfoSetHandler() {
 function specInfoSetHandler() {
   detailsContainerElem.classList = "details-container  dynamic-spec ";
   detailsContainerElem.innerHTML = "";
-  window.scrollTo(0, 933);
   specificationItems.forEach(function (item) {
     detailsContainerElem.insertAdjacentHTML(
       "beforeend",
@@ -337,6 +338,7 @@ changeableButton.forEach(function (btn) {
         break;
       case 3:
         specInfoSetHandler();
+        window.scrollTo(0, 933);
         break;
       case 4:
         reviewInfoSetHandler();
@@ -344,7 +346,8 @@ changeableButton.forEach(function (btn) {
     }
   });
 });
-
+//onload
+specInfoSetHandler();
 // related products
 
 function setRelatedProducts() {
