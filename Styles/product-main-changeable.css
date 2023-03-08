@@ -7,6 +7,7 @@
 }
 
 .changeable-buttons-container {
+  position: relative;
   grid-row: 1/2;
   grid-column: 1/-1;
   display: grid;
@@ -102,7 +103,7 @@
   top: 50%;
   transform: translateY(-50%);
   padding-left: 350px;
-  color: white;
+  color: gray;
 }
 
 /*  */
@@ -196,10 +197,9 @@
 
 @media screen and (max-width: 590px) {
   .changeable-buttons-container {
-    grid-template-columns: repeat(4, 1fr);
-    overflow: hidden;
-    position: relative;
-    display: none;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 0;
+    overflow-x: scroll;
   }
 
   .dynamic-review {
@@ -218,18 +218,32 @@
   }
 
   .spec-item p {
-    padding-left: 120px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 0px;
+    right: 0;
   }
 }
 
-@media screen and (max-width: 333px) {
+@media screen and (max-width: 460px) {
   .spec-item p {
-    padding-left: 100px;
+    font-size: 12px;
+  }
+  .spec-item {
+    font-size: 12px;
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 340px) {
+  .dynamic-spec {
+    display: grid;
+    grid-template-rows: repeat(12, 75px);
+    grid-auto-rows: 75px;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 10px;
+  }
   .spec-item p {
-    padding-left: 50px;
+    padding-left: 20px;
   }
 }

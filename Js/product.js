@@ -241,7 +241,7 @@ function findTargetObj(searchID) {
   setProductsInformation(mainProduct);
   console.log(mainProduct);
 }
-// findTargetObj(targetSearchID);
+findTargetObj(targetSearchID);
 
 function setProductsInformation(mainProduct) {
   infoNameElem.textContent = mainProduct.title;
@@ -279,6 +279,7 @@ function changeSlideImg(slideID) {
 function descInfoSetHandler() {
   detailsContainerElem.className = "details-container dynamic-desc";
   detailsContainerElem.innerHTML = "";
+  window.scrollTo(0, 533);
   detailsContainerElem.insertAdjacentHTML(
     "beforeend",
     "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Loremipsum dolor sit amet, consecteturadipiscing elit, sed do eiusmod tempincid idunt ut labore et dolore magna aliqua. nisi ut aliquip ex eacommodo consat. Duis aute irure dolor in reprehenderit n volup tate velitesse cillum dolore euy elit ale ruin irure dolor in. Adipisci accusatainterpretaris nec ea. In etiam neglegentur has, his iudico vidisse feugiatid. An nibh homero pri, mutat feugait salutandi id me."
@@ -288,6 +289,7 @@ function descInfoSetHandler() {
 function aditionalInfoSetHandler() {
   detailsContainerElem.className = "details-container  dynamic-additional";
   detailsContainerElem.innerHTML = "";
+  window.scrollTo(0, 533);
   detailsContainerElem.insertAdjacentHTML(
     "beforeend",
     "<div>    <p>RAM Size :</p>    16GB , 32Gb , 8GB  </div>  <div>    <p>Colors :</p>    White , Orange , Grey  </div>"
@@ -297,7 +299,6 @@ function aditionalInfoSetHandler() {
 function specInfoSetHandler() {
   detailsContainerElem.classList = "details-container  dynamic-spec ";
   detailsContainerElem.innerHTML = "";
-  window.scrollTo(0, 933);
   specificationItems.forEach(function (item) {
     detailsContainerElem.insertAdjacentHTML(
       "beforeend",
@@ -337,6 +338,7 @@ changeableButton.forEach(function (btn) {
         break;
       case 3:
         specInfoSetHandler();
+        window.scrollTo(0, 933);
         break;
       case 4:
         reviewInfoSetHandler();
@@ -344,7 +346,8 @@ changeableButton.forEach(function (btn) {
     }
   });
 });
-
+//onload
+specInfoSetHandler();
 // related products
 
 function setRelatedProducts() {
