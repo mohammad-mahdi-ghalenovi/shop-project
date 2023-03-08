@@ -207,7 +207,7 @@ let relatedProducts = [
     id: 7,
     title: "Cpu Fan",
     price: 200,
-    src:      "Imgs/products/CPUFAN.png",
+    src: "Imgs/products/CPUFAN.png",
   },
   {
     id: 8,
@@ -222,10 +222,10 @@ let relatedProducts = [
     src: "Imgs/products/keyboard.png",
   },
   {
-    id: 7,
-    title: "Cpu Fan",
-    price: 200,
-    src: "Imgs/products/CPUFAN.png",
+    id: 5,
+    title: "Controller",
+    price: 500,
+    src: "Imgs/products/control.png",
   },
 ];
 
@@ -368,5 +368,11 @@ function setRelatedProducts() {
   });
 }
 setRelatedProducts();
+
+function testOne(productID) {
+  location.href =
+    "file:///C:/Users/Win%20Green/Desktop/newProject/product.html?id=" +
+    productID;
+}
 
 document.body.style.zoom = "90%";

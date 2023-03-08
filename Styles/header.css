@@ -208,7 +208,6 @@
   position: fixed;
   width: 100%;
   top: 0;
-  font-weight: bold;
   background-color: rgba(104, 18, 210, 0.687);
   animation: animated 0.5s ease;
 }
