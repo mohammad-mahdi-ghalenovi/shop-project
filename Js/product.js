@@ -69,11 +69,11 @@ let products = [
     id: 7,
     title: "Cpu Fan",
     price: 200,
-    src: "Imgs/products/cpu-fan.png",
+    src: "Imgs/products/CPUFAN.png",
     slides: [
-      "Imgs/products/cpu-fan..png",
-      "Imgs/products/cpu-fan..png",
-      "Imgs/products/cpu-fan..png",
+      "Imgs/products/CPUFAN.png",
+      "Imgs/products/CPUFAN.png",
+      "Imgs/products/CPUFAN.png",
     ],
   },
   {
@@ -207,7 +207,7 @@ let relatedProducts = [
     id: 7,
     title: "Cpu Fan",
     price: 200,
-    src: "Imgs/products/cpu-fan.png",
+    src:      "Imgs/products/CPUFAN.png",
   },
   {
     id: 8,
@@ -225,7 +225,7 @@ let relatedProducts = [
     id: 7,
     title: "Cpu Fan",
     price: 200,
-    src: "Imgs/products/cpu-fan.png",
+    src: "Imgs/products/CPUFAN.png",
   },
 ];
 

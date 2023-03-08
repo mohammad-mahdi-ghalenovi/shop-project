@@ -39,7 +39,7 @@ let products = [
     id: 7,
     title: "Cpu Fan",
     price: 200,
-    src: "Imgs/products/cpu-fan.png",
+    src: "Imgs/products/CPUFAN.png",
   },
   {
     id: 8,
@@ -84,40 +84,40 @@ let products = [
     src: "Imgs/products/mouse.png",
   },
   {
-    id: 15,
-    title: "I5 Cpu",
-    price: 1200,
-    src: "Imgs/products/cpu.png",
-  },
-  {
-    id: 16,
-    title: "Gaming Glass Case ",
-    price: 3000,
-    src: "Imgs/products/case.png",
-  },
-  {
-    id: 17,
+    id: 7,
     title: "Cpu Fan",
     price: 200,
-    src: "Imgs/products/cpu-fan.png",
+    src: "Imgs/products/CPUFAN.png",
   },
   {
-    id: 18,
-    title: "Camera",
-    price: 500,
-    src: "Imgs/products/camera.png",
-  },
-  {
-    id: 19,
+    id: 8,
     title: "HeadPhone",
     price: 450,
     src: "Imgs/products/game-headphone.png",
   },
   {
-    id: 20,
-    title: "Gaming Mouse",
-    price: 150,
-    src: "Imgs/products/mouse.png",
+    id: 9,
+    title: "Gaming Keyboard",
+    price: 340,
+    src: "Imgs/products/keyboard.png",
+  },
+  {
+    id: 3,
+    title: "Camera",
+    price: 500,
+    src: "Imgs/products/camera.png",
+  },
+  {
+    id: 4,
+    title: "Graphic Card",
+    price: 2000,
+    src: "Imgs/products/card.png",
+  },
+  {
+    id: 5,
+    title: "Controller",
+    price: 500,
+    src: "Imgs/products/control.png",
   },
 ];
 let maincontainerElem = document.querySelector(".main-container");
@@ -172,7 +172,9 @@ function createDynamicProducts(container, product, isFirstTemplate) {
   } else if (isFirstTemplate == false) {
     container.insertAdjacentHTML(
       "beforeend",
-      '<div class="recently-product"><div class="recently-static-title">Metti</div><div class="recently-icon heart-icon2"></div><div class="recently-card-img" style="background-image: url(' +
+      '<div class="recently-product" onclick="testOne(' +
+        product.id +
+        ');"><div class="recently-static-title">Metti</div><div class="recently-icon heart-icon2"></div><div class="recently-card-img" style="background-image: url(' +
         product.src +
         ')"></div><div class="recently-card-title"> ' +
         product.title +
