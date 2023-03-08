@@ -343,8 +343,18 @@
 }
 
 .info-icons-conatiner > .info-icon {
-  background-color: red;
   border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.info-icons-conatiner > .info-icon:nth-child(2) {
+  background-image: url(../imgs/icons/icons8-location-40.png);
+}
+
+.info-icons-conatiner > .info-icon:nth-child(1) {
+  background-image: url(../imgs/icons/icons8-free-shipping-40.png);
 }
 
 .info-need-help-container {
