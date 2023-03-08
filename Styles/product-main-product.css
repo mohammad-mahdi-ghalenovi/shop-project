@@ -148,8 +148,8 @@
 }
 
 .info-rate-container > .rate-stars {
-  background-image: url(../Imgs/Icons/star.png);
-  background-size: cover;
+  background-image: url(../Imgs/Icons/Star-Icon-by-arus-3.jpg);
+  background-size: 200%;
   background-position: center;
   border-radius: 50%;
   cursor: pointer;
@@ -159,6 +159,7 @@
   font-size: 12px;
   padding-left: 10px;
   align-self: center;
+  color: white;
 }
 
 .info-desc {
