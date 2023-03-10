@@ -158,11 +158,13 @@ function createDynamicProducts(container, product, isFirstTemplate) {
   if (isFirstTemplate == true) {
     container.insertAdjacentHTML(
       "beforeend",
-      '<div class="product-card" onclick="testOne(' +
-        product.id +
-        ');" onload="testOnload() "><p>METTI SHOP</p><div class="static-title"></div><div class="product-icon heart-icon"></div><div class="product-card-img" style="background-image: url(' +
+      '<div class="product-card"><p>METTI SHOP</p><div class="static-title"></div><div class="product-icon heart-icon"></div><div class="product-card-img" style="background-image: url(' +
         product.src +
-        ')"></div><div class="product-card-title"> ' +
+        ')" onclick="testOne(' + //
+        product.id +
+        ');"></div><div class="product-card-title" onclick="testOne(' + //
+        product.id +
+        ');"> ' +
         product.title +
         '</div><div class="product-card-price">' +
         "$" +
@@ -172,11 +174,13 @@ function createDynamicProducts(container, product, isFirstTemplate) {
   } else if (isFirstTemplate == false) {
     container.insertAdjacentHTML(
       "beforeend",
-      '<div class="recently-product" onclick="testOne(' +
-        product.id +
-        ');"><div class="recently-static-title">Metti</div><div class="recently-icon heart-icon2"></div><div class="recently-card-img" style="background-image: url(' +
+      '<div class="recently-product"><div class="recently-static-title">Metti</div><div class="recently-icon heart-icon2"></div><div class="recently-card-img" style="background-image: url(' +
         product.src +
-        ')"></div><div class="recently-card-title"> ' +
+        ')" onclick="testOne(' + //
+        product.id +
+        ');"></div><div class="recently-card-title"  onclick="testOne(' + //
+        product.id +
+        ');"> ' +
         product.title +
         ' </div><div class="recently-card-price">' +
         "$" +
