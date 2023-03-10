@@ -47,6 +47,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 90%;
+  cursor: pointer;
   transition: 0.3s;
 }
 
