@@ -224,15 +224,32 @@ function testOne(productID) {
 
 // add to Basket
 function addToBasket(productID) {
+  // find target product
   let mainProduct = products.find(function (product) {
     return product.id === productID;
   });
 
-  userBasket.push(mainProduct);
-  setContainerProducts(userBasket);
+  let isAdded = userBasket.some(function (product) {
+    return product.id == productID;
+  });
+
+  if (isAdded === false) {
+    userBasket.push(mainProduct);
+    calculateProductPrice(userBasket);
+    setBasketProducts(userBasket);
+  } else {
+    increaseCountHandler(mainProduct);
+  }
 }
 
-function setContainerProducts(userBasket) {
+function increaseCountHandler(mainProduct) {
+  mainProduct.count += 1;
+  calculateProductPrice(userBasket);
+  setBasketProducts(userBasket);
+}
+
+function setBasketProducts(userBasket) {
+  // append product to basket
   userBasketContainerElem.innerHTML = "";
 
   userBasket.forEach(function (product) {
@@ -242,23 +259,25 @@ function setContainerProducts(userBasket) {
         product.id +
         " <div onclick='removeProduct(" +
         product.id +
-        ")'>remove</div> </div> "
+        ")'>remove</div> <input type='number' value='" +
+        product.count +
+        "' oninput='changeCount()' /> </div> "
     );
   });
-
-  calculateProductPrice(userBasket);
 }
 
 function removeProduct(productID) {
+  // remove product handler
   userBasket = userBasket.filter(function (product) {
     return product.id !== productID;
   });
 
-  setContainerProducts(userBasket);
+  setBasketProducts(userBasket);
   calculateProductPrice(userBasket);
 }
 
 function calculateProductPrice(userBasket) {
+  // calculate product prices
   let sum = null;
   userBasket.forEach(function (product) {
     sum = sum + product.price * product.count;
