@@ -217,9 +217,21 @@ function setContainerProducts(userBasket) {
   userBasket.forEach(function (product) {
     userBasketContainerElem.insertAdjacentHTML(
       "beforeend",
-      "<div>  " + product.id + " </div>"
+      "<div>  " +
+        product.id +
+        " <div onclick='removeProduct(" +
+        product.id +
+        ")'>remove</div> </div> "
     );
   });
+}
+
+function removeProduct(productID) {
+  userBasket = userBasket.filter(function (product) {
+    return product.id !== productID;
+  });
+
+  setContainerProducts(userBasket);
 }
 
 // add scroll animations
