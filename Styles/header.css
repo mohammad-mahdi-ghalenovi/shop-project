@@ -285,18 +285,35 @@
 .user-basket-container {
   position: fixed;
   top: 100px;
-  right: 10px;
-  height: 150px;
-  width: 400px;
+  right: 0px;
+  height: 250px;
+  width: 600px;
   background-image: url(../Imgs/basket.jpg);
   background-size: cover;
   background-position: center;
   display: grid;
   grid-gap: 14px 0px;
   padding: 10px 20px;
-  grid-auto-rows: 37px;
+  grid-auto-rows: 45px;
   grid-template-columns: 1fr;
+  border-radius: 10px;
+  transition: 0.4s;
   overflow-y: scroll;
+  z-index: 99;
+}
+
+.user-basket-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  /* background-color: rgba(11, 1, 1, 0.687); */
+  backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
+  filter: blur(14px);
 }
 
 .basket-product-container {
@@ -328,7 +345,7 @@
   height: 120%;
   top: 50%;
   transform: translateY(-50%);
-  width: 50px;
+  width: 70px;
   background-image: url(../Imgs/products/game-headphone.png);
   background-position: center;
   background-size: cover;
@@ -337,9 +354,9 @@
 .basket-name {
   position: absolute;
   color: white;
-  line-height: 40px;
-  font-size: 14px;
-  padding-left: 55px;
+  line-height: 44px;
+  font-size: 16px;
+  padding-left: 75px;
 }
 
 .basket-remove {
