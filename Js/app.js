@@ -141,7 +141,8 @@ let products = [
   },
 ];
 let userBasket = [];
-let userBasketContainerElem = document.querySelector(".user-basket");
+let basketBtnElem = document.querySelector(".basket-btn");
+let userBasketContainerElem = document.querySelector(".user-basket-container");
 let maincontainerElem = document.querySelector(".main-container");
 const topRatedProducts = document.querySelector(".top-rated-products");
 const featuredProducts = document.querySelector(".featured-products");
@@ -210,7 +211,9 @@ function createDynamicProducts(container, product, isFirstTemplate) {
         "$" +
         "  " +
         product.price +
-        '</div><div class="recently-icon basket-icon2"></div><button class="recently-add-shop"></button></div>'
+        '</div><div class="recently-icon basket-icon2"></div><button class="recently-add-shop" onclick="addToBasket(' +
+        product.id +
+        ')"></button></div>'
     );
   }
 }
@@ -255,15 +258,21 @@ function setBasketProducts(userBasket) {
   userBasket.forEach(function (product) {
     userBasketContainerElem.insertAdjacentHTML(
       "beforeend",
-      "<div>  " +
+      '<div class="basket-product-container"><div class="basket-info">  <div class="basket-name">' +
+        product.title +
+        '</div>  <div class="basket-img" style="background-image: url(' +
+        product.src +
+        ')"></div>  <div class="basket-price">' +
+        product.price +
+        '</div></div><div class="basket-remove">  <i class="fa fa-trash" onclick="removeProduct(' +
         product.id +
-        " <div onclick='removeProduct(" +
-        product.id +
-        ")'>remove</div> <input type='number' value='" +
+        ')"></i></div><input value="' +
         product.count +
-        "'/> </div> "
+        '"  class="basket-count" /></div>'
     );
   });
+  userBasketContainerElem.scrollTo(0, 10000);
+  userBasketContainerElem.classList.add("basket-active");
 }
 
 function removeProduct(productID) {
@@ -283,8 +292,12 @@ function calculateProductPrice(userBasket) {
     sum = sum + product.price * product.count;
   });
 
-  console.log(sum);
+  // console.log(sum);
 }
+
+basketBtnElem.addEventListener("click", function () {
+  userBasketContainerElem.classList.toggle("basket-active");
+});
 
 // add scroll animations
 window.addEventListener("scroll", function () {
@@ -296,11 +309,15 @@ window.addEventListener("scroll", function () {
       li.style.color = "white";
     });
     hamMenuElem.classList.remove("ham-active");
+    //basket
+    userBasketContainerElem.style.top = "60px";
   } else {
     navigationElem.classList.remove("active-nav");
     navigationLiChilds.forEach(function (li) {
       li.style.color = "white";
     });
+    //basket
+    userBasketContainerElem.style.top = "92px";
   }
   // twice banners
   if (scrolled > 750) {

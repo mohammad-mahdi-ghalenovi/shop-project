@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 50px;
+}
+
+.user-basket-container {
+  position: fixed;
+  top: 100px;
+  right: 10px;
+  height: 150px;
+  width: 400px;
+  display: grid;
+  grid-gap: 14px 0px;
+  padding: 10px 20px;
+  grid-auto-rows: 37px;
+  grid-template-columns: 1fr;
+  overflow-y: scroll;
+}
+
+.basket-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(../Imgs/basket.jpg);
+  background-position: center;
+  background-size: 120%;
+  filter: blur(4px);
+}
+
+.basket-product-container {
+  display: grid;
+  grid-template-columns: 1fr 41px 90px;
+  grid-template-rows: 1fr;
+  z-index: 9;
+}
+
+.basket-info {
+  position: relative;
+  background: rgba(255, 255, 255, 0.559);
+  grid-row: 1/2;
+  grid-column: 1/2;
+  border-radius: 17px;
+}
+
+.basket-price {
+  position: absolute;
+  color: white;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+}
+
+.basket-img {
+  position: absolute;
+  height: 120%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  background-image: url(../Imgs/products/game-headphone.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.basket-name {
+  position: absolute;
+  color: white;
+  line-height: 40px;
+  font-size: 14px;
+  padding-left: 55px;
+}
+
+.basket-remove {
+  position: relative;
+  background: rgba(255, 255, 255, 0.559);
+  border-right: 1px solid rgb(13, 13, 55);
+  border-left: 1px solid rgb(13, 13, 55);
+  border-radius: 50%;
+  z-index: 9;
+}
+
+.basket-remove i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  cursor: pointer;
+  color: rgb(92, 86, 86);
+}
+
+.basket-count {
+  position: relative;
+  background: rgba(255, 255, 255, 0.559);
+  color: white;
+  grid-row: 1/2;
+  grid-column: -1/-2;
+  border-radius: 19px;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid transparent;
+  transition: 0.4s;
+}
+
+.basket-count:focus {
+  border-color: rgb(83, 83, 193);
+  outline: none;
+}
+
+.user-basket-container::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  border: none;
+}
+
+.user-basket-container::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.user-basket-container::-webkit-scrollbar-thumb {
+  background-color: rgb(17, 28, 62);
+  border-radius: 10px;
+}
