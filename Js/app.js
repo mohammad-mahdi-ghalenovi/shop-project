@@ -4,120 +4,140 @@ let products = [
     title: "Gaming Glass Case ",
     price: 3000,
     src: "Imgs/products/case.png",
+    count: 1,
   },
   {
     id: 2,
     title: "HDMI Cable ",
     price: 30,
     src: "Imgs/products/cable.png",
+    count: 1,
   },
   {
     id: 3,
     title: "Camera",
     price: 500,
     src: "Imgs/products/camera.png",
+    count: 1,
   },
   {
     id: 4,
     title: "Graphic Card",
     price: 2000,
     src: "Imgs/products/card.png",
+    count: 1,
   },
   {
     id: 5,
     title: "Controller",
     price: 500,
     src: "Imgs/products/control.png",
+    count: 1,
   },
   {
     id: 6,
     title: "I5 Cpu",
     price: 1200,
     src: "Imgs/products/cpu.png",
+    count: 1,
   },
   {
     id: 7,
     title: "Cpu Fan",
     price: 200,
     src: "Imgs/products/CPUFAN.png",
+    count: 1,
   },
   {
     id: 8,
     title: "HeadPhone",
     price: 450,
     src: "Imgs/products/game-headphone.png",
+    count: 1,
   },
   {
     id: 9,
     title: "Gaming Keyboard",
     price: 340,
     src: "Imgs/products/keyboard.png",
+    count: 1,
   },
   {
     id: 10,
     title: "Gaming Mouse",
     price: 150,
     src: "Imgs/products/mouse.png",
+    count: 1,
   },
   {
     id: 11,
     title: "Gaming Table",
     price: 1000,
     src: "Imgs/products/table.png",
+    count: 1,
   },
   {
     id: 12,
     title: " SAM TV",
     price: 1300,
     src: "Imgs/products/tv.png",
+    count: 1,
   },
   {
     id: 13,
     title: "USB",
     price: 30,
     src: "Imgs/products/usb.png",
+    count: 1,
   },
   {
     id: 14,
     title: "Gaming Mouse",
     price: 150,
     src: "Imgs/products/mouse.png",
+    count: 1,
   },
   {
     id: 7,
     title: "Cpu Fan",
     price: 200,
     src: "Imgs/products/CPUFAN.png",
+    count: 1,
   },
   {
     id: 8,
     title: "HeadPhone",
     price: 450,
     src: "Imgs/products/game-headphone.png",
+    count: 1,
   },
   {
     id: 9,
     title: "Gaming Keyboard",
     price: 340,
     src: "Imgs/products/keyboard.png",
+    count: 1,
   },
   {
     id: 3,
     title: "Camera",
     price: 500,
     src: "Imgs/products/camera.png",
+    count: 1,
   },
   {
     id: 4,
     title: "Graphic Card",
     price: 2000,
     src: "Imgs/products/card.png",
+    count: 1,
   },
   {
     id: 5,
     title: "Controller",
     price: 500,
     src: "Imgs/products/control.png",
+    count: 1,
   },
 ];
 let userBasket = [];
@@ -214,6 +234,7 @@ function addToBasket(productID) {
 
 function setContainerProducts(userBasket) {
   userBasketContainerElem.innerHTML = "";
+
   userBasket.forEach(function (product) {
     userBasketContainerElem.insertAdjacentHTML(
       "beforeend",
@@ -224,6 +245,8 @@ function setContainerProducts(userBasket) {
         ")'>remove</div> </div> "
     );
   });
+
+  calculateProductPrice(userBasket);
 }
 
 function removeProduct(productID) {
@@ -232,6 +255,16 @@ function removeProduct(productID) {
   });
 
   setContainerProducts(userBasket);
+  calculateProductPrice(userBasket);
+}
+
+function calculateProductPrice(userBasket) {
+  let sum = null;
+  userBasket.forEach(function (product) {
+    sum = sum + product.price * product.count;
+  });
+
+  console.log(sum);
 }
 
 // add scroll animations
