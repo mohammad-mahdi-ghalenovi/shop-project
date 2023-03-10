@@ -120,6 +120,8 @@ let products = [
     src: "Imgs/products/control.png",
   },
 ];
+let userBasket = [];
+let userBasketContainerElem = document.querySelector(".user-basket");
 let maincontainerElem = document.querySelector(".main-container");
 const topRatedProducts = document.querySelector(".top-rated-products");
 const featuredProducts = document.querySelector(".featured-products");
@@ -169,7 +171,9 @@ function createDynamicProducts(container, product, isFirstTemplate) {
         '</div><div class="product-card-price">' +
         "$" +
         product.price +
-        '</div> <div class="product-icon basket-icon"></div> <div class="add-product">Select Options</div></div>'
+        '</div> <div class="product-icon basket-icon"></div> <div class="add-product" onclick="addToBasket(' +
+        product.id +
+        ')">Select Options</div></div>'
     );
   } else if (isFirstTemplate == false) {
     container.insertAdjacentHTML(
@@ -191,16 +195,36 @@ function createDynamicProducts(container, product, isFirstTemplate) {
   }
 }
 
+// go to product page
 function testOne(productID) {
   location.href =
     "file:///C:/Users/Win%20Green/Desktop/newProject/product.html?id=" +
     productID;
 }
 
+// add to Basket
+function addToBasket(productID) {
+  let mainProduct = products.find(function (product) {
+    return product.id === productID;
+  });
+
+  userBasket.push(mainProduct);
+  setContainerProducts(userBasket);
+}
+
+function setContainerProducts(userBasket) {
+  userBasketContainerElem.innerHTML = "";
+  userBasket.forEach(function (product) {
+    userBasketContainerElem.insertAdjacentHTML(
+      "beforeend",
+      "<div>  " + product.id + " </div>"
+    );
+  });
+}
+
 // add scroll animations
 window.addEventListener("scroll", function () {
   let scrolled = window.scrollY;
-  console.log(scrolled);
   // navigation
   if (scrolled > 0) {
     navigationElem.classList.add("active-nav");

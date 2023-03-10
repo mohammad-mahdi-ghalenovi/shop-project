@@ -14,7 +14,7 @@ body {
 .main-container {
   display: grid;
   position: absolute;
-  grid-template-rows: 35px 57px 1fr 1fr 1fr 1fr  1fr 1fr 1fr;
+  grid-template-rows: 35px 57px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   /* top navigation  slider top-rated-row  banners featured-products big-banner trend-products */
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
@@ -26,4 +26,17 @@ body {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+}
+
+.user-basket {
+  position: fixed;
+  width: 200px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 50px;
+  z-index: 99;
 }
