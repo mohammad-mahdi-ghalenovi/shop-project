@@ -296,6 +296,7 @@
   padding: 10px 20px;
   grid-auto-rows: 45px;
   grid-template-columns: 1fr;
+  scroll-behavior: smooth;
   border-radius: 10px;
   transition: 0.4s;
   overflow-y: scroll;

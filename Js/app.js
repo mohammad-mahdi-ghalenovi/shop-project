@@ -268,6 +268,7 @@ function setBasketProducts(userBasket) {
         '"  class="basket-count" /></div>'
     );
   });
+  userBasketContainerElem.scrollTo(0, 10000);
 }
 
 function removeProduct(productID) {
@@ -287,7 +288,7 @@ function calculateProductPrice(userBasket) {
     sum = sum + product.price * product.count;
   });
 
-  console.log(sum);
+  // console.log(sum);
 }
 
 // add scroll animations
