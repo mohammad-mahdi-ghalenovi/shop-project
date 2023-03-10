@@ -10,7 +10,9 @@ body {
 }
 
 .user-basket-container {
-  position: relative;
+  position: fixed;
+  top: 100px;
+  right: 10px;
   height: 150px;
   width: 400px;
   display: grid;
@@ -102,6 +104,13 @@ body {
   border-radius: 19px;
   text-align: center;
   line-height: 40px;
+  border: 1px solid transparent;
+  transition: 0.4s;
+}
+
+.basket-count:focus {
+  border-color: rgb(83, 83, 193);
+  outline: none;
 }
 
 .user-basket-container::-webkit-scrollbar {
