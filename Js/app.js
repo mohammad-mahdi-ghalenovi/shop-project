@@ -141,6 +141,7 @@ let products = [
   },
 ];
 let userBasket = [];
+let basketBtnElem = document.querySelector(".basket-btn");
 let userBasketContainerElem = document.querySelector(".user-basket-container");
 let maincontainerElem = document.querySelector(".main-container");
 const topRatedProducts = document.querySelector(".top-rated-products");
@@ -210,7 +211,9 @@ function createDynamicProducts(container, product, isFirstTemplate) {
         "$" +
         "  " +
         product.price +
-        '</div><div class="recently-icon basket-icon2"></div><button class="recently-add-shop"></button></div>'
+        '</div><div class="recently-icon basket-icon2"></div><button class="recently-add-shop" onclick="addToBasket(' +
+        product.id +
+        ')"></button></div>'
     );
   }
 }
@@ -269,6 +272,7 @@ function setBasketProducts(userBasket) {
     );
   });
   userBasketContainerElem.scrollTo(0, 10000);
+  userBasketContainerElem.classList.add("basket-active");
 }
 
 function removeProduct(productID) {
@@ -290,6 +294,10 @@ function calculateProductPrice(userBasket) {
 
   // console.log(sum);
 }
+
+basketBtnElem.addEventListener("click", function () {
+  userBasketContainerElem.classList.toggle("basket-active");
+});
 
 // add scroll animations
 window.addEventListener("scroll", function () {

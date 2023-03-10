@@ -300,7 +300,8 @@
   border-radius: 10px;
   transition: 0.4s;
   overflow-y: scroll;
-  z-index: 99;
+  /* z-index: 99; */
+  opacity: 0;
 }
 
 .user-basket-container::after {
@@ -410,4 +411,9 @@
 .user-basket-container::-webkit-scrollbar-thumb {
   background-color: rgb(17, 28, 62);
   border-radius: 10px;
+}
+
+.basket-active {
+  opacity: 1;
+  z-index: 99;
 }
