@@ -261,7 +261,7 @@ function setBasketProducts(userBasket) {
         product.id +
         ")'>remove</div> <input type='number' value='" +
         product.count +
-        "' oninput='changeCount()' /> </div> "
+        "'/> </div> "
     );
   });
 }
