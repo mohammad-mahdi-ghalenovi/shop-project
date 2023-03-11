@@ -140,9 +140,16 @@ let products = [
     count: 1,
   },
 ];
+// basket
 let userBasket = [];
 let basketBtnElem = document.querySelector(".basket-btn");
-let userBasketContainerElem = document.querySelector(".user-basket-container");
+let userBasketMainContainer = document.querySelector(".user-basket-container");
+let userBasketContainerElem = document.querySelector(
+  ".basket-products-container"
+);
+let totalPriceElem = document.querySelector(".total-price");
+let purchaceAllBtn = document.querySelector(".purchace-all");
+// sections
 let maincontainerElem = document.querySelector(".main-container");
 const topRatedProducts = document.querySelector(".top-rated-products");
 const featuredProducts = document.querySelector(".featured-products");
@@ -258,21 +265,21 @@ function setBasketProducts(userBasket) {
   userBasket.forEach(function (product) {
     userBasketContainerElem.insertAdjacentHTML(
       "beforeend",
-      '<div class="basket-product-container"><div class="basket-info">  <div class="basket-name">' +
-        product.title +
-        '</div>  <div class="basket-img" style="background-image: url(' +
+      '<div class="basket-product">  <div class="b-info-container">    <div class="b-img" style="background-image: url(' +
         product.src +
-        ')"></div>  <div class="basket-price">' +
+        ')"></div>    <div class="b-name">' +
+        product.title +
+        '</div>    <div class="b-price">$ ' +
         product.price +
-        '</div></div><div class="basket-remove">  <i class="fa fa-trash" onclick="removeProduct(' +
+        '</div>  </div>  <div class="b-remove" onclick="removeProduct(' +
         product.id +
-        ')"></i></div><input value="' +
+        ')">    <i class="fa fa-trash"></i>  </div>  <div class="b-count">' +
         product.count +
-        '"  class="basket-count" /></div>'
+        "</div></div>"
     );
   });
   userBasketContainerElem.scrollTo(0, 10000);
-  userBasketContainerElem.classList.add("basket-active");
+  userBasketMainContainer.classList.add("basket-active");
 }
 
 function removeProduct(productID) {
@@ -280,6 +287,12 @@ function removeProduct(productID) {
   userBasket = userBasket.filter(function (product) {
     return product.id !== productID;
   });
+
+  let mainProduct = products.find(function (product) {
+    return product.id === productID;
+  });
+
+  mainProduct.count = 1;
 
   setBasketProducts(userBasket);
   calculateProductPrice(userBasket);
@@ -292,11 +305,17 @@ function calculateProductPrice(userBasket) {
     sum = sum + product.price * product.count;
   });
 
-  // console.log(sum);
+  totalPriceElem.textContent = "Total Price : $" + sum + "";
 }
 
 basketBtnElem.addEventListener("click", function () {
-  userBasketContainerElem.classList.toggle("basket-active");
+  userBasketMainContainer.classList.toggle("basket-active");
+});
+
+purchaceAllBtn.addEventListener("click", function () {
+  userBasket = [];
+  setBasketProducts(userBasket);
+  calculateProductPrice(userBasket);
 });
 
 // add scroll animations
@@ -310,14 +329,14 @@ window.addEventListener("scroll", function () {
     });
     hamMenuElem.classList.remove("ham-active");
     //basket
-    userBasketContainerElem.style.top = "60px";
+    userBasketMainContainer.style.top = "60px";
   } else {
     navigationElem.classList.remove("active-nav");
     navigationLiChilds.forEach(function (li) {
       li.style.color = "white";
     });
     //basket
-    userBasketContainerElem.style.top = "92px";
+    userBasketMainContainer.style.top = "92px";
   }
   // twice banners
   if (scrolled > 750) {
