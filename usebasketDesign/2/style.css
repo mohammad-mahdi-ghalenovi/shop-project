@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 50px;
+  background: rgb(0, 0, 0);
+  background-position: center;
+  background-size: cover;
+  background-image: url(/Imgs/basket.jpg);
+}
+
+.user-basket-container {
+  position: fixed;
+  display: grid;
+  grid-template-rows: 200px 110px;
+  grid-template-columns: 1fr;
+  width: 600px;
+  backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
+  box-shadow: 0 0 14px white;
+  border-radius: 10px;
+}
+
+.basket-products-container {
+  position: relative;
+  display: grid;
+  grid-gap: 15px 0;
+  padding: 10px;
+  grid-auto-rows: 50px;
+  grid-template-columns: 1fr;
+  background-color: rgba(57, 56, 56, 0.45);
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+.basket-product {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 50px 75px;
+  border-radius: 10px;
+}
+
+.b-info-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.669);
+  border-radius: 19px;
+  color: white;
+}
+
+.b-img {
+  position: absolute;
+  background-position: center;
+  background-size: 80%;
+  background-image: url(/usebasketDesign/2/case.png);
+  left: 0;
+  height: 120%;
+  width: 80px;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.b-name {
+  position: absolute;
+  left: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+}
+
+.b-price {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.b-remove {
+  position: relative;
+  background: rgba(255, 255, 255, 0.669);
+  border-radius: 50%;
+}
+
+.b-remove i {
+  font-size: 28px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.b-count {
+  border-radius: 19px;
+  background: rgba(255, 255, 255, 0.669);
+  text-align: center;
+  color: white;
+  border: none;
+}
