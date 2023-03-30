@@ -477,8 +477,6 @@
 @media screen and (max-width: 780px) {
   .user-basket-container {
     top: 60px;
-    opacity: 1;
-    z-index: 999;
   }
 }
 
