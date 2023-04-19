@@ -7,7 +7,7 @@ let sliderInfoContainer = document.querySelector(
 );
 let sliderInfoName = document.querySelector(".name");
 let sliderInfoCode = document.querySelector(".code");
-let imgs = [
+let sliderImgs = [
   {
     id: 0,
     src: "Imgs/products/game-headphone.png",
@@ -58,19 +58,20 @@ let imgs = [
     icon: "Imgs/Icons/icons8-tv-show-40.png",
   },
 ];
+// Start of TopSlider  \\
 let slideCounter = 0;
 //onload
 window.onload = function () {
   setTimeout(() => {
-    setImgSrc(slideCounter);
+    setImgSrc(slideCounter); // when window loaded , first slide will show
   }, 400);
 
-  createSlideSigns();
+  createSlideHandlers();
 };
 
 function nxtImgHandler() {
   slideCounter++;
-  if (slideCounter > imgs.length - 1) {
+  if (slideCounter > sliderImgs.length - 1) {
     slideCounter = 0;
   }
   setImgSrc(slideCounter);
@@ -79,7 +80,7 @@ function nxtImgHandler() {
 function preImgHandler() {
   slideCounter--;
   if (slideCounter < 0) {
-    slideCounter = imgs.length - 1;
+    slideCounter = sliderImgs.length - 1;
   }
   setImgSrc(slideCounter);
 }
@@ -87,7 +88,7 @@ function preImgHandler() {
 //set details & src
 function setImgSrc(i) {
   sliderElem.classList.add("transition");
-  sliderInfoContainer.classList.add("animated");
+  sliderInfoContainer.classList.add("animated"); // add some animations to have a smooth change
 
   setTimeout(function () {
     sliderElem.classList.remove("transition");
@@ -98,29 +99,31 @@ function setImgSrc(i) {
   });
 
   setTimeout(function () {
-    sliderElem.setAttribute("src", imgs[i].src);
+    sliderElem.setAttribute("src", sliderImgs[i].src); // set new src of img
   }, 300);
 
-  sliderInfoName.textContent = imgs[i].name;
-  sliderInfoCode.textContent = imgs[i].icon;
+  sliderInfoName.textContent = sliderImgs[i].name; // set new name of img
+  sliderInfoCode.textContent = sliderImgs[i].icon; // set new code of img
 
   btnClassSetHandler(i);
 
-  slideCounter = i;
+  slideCounter = i; // counter number reset
 }
 
 function btnClassSetHandler(ID) {
-  imgs.forEach(function (img) {
+  sliderImgs.forEach(function (img) {
+    // set active class to the btns
     img.activeClass = "";
   });
-  imgs[ID].activeClass = "slide-active";
-  createSlideSigns();
+  sliderImgs[ID].activeClass = "slide-active";
+  createSlideHandlers();
 }
 
-function createSlideSigns() {
+function createSlideHandlers() {
+  // the handler btns created and onclick seted
   slidesSelection.innerHTML = "";
 
-  imgs.forEach(function (img) {
+  sliderImgs.forEach(function (img) {
     slidesSelection.insertAdjacentHTML(
       "beforeend",
       '<div  class="slide ' +
@@ -137,8 +140,10 @@ function createSlideSigns() {
 }
 
 function goToSlide(imgID) {
+  // go to target of handlers  img
   setImgSrc(imgID);
 }
 
 nxtButton.addEventListener("click", nxtImgHandler);
 PreButton.addEventListener("click", preImgHandler);
+// End of TopSlider \\
