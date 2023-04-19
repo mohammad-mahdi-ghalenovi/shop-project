@@ -124,18 +124,11 @@ function createSlideHandlers() {
   slidesSelection.innerHTML = "";
 
   sliderImgs.forEach(function (img) {
-    slidesSelection.insertAdjacentHTML(
-      "beforeend",
-      '<div  class="slide ' +
-        img.activeClass +
-        '" onclick="goToSlide(' +
-        img.id +
-        ')"><div class="slide-icon" style="background-image: url(' +
-        img.icon +
-        ')"></div><p>' +
-        img.name +
-        "</p></div>"
-    );
+    slidesSelection.innerHTML += `
+    <div  class="slide ${img.activeClass}" onclick="goToSlide(${img.id})"> 
+            <div class="slide-icon" style="background-image: url(${img.icon})"></div>
+            <p>${img.name}</p>
+    </div>`;
   });
 }
 

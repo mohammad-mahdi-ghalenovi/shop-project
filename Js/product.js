@@ -5,12 +5,15 @@ let infoPriceElem = document.querySelector(".info-price");
 let productSlider = document.querySelector(".product-slider");
 let productSlides = document.querySelector(".product-slides");
 let i = 0;
+
 // URL PARAM
 let locationSearch = location.search;
 let SearchUrlParam = new URLSearchParams(locationSearch);
-let targetSearchID = SearchUrlParam.get("id");
+let targetSearchID = SearchUrlParam.get("id"); // get target ID from URL PARAMS
+
 //slider
 let targetSlider = [];
+
 // changeable section
 let changeableSection = document.querySelector(".changeable-section");
 let detailsContainerElem = document.querySelector(".details-container");
@@ -38,10 +41,10 @@ let specificationItems = [
   { name: "Graphic Card Description", desc: "Integrated Graphics Card" },
   { name: "Hardware Platform", desc: "Windows" },
 ];
-// related producrs
+// related products
 let relatedProductSection = document.querySelector(".related-product-section");
-// let relatedProducts
-// find target Obj
+
+// find target Obj from URL PARAMS ID
 function findTargetObj(searchID) {
   let mainProduct = products.find(function (product) {
     return product.id == searchID;
@@ -55,7 +58,7 @@ function findTargetObj(searchID) {
 }
 findTargetObj(targetSearchID);
 
-function setProductsInformation(mainProduct) {
+function setProductsInformation(mainProduct) { // product information seted based on ID
   infoNameElem.textContent = mainProduct.title;
   infoPriceElem.textContent = "$" + mainProduct.price;
 }
@@ -72,7 +75,7 @@ function createButtons(targetSlider) {
         i +
         ")'>" +
         i +
-        "</button>" // set the same background for main slider
+        "</button>" //  the same background for main slider seted for first time 
     );
   });
   //onload
