@@ -113,6 +113,12 @@
   background-color: rgba(193, 193, 193, 0.354);
 }
 
+.top-navigation-container li a {
+  text-decoration: none;
+  color: white;
+  
+}
+
 .navigation-icons-container {
   display: grid;
   grid-template-columns: repeat(5, 50px);
