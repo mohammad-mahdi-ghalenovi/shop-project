@@ -41,8 +41,8 @@ products.forEach(function (product) {
   }
 });
 
+// two type of product designs
 function createDynamicProducts(container, product, isFirstTemplate) {
-  // first template of product
   if (isFirstTemplate == true) {
     container.insertAdjacentHTML(
       "beforeend",
@@ -85,9 +85,7 @@ function createDynamicProducts(container, product, isFirstTemplate) {
 
 // go to product page
 function testOne(productID) {
-  location.href =
-    "product.html?id=" +
-    productID;
+  location.href = "product.html?id=" + productID;
 }
 
 // add to Basket
