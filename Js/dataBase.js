@@ -170,3 +170,83 @@ let products = [
   },
 ];
 // main products dataBase \\
+
+// sliderImgs \\
+let sliderImgs = [
+  {
+    id: 0,
+    src: "Imgs/products/game-headphone.png",
+    name: "Headphones & AirPods",
+    icon: "WP-213131-ME",
+    activeClass: "",
+    icon: "Imgs/Icons/icons8-headphones-40.png",
+  },
+  {
+    id: 1,
+    src: "imgs/download.png",
+    name: "Computer & Laptops",
+    icon: "WP-213131",
+    activeClass: "",
+    icon: "Imgs/Icons/icons8-monitor-40.png",
+  },
+
+  {
+    id: 2,
+    src: "Imgs/products/camera.png",
+    name: "Cameras & Lenses",
+    icon: "WP-213131-ME",
+    activeClass: "",
+    icon: "Imgs/Icons/icons8-camera-40.png",
+  },
+  {
+    id: 3,
+    src: "Imgs/products/keyboard.png",
+    name: "Mouse & Keyboards",
+    icon: "WP-213131-ME",
+    activeClass: "",
+    icon: "Imgs/Icons/icons8-keyboard-40.png",
+  },
+  {
+    id: 4,
+    src: "Imgs/products/cable.png",
+    name: "Network Cable",
+    icon: "WP-213131-ME",
+    activeClass: "",
+    icon: "Imgs/Icons/cable.png",
+  },
+  {
+    id: 5,
+    src: "Imgs/products/tv.png",
+    name: "TV & Audio Speakers",
+    icon: "WP-213131-ME",
+    activeClass: "",
+    icon: "Imgs/Icons/icons8-tv-show-40.png",
+  },
+];
+// sliderImgs \\
+
+// specificationItems \\
+let specificationItems = [
+  { name: "Weight", desc: "7.25kg" },
+  { name: "Dimensions", desc: "90 x 60 x 90 cm" },
+  { name: "Size", desc: "One Size Fits All" },
+  { name: "Color", desc: "Black with Red, White with Gold" },
+  { name: "Guarantee", desc: "5 years" },
+  { name: "Brand", desc: "Metti" },
+  { name: "Item Height", desc: "18 Millimeters" },
+  { name: "Item Width", desc: "one size fits all" },
+  { name: "Screen Size", desc: "13 Inches" },
+  { name: "Item Weight", desc: "1.6kg" },
+  { name: "Product Dimensions", desc: "21.9 x 31.4 x 1.8 cm" },
+  { name: "Item Model Number", desc: "MF841HN/A" },
+  { name: "Processor Brand", desc: "Intel" },
+  { name: "Processor Type", desc: "Core I7" },
+  { name: "Processor Speed", desc: "3.4 Ghz" },
+  { name: "RAM Size", desc: "8 GB" },
+  { name: "Hard Drive Size", desc: "512 GB" },
+  { name: "Hard Disk Technology", desc: "Solid State Drive" },
+  { name: "Graphics Coprocessor", desc: "Intel Integrated Graphics" },
+  { name: "Graphic Card Description", desc: "Integrated Graphics Card" },
+  { name: "Hardware Platform", desc: "Windows" },
+];
+// specificationItems \\

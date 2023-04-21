@@ -375,6 +375,8 @@
 @media screen and (max-width: 1340px) {
   .product-slider {
     width: 450px;
+    background-size: 95%;
+    background-repeat: no-repeat;
   }
 }
 

@@ -18,29 +18,6 @@ let targetSlider = [];
 let changeableSection = document.querySelector(".changeable-section");
 let detailsContainerElem = document.querySelector(".details-container");
 let changeableButton = document.querySelectorAll(".changeable-btn");
-let specificationItems = [
-  { name: "Weight", desc: "7.25kg" },
-  { name: "Dimensions", desc: "90 x 60 x 90 cm" },
-  { name: "Size", desc: "One Size Fits All" },
-  { name: "Color", desc: "Black with Red, White with Gold" },
-  { name: "Guarantee", desc: "5 years" },
-  { name: "Brand", desc: "Metti" },
-  { name: "Item Height", desc: "18 Millimeters" },
-  { name: "Item Width", desc: "one size fits all" },
-  { name: "Screen Size", desc: "13 Inches" },
-  { name: "Item Weight", desc: "1.6kg" },
-  { name: "Product Dimensions", desc: "21.9 x 31.4 x 1.8 cm" },
-  { name: "Item Model Number", desc: "MF841HN/A" },
-  { name: "Processor Brand", desc: "Intel" },
-  { name: "Processor Type", desc: "Core I7" },
-  { name: "Processor Speed", desc: "3.4 Ghz" },
-  { name: "RAM Size", desc: "8 GB" },
-  { name: "Hard Drive Size", desc: "512 GB" },
-  { name: "Hard Disk Technology", desc: "Solid State Drive" },
-  { name: "Graphics Coprocessor", desc: "Intel Integrated Graphics" },
-  { name: "Graphic Card Description", desc: "Integrated Graphics Card" },
-  { name: "Hardware Platform", desc: "Windows" },
-];
 // related products
 let relatedProductSection = document.querySelector(".related-product-section");
 
@@ -75,7 +52,7 @@ function createButtons(targetSlider) {
         i +
         ")'>" +
         i +
-        "</button>" //  the same background for main slider seted for first time 
+        "</button>" //  the same background for main slider seted 
     );
   });
   //onload
@@ -163,8 +140,8 @@ changeableButton.forEach(function (btn) {
 });
 //onload
 specInfoSetHandler();
-// related products
 
+// related products
 let q = 0;
 function setRelatedProducts() {
   products.forEach(function (product) {
