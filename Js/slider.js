@@ -16,8 +16,16 @@ window.onload = function () {
     setImgSrc(slideCounter); // when window loaded , first slide will show
   }, 400);
 
+  bannerProductName.classList.add("big-banner-animate");
+  bigBannerImg.classList.add("big-banner-animate");
+
+  document.body.style.zoom = "0.9"
+
   createSlideHandlers();
 };
+
+// change img slider each 5 secondes 
+setInterval(nxtImgHandler, 5000);
 
 function nxtImgHandler() {
   slideCounter++;
