@@ -19,8 +19,13 @@ window.onload = function () {
   bannerProductName.classList.add("big-banner-animate");
   bigBannerImg.classList.add("big-banner-animate");
 
+  document.body.style.zoom = "0.9"
+
   createSlideHandlers();
 };
+
+// change img slider each 5 secondes 
+setInterval(nxtImgHandler, 5000);
 
 function nxtImgHandler() {
   slideCounter++;
