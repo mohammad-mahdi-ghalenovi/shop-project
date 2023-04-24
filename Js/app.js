@@ -156,7 +156,7 @@ function removeProduct(productID) {
 
 function calculateProductPrice(userBasket) {
   // calculate product prices
-  let sum = null;
+  let sum = 0;
   userBasket.forEach(function (product) {
     sum = sum + product.price * product.count;
   });
@@ -228,6 +228,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// show hamburger Menu
 function showHamMenu(menu) {
   menu.classList.toggle("ham-active");
 }

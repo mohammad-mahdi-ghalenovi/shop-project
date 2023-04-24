@@ -16,6 +16,9 @@ window.onload = function () {
     setImgSrc(slideCounter); // when window loaded , first slide will show
   }, 400);
 
+  bannerProductName.classList.add("big-banner-animate");
+  bigBannerImg.classList.add("big-banner-animate");
+
   createSlideHandlers();
 };
 
