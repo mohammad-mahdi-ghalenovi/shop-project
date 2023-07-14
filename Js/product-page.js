@@ -169,7 +169,7 @@ setRelatedProducts();
 
 function referToProductPage(productID) {
   location.href =
-    "file:///C:/Users/Win%20Green/Desktop/newProject/product.html?id=" +
+    "product.html?id=" +
     productID;
 }
 
