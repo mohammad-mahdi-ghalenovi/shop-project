@@ -41,3 +41,18 @@ body {
   grid-auto-rows: 150px;
   z-index: 99;
 }
+
+.illustration {
+  position: absolute;
+  z-index: -1;
+  height: 200px;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0.3;
+}
+
+.recently-illustration {
+  left: auto;
+  transform: translate(0%); 
+  right: 0;
+}
