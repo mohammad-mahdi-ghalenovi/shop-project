@@ -116,12 +116,12 @@
 .top-navigation-container li a {
   text-decoration: none;
   color: white;
-  
 }
 
 .navigation-icons-container {
-  display: grid;
-  grid-template-columns: repeat(5, 50px);
+  display: flex;
+  justify-content: end;
+  padding: 0 1rem;
   grid-column: -1/-2;
   grid-row: 1fr;
   cursor: pointer;
@@ -137,24 +137,16 @@
   background-size: 90%;
 }
 
-.navigation-icon:nth-child(5) {
-  background-image: url(../Imgs/Icons/icons8-shopping-cart-40.png);
-}
-
-.navigation-icon:nth-child(4) {
-  background-image: url(../Imgs/Icons/icons8-melting-heart-40.png);
-}
-
-.navigation-icon:nth-child(3) {
-  background-image: url(../Imgs/Icons/icons8-user-40.png);
+.navigation-icons-container  div {
+  margin: 0 1rem;
 }
 
 .navigation-icon:nth-child(2) {
-  background-image: url(../Imgs/Icons/icons8-circular-arrows-40.png);
+  background-image: url(../Imgs/Icons/icons8-shopping-cart-40.png);
 }
 
 .navigation-icon:nth-child(1) {
-  /* background-image: url(../Imgs/Icons/icons8-search-40.png); */
+  background-image: url(../Imgs/Icons/icons8-user-40.png);
 }
 /* ham menu */
 
@@ -168,7 +160,7 @@
   grid-gap: 1px;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, 1fr);
-  top: 50px;
+  top: 60px;
   height: 250px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.685);
@@ -227,6 +219,12 @@
   }
 }
 
+@media screen and (min-width: 780px) {
+  .ham-menu {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 780px) {
   .welcome-nav {
     display: none;
@@ -240,7 +238,16 @@
 
   .ham-menu-btn {
     display: block;
+    width: 50%;
     grid-column: 1/2;
+  }
+
+  .navigation-icons-container .navigation-icon {
+    display: none;
+  }
+
+  .navigation-icons-container {
+    padding: 0;
   }
 
   .navigation-icon:nth-child(1),
@@ -262,23 +269,11 @@
   .top-navigation-container li {
     display: none;
   }
-
-  .navigation-icons-container {
-    grid-template-columns: repeat(4, 60px);
-    float: right;
-    direction: rtl;
-  }
 }
 
 @media screen and (max-width: 530px) {
   .top-main-title {
     padding-left: 20px;
-  }
-}
-
-@media screen and (max-width: 370px) {
-  .navigation-icons-container {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
 
