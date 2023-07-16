@@ -58,15 +58,15 @@
 }
 
 .locator .icon {
-  background-image: url(../Imgs/Icons/icons8-location-40.png);
+  background-image: url(../../Imgs/Icons/icons8-location-40.png);
 }
 
 .shipping .icon {
-  background-image: url(../Imgs/Icons/icons8-free-shipping-40.png);
+  background-image: url(../../Imgs/Icons/icons8-free-shipping-40.png);
 }
 
 .acount .icon {
-  background-image: url(../Imgs/Icons/icons8-user-4.png);
+  background-image: url(../../Imgs/Icons/icons8-user-4.png);
 }
 
 .top-wel-icons p {
@@ -74,7 +74,7 @@
 }
 
 .wel-icon {
-  background-image: url(../Imgs/Icons/icons8-magnetic-card-40.png);
+  background-image: url(../../Imgs/Icons/icons8-magnetic-card-40.png);
 }
 
 /* navigation */
@@ -142,11 +142,11 @@
 }
 
 .navigation-icon:nth-child(2) {
-  background-image: url(../Imgs/Icons/icons8-shopping-cart-40.png);
+  background-image: url(../../Imgs/Icons/icons8-shopping-cart-40.png);
 }
 
 .navigation-icon:nth-child(1) {
-  background-image: url(../Imgs/Icons/icons8-user-40.png);
+  background-image: url(../../Imgs/Icons/icons8-user-40.png);
 }
 /* ham menu */
 

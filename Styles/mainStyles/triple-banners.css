@@ -19,7 +19,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../imgs/ford.jpeg);
+  background-image: url(../../imgs/ford.jpeg);
   /*  animated  */
   transform: translateY(-50px);
   opacity: 0;

@@ -76,7 +76,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 40px 1fr;
   background-size: cover;
-  background-image: url(../Imgs/twin-banner.jpg);
+  background-image: url(../../Imgs/twin-banner.jpg);
   color: white;
   border-radius: 10px;
   padding: 37px;
@@ -130,7 +130,7 @@
   height: 340px;
   width: 340px;
   border-radius: 10px;
-  background-image: url(../Imgs/products/game-headphone.png);
+  background-image: url(../../Imgs/products/game-headphone.png);
   background-position: center;
   background-size: cover;
   z-index: 9;
