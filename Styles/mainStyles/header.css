@@ -152,6 +152,15 @@
 
 .ham-menu-btn {
   display: none;
+  position: absolute;
+  top:  4px;
+  right: 10px;
+  background-size: 70%;
+  background-position: center;
+  background-image: url(../../imgs/Icons/menu.png);
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
 }
 
 .ham-menu {
@@ -238,8 +247,6 @@
 
   .ham-menu-btn {
     display: block;
-    width: 50%;
-    grid-column: 1/2;
   }
 
   .navigation-icons-container .navigation-icon {
