@@ -13,9 +13,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(mohit-suthar-HTGczLjKhsE-unsplash.jpg);
-  background-position: center;
-  background-size: cover;
+  background-color: #000;
+  height: 100vh;
 }
 
 .container {
@@ -31,15 +30,14 @@ body {
   height: 90vh;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 0 7px #00000088;
-}
+  box-shadow: rgba(54, 168, 132, 0.25) 0px 30px 60px -12px, #64CCC5 0px 18px 36px -18px;}
 
 .left-content {
   position: relative;
   padding: 1rem 1.8rem 0 1.8rem;
   display: flex;
   flex-direction: column;
-  background: #fff;
+  background: #537FE7;
   flex-basis: 60%;
   height: 100%;
 }
@@ -52,6 +50,7 @@ body {
   align-items: center;
   width: 100%;
   top: 0;
+  color: #EEEEEE;
 }
 
 .left__title::after {
@@ -92,7 +91,6 @@ body {
   grid-template-rows: 1fr;
   grid-template-columns: 100px 120px 1fr 120px 100px;
   width: 100%;
-  color: white;
   padding: 0.5rem 0 0.5rem;
   border-bottom: 2px solid #00000032;
 }
@@ -120,16 +118,17 @@ body {
   flex-direction: column;
   justify-content: center;
   margin-left: 20px;
+  color: #EEEEEE;
 }
 
 .info__category {
-  color: rgba(128, 128, 128, 0.555);
+  color: #EEEEEE;
   font-size: 12px;
 }
 
 .info__name {
   margin-top: 5px;
-  color: black;
+  color: #EEEEEE;
   font-size: 14px;
 }
 
@@ -149,6 +148,8 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.201);
   transition: 0.3s ease;
+  background-color: #393E46;
+  color: #EEEEEE;
 }
 
 .count__input:focus {
@@ -158,7 +159,7 @@ body {
 
 .cart-price {
   align-self: center;
-  color: black;
+  color: #EEEEEE;
   font-size: 12px;
 }
 

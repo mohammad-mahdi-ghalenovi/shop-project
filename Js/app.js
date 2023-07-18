@@ -1,7 +1,6 @@
 // basket
 let userBasket = [];
 let basketBtnElem = document.querySelector(".basket-btn");
-let userBasketMainContainer = document.querySelector(".user-basket-container");
 let userBasketContainerElem = document.querySelector(
   ".basket-products-container"
 );
@@ -95,84 +94,28 @@ function addToBasket(productID) {
     return product.id === productID;
   });
 
-  let isAdded = userBasket.some(function (product) {
-    return product.id == productID;
-  });
-
-  if (isAdded === false) {
-    userBasket.push(mainProduct);
-    calculateProductPrice(userBasket);
-    setBasketProducts(userBasket);
-  } else {
-    increaseCountHandler(mainProduct);
-  }
+  sendToShopCart(mainProduct)
 }
 
-function increaseCountHandler(mainProduct) {
-  mainProduct.count += 1;
-  calculateProductPrice(userBasket);
-  setBasketProducts(userBasket);
+function sendToShopCart(product) {
+  fetch(
+    "https://competition-shop-default-rtdb.firebaseio.com/products.json",
+    {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(product),
+    }
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      console.log("added")
+    })
+    .catch((err) => console.log(err));
 }
 
-function setBasketProducts(userBasket) {
-  // append product to basket
-  userBasketContainerElem.innerHTML = "";
-
-  userBasket.forEach(function (product) {
-    userBasketContainerElem.insertAdjacentHTML(
-      "beforeend",
-      '<div class="basket-product">  <div class="b-info-container">    <div class="b-img" style="background-image: url(' +
-        product.src +
-        ')"></div>    <div class="b-name">' +
-        product.title +
-        '</div>    <div class="b-price">$ ' +
-        product.price +
-        '</div>  </div>  <div class="b-remove" onclick="removeProduct(' +
-        product.id +
-        ')">    <i class="fa fa-trash"></i>  </div>  <div class="b-count">' +
-        product.count +
-        "</div></div>"
-    );
-  });
-  userBasketContainerElem.scrollTo(0, 10000);
-  userBasketMainContainer.classList.add("basket-active");
-}
-
-function removeProduct(productID) {
-  // remove product handler
-  userBasket = userBasket.filter(function (product) {
-    return product.id !== productID;
-  });
-
-  let mainProduct = products.find(function (product) {
-    return product.id === productID;
-  });
-
-  mainProduct.count = 1;
-
-  setBasketProducts(userBasket);
-  calculateProductPrice(userBasket);
-}
-
-function calculateProductPrice(userBasket) {
-  // calculate product prices
-  let sum = 0;
-  userBasket.forEach(function (product) {
-    sum = sum + product.price * product.count;
-  });
-
-  totalPriceElem.textContent = "Total Price : $" + sum + "";
-}
-
-basketBtnElem.addEventListener("click", function () {
-  userBasketMainContainer.classList.toggle("basket-active");
-});
-
-purchaceAllBtn.addEventListener("click", function () {
-  userBasket = [];
-  setBasketProducts(userBasket);
-  calculateProductPrice(userBasket);
-});
 
 // add scroll animations
 window.addEventListener("scroll", function () {
@@ -185,14 +128,12 @@ window.addEventListener("scroll", function () {
     });
     hamMenuElem.classList.remove("ham-active");
     //basket
-    userBasketMainContainer.style.top = "60px";
   } else {
     navigationElem.classList.remove("active-nav");
     navigationLiChilds.forEach(function (li) {
       li.style.color = "white";
     });
     //basket
-    userBasketMainContainer.style.top = "92px";
   }
   // twice banners
   if (scrolled > 750) {

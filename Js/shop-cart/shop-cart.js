@@ -1,8 +1,9 @@
 const cartItemsContainer = document.querySelector(".left__carts-container");
 const titleCountElem = document.querySelector(".title__count");
+let sumCount = 0;
 
 function loadProducts() {
-  fetch("https://shop-project1-d3570-default-rtdb.firebaseio.com/products.json")
+  fetch("https://competition-shop-default-rtdb.firebaseio.com/products.json")
     .then((res) => res.json())
     .then((data) => {
       createProducts(data);
@@ -13,17 +14,16 @@ function createProducts(data) {
   if (data) {
     data = Object.entries(data);
     cartItemsContainer.innerHTML = "";
-    titleCountElem.innerHTML = data.length + " items";
     data.forEach((product) => {
       cartItemsContainer.insertAdjacentHTML(
         "beforeend",
         `
       <div class="cart-item">
       <div class="cart-img">
-          <div style="background-image: url(${product[1].images[0]})" class="cart__img" /></div>
+          <div style="background-image: url(${product[1].src})" class="cart__img" /></div>
       </div>
       <div class="cart-infos">
-          <div class="info__category">${product[1].category}</div>
+          <div class="info__category">${""}</div>
           <div class="info__name">${product[1].title}</div>
       </div>
       <div class="cart-count">
@@ -34,24 +34,27 @@ function createProducts(data) {
     </div>
       `
       );
+      sumCount += product[1].price;
     });
   } else {
-    titleCountElem.innerHTML = 0 + " items";
     cartItemsContainer.innerHTML = "";
+    titleCountElem.innerHTML =  "$"+ 0
   }
+
+  titleCountElem.innerHTML =  "Total Price : $"+ sumCount
+  sumCount = 0
 }
 
 function deleteProduct(productID) {
   fetch(
-    `https://shop-project1-d3570-default-rtdb.firebaseio.com/products/${productID}.json`,
+    `https://competition-shop-default-rtdb.firebaseio.com/products/${productID}.json`,
     {
       method: "DELETE",
     }
-  ).then(() => {
+  ).then((res) => {
+    console.log(res)
     loadProducts();
   });
 }
 
-window.addEventListener("load", () => {
-  loadProducts();
-});
+loadProducts();

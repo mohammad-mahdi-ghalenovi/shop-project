@@ -79,7 +79,7 @@
 /* SLIDER */
 
 .product-slider {
-  background-image: url(../Imgs/products/game-headphone.png);
+  background-image: url(../../Imgs/products/game-headphone.png);
   background-position: center;
   background-size: cover;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -151,7 +151,7 @@
 }
 
 .info-rate-container > .rate-stars {
-  background-image: url(../Imgs/Icons/Star-Icon-by-arus-3.jpg);
+  background-image: url(../../Imgs/Icons/Star-Icon-by-arus-3.jpg);
   background-size: 200%;
   background-position: center;
   border-radius: 50%;
@@ -354,11 +354,11 @@
 }
 
 .info-icons-conatiner > .info-icon:nth-child(2) {
-  background-image: url(../imgs/icons/icons8-location-40.png);
+  background-image: url(../../Imgs/icons/icons8-location-40.png);
 }
 
 .info-icons-conatiner > .info-icon:nth-child(1) {
-  background-image: url(../imgs/icons/icons8-free-shipping-40.png);
+  background-image: url(../../Imgs/icons/icons8-free-shipping-40.png);
 }
 
 .info-need-help-container {
