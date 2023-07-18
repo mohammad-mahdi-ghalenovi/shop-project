@@ -56,3 +56,48 @@ body {
   transform: translate(0%); 
   right: 0;
 }
+
+.loading {
+  position: fixed;
+  display: flex;;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  z-index: 999;
+}
+
+.loading .loading-circle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 4px solid gray;
+}
+
+.loading .loading-circle::after {
+  content: " ";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 4px solid rgb(0, 47, 255);
+  animation: 1s scale infinite;
+}
+
+@keyframes scale {
+  50% {
+    padding: 20px;
+  }
+  100% {
+    padding: 0px;
+  }
+}
+
+.invisible {
+  display: none;
+}

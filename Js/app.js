@@ -177,3 +177,7 @@ function showHamMenu(menu) {
 hamMenuButton.addEventListener("click", function () {
   showHamMenu(hamMenuElem);
 });
+
+window.addEventListener("load" , () => {
+  document.querySelector(".loading").classList.add("invisible")
+})
