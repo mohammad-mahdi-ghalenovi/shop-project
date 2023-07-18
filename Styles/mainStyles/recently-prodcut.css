@@ -23,7 +23,7 @@
   background-size: 95%;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(imgs/download.png);
+  background-image: url(../../imgs/download.png);
   border-radius: 10px;
   transition: 0.4s;
   cursor: pointer;
@@ -65,13 +65,13 @@
 .heart-icon2 {
   /* icons for recently */
   top: 10px;
-  background-image: url(../Imgs/Icons/icons8-melting-heart-40.png);
+  background-image: url(../../Imgs/Icons/icons8-melting-heart-40.png);
 }
 
 .basket-icon2 {
   /* icons for recently */
   top: 41px;
-  background-image: url(../Imgs/Icons/icons8-search-40.png);
+  background-image: url(../../Imgs/Icons/icons8-search-40.png);
 }
 
 .recently-product .recently-card-price {
@@ -92,7 +92,7 @@
   border-top-left-radius: 10px;
   background: rgba(255, 255, 255, 0);
   z-index: 5;
-  background-image: url(../Imgs/Icons/icons8-shopping-cart-40.png);
+  background-image: url(../../Imgs/Icons/icons8-shopping-cart-40.png);
   background-size: 50%;
   background-position: center;
   background-color: rgba(38, 83, 179, 0.066);

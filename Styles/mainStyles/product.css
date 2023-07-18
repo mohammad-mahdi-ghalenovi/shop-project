@@ -77,13 +77,13 @@
 .heart-icon {
   top: 13px;
   right: 13px;
-  background-image: url(../Imgs/Icons/icons8-melting-heart-40.png);
+  background-image: url(../../Imgs/Icons/icons8-melting-heart-40.png);
 }
 
 .basket-icon {
   bottom: 20px;
   right: 15px;
-  background-image: url(../Imgs/Icons/icons8-shopping-cart-40.png);
+  background-image: url(../../Imgs/Icons/icons8-shopping-cart-40.png);
   z-index: 99;
 }
 
