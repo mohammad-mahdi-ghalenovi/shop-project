@@ -1,9 +1,9 @@
 // onload elems
-let infoNameElem = document.querySelector(".info-name");
-let infoPriceElem = document.querySelector(".info-price");
+const infoNameElem = document.querySelector(".info-name");
+const infoPriceElem = document.querySelector(".info-price");
 
-let productSlider = document.querySelector(".product-slider");
-let productSlides = document.querySelector(".product-slides");
+const productSlider = document.querySelector(".product-slider");
+const productSlides = document.querySelector(".product-slides");
 let i = 0;
 
 // URL PARAM
@@ -15,15 +15,18 @@ let targetSearchID = SearchUrlParam.get("id"); // get target ID from URL PARAMS
 let targetSlider = [];
 
 // changeable section
-let changeableSection = document.querySelector(".changeable-section");
-let detailsContainerElem = document.querySelector(".details-container");
-let changeableButton = document.querySelectorAll(".changeable-btn");
+const changeableSection = document.querySelector(".changeable-section");
+const detailsContainerElem = document.querySelector(".details-container");
+const changeableButton = document.querySelectorAll(".changeable-btn");
 // related products
-let relatedProductSection = document.querySelector(".related-product-section");
+const relatedProductSection = document.querySelector(".related-product-section");
+// add to basket 
+const addToBasket = document.querySelector(".add-to-basket")
 
 // find target Obj from URL PARAMS ID
+let mainProduct
 function findTargetObj(searchID) {
-  let mainProduct = products.find(function (product) {
+  mainProduct = products.find(function (product) {
     return product.id == searchID;
   });
 
@@ -167,6 +170,26 @@ function setRelatedProducts() {
 }
 setRelatedProducts();
 
+function sendToShopCart(product) {
+  fetch(
+    "https://competition-shop-default-rtdb.firebaseio.com/products.json",
+    {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(product),
+    }
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      console.log("added")
+    })
+    .catch((err) => console.log(err));
+}
+
+
 function referToProductPage(productID) {
   location.href =
     "product.html?id=" +
@@ -174,3 +197,6 @@ function referToProductPage(productID) {
 }
 
 document.body.style.zoom = "90%";
+addToBasket.addEventListener("click" , () => {
+  sendToShopCart(mainProduct)
+})
