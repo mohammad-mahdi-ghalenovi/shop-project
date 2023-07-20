@@ -1,6 +1,7 @@
 const cartItemsContainer = document.querySelector(".left__carts-container");
 const titleCountElem = document.querySelector(".title__count");
 let sumCount = 0;
+const successNotfi = document.querySelector(".success-notfi")
 
 function loadProducts() {
   fetch("https://competition-shop-default-rtdb.firebaseio.com/products.json")
@@ -27,14 +28,14 @@ function createProducts(data) {
           <div class="info__name">${product[1].title}</div>
       </div>
       <div class="cart-count">
-          <input type="number" value="1" min="1" class="count__input" />
+          <input type="number" value="${product[1].count}" min="1" class="count__input" />
       </div>
       <div class="cart-price">$${product[1].price}</div>
       <button class="cart-close" onclick="deleteProduct('${product[0]}')">X</button>
     </div>
       `
       );
-      sumCount += product[1].price;
+      sumCount += product[1].price * product[1].count
     });
   } else {
     cartItemsContainer.innerHTML = "";
@@ -45,6 +46,7 @@ function createProducts(data) {
   sumCount = 0
 }
 
+let isAdded;
 function deleteProduct(productID) {
   fetch(
     `https://competition-shop-default-rtdb.firebaseio.com/products/${productID}.json`,
@@ -52,9 +54,27 @@ function deleteProduct(productID) {
       method: "DELETE",
     }
   ).then((res) => {
-    console.log(res)
+    isAdded = true;
+    showNotif(isAdded);
     loadProducts();
-  });
+  })
+  .catch(() => {
+    isAdded = false;
+    showNotif(isAdded);
+  })
 }
-
 loadProducts();
+
+function showNotif(isAdded) {
+  if (isAdded) {
+    successNotfi.innerHTML  = "Product deleted successfully ✅"
+  } else {
+    successNotfi.innerHTML  = "Product not deleted successfully ❌"
+  }
+
+  
+  successNotfi.classList.add("active");
+  setTimeout(() => {
+    successNotfi.classList.remove("active"); 
+  }, 3000);
+}

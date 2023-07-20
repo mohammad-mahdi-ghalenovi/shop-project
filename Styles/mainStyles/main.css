@@ -101,3 +101,31 @@ body {
 .invisible {
   display: none;
 }
+
+.success-notfi {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 5rem;
+  width: 50%;
+  height: 3rem;
+  left: 50%;
+  border-radius: 10px;
+  z-index: 99;
+  background: rgb(89, 0, 255);
+  color: white;
+  transition: 0.4s ease;
+  transform: translate(-50%);
+}
+
+.active {
+  display: flex;
+}
+
+@media screen and (max-width: 430px) {
+    .success-notfi {
+      width: 90%;
+    }
+}

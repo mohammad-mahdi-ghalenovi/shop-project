@@ -22,6 +22,7 @@ const changeableButton = document.querySelectorAll(".changeable-btn");
 const relatedProductSection = document.querySelector(".related-product-section");
 // add to basket 
 const addToBasket = document.querySelector(".add-to-basket")
+const successNotfi = document.querySelector(".success-notfi")
 
 // find target Obj from URL PARAMS ID
 let mainProduct
@@ -170,6 +171,7 @@ function setRelatedProducts() {
 }
 setRelatedProducts();
 
+let isAdded;
 function sendToShopCart(product) {
   fetch(
     "https://competition-shop-default-rtdb.firebaseio.com/products.json",
@@ -183,12 +185,28 @@ function sendToShopCart(product) {
   )
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
-      console.log("added")
+      isAdded = true
+      showNotif(isAdded)
     })
-    .catch((err) => console.log(err));
+    .catch((err) =>{
+      isAdded = false
+      showNotif(isAdded)
+    });
 }
 
+function showNotif(isAdded) {
+  if (isAdded) {
+    successNotfi.innerHTML  = "Product added successfully ✅"
+  } else {
+    successNotfi.innerHTML  = "Product not added successfully ❌"
+  }
+
+  
+  successNotfi.classList.add("active")
+  setTimeout(() => {
+    successNotfi.classList.remove("active")
+  }, 3000);
+}
 
 function referToProductPage(productID) {
   location.href =
@@ -198,5 +216,6 @@ function referToProductPage(productID) {
 
 document.body.style.zoom = "90%";
 addToBasket.addEventListener("click" , () => {
-  sendToShopCart(mainProduct)
+  mainProduct.count = Number(document.querySelector(".buy-input").value)
+  sendToShopCart(mainProduct) 
 })
